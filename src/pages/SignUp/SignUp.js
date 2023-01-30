@@ -17,17 +17,17 @@ function SignUp() {
         toggleError(false);
         toggleLoading(true);
 
-        console.log(email, password, username)
+        // console.log(email, password, username)
 
         try {
-            const response = await axios.post("https://frontend-educational-backend.herokuapp.com/api/auth/signup",
+            const result = await axios.post("https://frontend-educational-backend.herokuapp.com/api/auth/signup",
                 {
                     email: email,
                     password: password,
                     username: username,
                     role: ["user"],
                 });
-            console.log(response);
+            console.log(result);
         }catch (e) {
             console.error(e);
             toggleError(true);
