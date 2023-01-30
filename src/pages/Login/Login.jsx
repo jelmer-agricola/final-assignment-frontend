@@ -13,6 +13,8 @@ function Login() {
         e.preventDefault();
         toggleError(false);
 
+        console.log(password, username)
+
         try {
             const result = await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signin`,
                 {
@@ -23,7 +25,6 @@ function Login() {
             console.log(result.data);
             // pass the JWT token to the login function of the context
 
-            login(result.data.accessToken);
         } catch(e) {
             console.error(e);
             toggleError(true);
@@ -56,7 +57,7 @@ function Login() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 /><br/>
-                <button type="submit"className="registreren"> Inloggen </button>
+                <button type="submit" className="registreren"> Inloggen </button>
 
             </form>            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
         </>    );

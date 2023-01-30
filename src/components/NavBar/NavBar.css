@@ -1,0 +1,21 @@
+nav {
+    background-color: #0B5351;
+    color: white;
+    display: flex;
+    padding: 0 32px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a,
+nav a:visited,
+nav a:active {
+    color: white;
+}
+/* kleuren pallet
+#092327
+#0B5351
+#00A9A5
+#4E8098
+#90C2E7
+*/
