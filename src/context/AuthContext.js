@@ -31,10 +31,10 @@ function AuthContextProvider({children}) {
 
     function login(JWT) {
         localStorage.setItem('token', JWT);
-        fetchUserData(JWT, '/profile');
+        fetchUserData(JWT, '/');
     }
 
-    function logout() {
+    function logout(JWT) {
         // setIsAuth(false);
         // console.log('Gebruiker is uitgelogd');
         // navigate('/');
@@ -45,6 +45,7 @@ function AuthContextProvider({children}) {
             status: 'done',
         });
         console.log('Gebruiker is uitgelogd!');
+        navigate('/');
     }
 //  Omdat deze fetchdata functie zowel in de login wordt gebruikt als voor de mounting cyclus wordt gebruikt is die hieronder pas gedeclareerd
         async function fetchUserData(token, redirectUrl) {

@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import {Link, useNavigate} from "react-router-dom";
+import React, {useState, useNavigate} from "react";
+import {Link} from "react-router-dom";
 import axios from "axios";
 
 function SignUp() {
@@ -17,7 +17,7 @@ function SignUp() {
         toggleError(false);
         toggleLoading(true);
 
-        // console.log(email, password, username)
+        console.log(email, password, username)
 
         try {
             const result = await axios.post("https://frontend-educational-backend.herokuapp.com/api/auth/signup",
@@ -28,6 +28,8 @@ function SignUp() {
                     role: ["user"],
                 });
             console.log(result);
+            navigate(`/login`)
+
         }catch (e) {
             console.error(e);
             toggleError(true);
