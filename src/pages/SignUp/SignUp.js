@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
-import "../App.css";
 import axios from "axios";
 
 function SignUp() {
@@ -17,15 +16,18 @@ function SignUp() {
         e.preventDefault();
         toggleError(false);
         toggleLoading(true);
-        
+
+        console.log(email, password, username)
+
         try {
-            await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signup`,
+            const response = await axios.post("https://frontend-educational-backend.herokuapp.com/api/auth/signup",
                 {
                     email: email,
                     password: password,
                     username: username,
-
+                    role: ["user"],
                 });
+            console.log(response);
         }catch (e) {
             console.error(e);
             toggleError(true);
@@ -39,7 +41,7 @@ function SignUp() {
             <p>>Lorem ipsum dolor sit amet </p>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="email-field">
-                    Emailadres:</label><br/>
+                    Email adres:</label><br/>
                 <input
                     type="text"
                     id="email-field"
@@ -71,7 +73,7 @@ function SignUp() {
                 </button>
 
             </form>
-            <p>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
+            <p>Heb je al een account? Je kunt je <Link to="/login">hier</Link> inloggen.</p>
         </>
 
     );

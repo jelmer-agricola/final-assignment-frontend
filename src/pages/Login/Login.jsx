@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
-import {AuthContext} from "../../context/AuthContext ";
+import {AuthContext} from "../../context/AuthContext";
 import axios from 'axios';
 
 function Login() {
@@ -29,7 +29,7 @@ function Login() {
             toggleError(true);
         }
     }
-    // console.log({
+//     console.log({
 //     email: email,
 //     wachtwoord: password,
 // });
@@ -61,4 +61,5 @@ function Login() {
             </form>            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
         </>    );
 
-}export default Login;
+}
+export default Login;
