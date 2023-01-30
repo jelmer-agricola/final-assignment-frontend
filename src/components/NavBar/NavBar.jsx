@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import {AuthContext} from '../../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import './NavBar.css';
+import Searchbar from "../Searchbar/Searchbar";
 
 function NavBar() {
     const {isAuth, logout, user } = useContext(AuthContext);
@@ -14,10 +15,12 @@ return (
                 Home
             </h3>
         </Link>
+        <Searchbar/>
 
         {isAuth ?
             <>
-                <span>{user.email}</span>
+                <span>{user.email}
+                </span>
                 <button
                     type="button"
                     onClick={logout}

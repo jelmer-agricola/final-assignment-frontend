@@ -1,11 +1,11 @@
 import React, {useContext} from "react";
+import axios from 'axios';
+
 import {Route, Routes} from "react-router-dom";
-import logo from './logo.svg';
 import './App.css';
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Home from "./pages/Home/Home";
-import axios from 'axios';
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
@@ -26,7 +26,8 @@ function App() {
 
     return (
         <>
-<NavBar></NavBar>
+<NavBar/>
+
             <button onClick={fetchData}>api data</button>
 
 
