@@ -8,21 +8,23 @@ import SignUp from "./pages/SignUp/SignUp";
 import Home from "./pages/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
 import SearchBar from "./components/SearchBar/SearchBar";
+import useFetch from "./hooks/useFetch";
 
 function App() {
 
-
-    async function fetchData(e) {
-        e.preventDefault();
-
-        try {
-            const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/test/all`)
-            console.log(result);
-
-        } catch (e) {
-            console.error(e);
-        }
-    }
+    const { data } = useFetch(`https://frontend-educational-backend.herokuapp.com/api/test/all`)
+    console.log(data)
+    // async function fetchData(e) {
+    //     e.preventDefault();
+    //
+    //     try {
+    //         const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/test/all`)
+    //         console.log(result);
+    //
+    //     } catch (e) {
+    //         console.error(e);
+    //     }
+    // }
 
 
     return (
@@ -30,7 +32,8 @@ function App() {
 <NavBar/>
 <SearchBar/>
 
-            <button onClick={fetchData}>api data</button>
+            {/*<button onClick={data}>api data</button>*/}
+            {/*<button onClick={fetchData}>api data</button>*/}
 
 
             <div>
