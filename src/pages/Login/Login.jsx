@@ -19,22 +19,26 @@ function Login() {
             const result = await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signin`,
                 {
                     username: username,
-                    password: password,            });
+                    password: password,
+                });
             // log het  resultaat  in de console
 
             console.log(result.data);
-            // pass the JWT token to the login function of the context
-
+            // pass the JWT token in de login function van de context
+            login(result.data.accessToken);
         } catch(e) {
             console.error(e);
             toggleError(true);
         }
+
+
     }
 //     console.log({
 //     email: email,
 //     wachtwoord: password,
 // });
 // login();
+
 
     return (
         <>
@@ -59,8 +63,10 @@ function Login() {
                 /><br/>
                 <button type="submit" className="registreren"> Inloggen </button>
 
-            </form>            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
-        </>    );
+            </form>
+            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
+        </>
+    );
 
 }
 export default Login;

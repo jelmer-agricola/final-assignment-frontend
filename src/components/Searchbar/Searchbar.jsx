@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import "./Searchbar.css";
+import "./SearchBar.css";
 
-function Searchbar() {
+function SearchBar() {
     const[query, setQuery] = useState( '');
     const[searchResults, setSearchResults] = useState([]);
     const [error, setError] = useState(null);
@@ -12,11 +12,11 @@ function Searchbar() {
         if (!query) {
             return;
         }
-        search();
+        Search();
     }, [query]);
 
 
-    async function search(){
+    async function Search(){
         try{
             const response = await axios.get(
                 'https://api.themoviedb.org/3/search/multi',
@@ -37,7 +37,7 @@ function Searchbar() {
     }
     const handleSubmit = event => {
         event.preventDefault();
-        search();
+        Search();
     };
 
     return (
@@ -75,4 +75,4 @@ function Searchbar() {
         </div>
     );
 }
-export default Searchbar;
+export default SearchBar;

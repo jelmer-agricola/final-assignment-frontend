@@ -7,6 +7,7 @@ import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Home from "./pages/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
+import SearchBar from "./components/SearchBar/SearchBar";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
     return (
         <>
 <NavBar/>
+<SearchBar/>
 
             <button onClick={fetchData}>api data</button>
 
@@ -36,6 +38,7 @@ function App() {
 
                     <Route path="/" element={<Home/>} />
                     {/*dynamische routing voor verschillende dingen .5*/}
+
                     <Route path="/movie/:id"/>
                     {/*<Route exact path="/login" element=<Login toggleAuthenticated={toggleAuth}/>}/>*/}
                     <Route path="/login" element={ <Login />} />

@@ -30,13 +30,14 @@ function AuthContextProvider({children}) {
     }, []);
 
     function login(jwt) {
+        console.log('gebruiker is ingelogd!')
         localStorage.setItem('token', jwt);
-        fetchUserData(jwt, '/');
+        fetchUserData(jwt, '/profile');
     }
 
     function logout(jwt) {
         // setIsAuth(false);
-        // console.log('Gebruiker is uitgelogd');
+        console.log('Gebruiker is uitgelogd');
         // navigate('/');
         localStorage.clear();
         toggleIsAuth({
@@ -56,7 +57,7 @@ function AuthContextProvider({children}) {
                         Authorization: `Bearer ${token}`,
                     },
                 });
-
+                console.log(result);
                 toggleIsAuth({
                     ...isAuth,
                     isAuth: true,
