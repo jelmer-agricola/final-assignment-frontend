@@ -1,6 +1,6 @@
 import React, {createContext, useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-import jwtDecode from "jwt-decode";
+// import jwtDecode from "jwt-decode";
 import axios from "axios";
 
 export const AuthContext = createContext({});
@@ -29,12 +29,12 @@ function AuthContextProvider({children}) {
         // dependecies lege array meegeven
     }, []);
 
-    function login(JWT) {
-        localStorage.setItem('token', JWT);
-        fetchUserData(JWT, '/');
+    function login(jwt) {
+        localStorage.setItem('token', jwt);
+        fetchUserData(jwt, '/');
     }
 
-    function logout(JWT) {
+    function logout(jwt) {
         // setIsAuth(false);
         // console.log('Gebruiker is uitgelogd');
         // navigate('/');
