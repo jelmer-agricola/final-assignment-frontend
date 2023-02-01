@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import {AuthContext} from '../../context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import './NavBar.css';
+import Button from "../Button/Button";
 
 function NavBar() {
     const {isAuth, logout, user} = useContext(AuthContext);
@@ -18,28 +19,28 @@ return (
 
         {isAuth ?
             <>
-                <span>{user.email}</span>
-                <button
+                <span>{user.username}</span>
+                <Button
+                    children="uitloggen"
                     type="button"
                     onClick={logout}
-                >
-                    Log uit
-                </button>
+                />
+
             </>
             :
             <div>
-                <button
+                <Button
+                    children="Log in"
                     type="button"
                     onClick={() => navigate('/login')}
-                >
-                    Log in
-                </button>
-                <button
+                />
+
+                <Button
+                    children= "Registreren"
                     type="button"
                     onClick={() => navigate('/signup')}
-                >
-                    Registreren
-                </button>
+                />
+
             </div>
         }
     </nav>

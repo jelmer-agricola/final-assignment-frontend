@@ -18,7 +18,7 @@ function AuthContextProvider({children}) {
         const token = localStorage.getItem('token');
 
         if (token) {
-            fetchUserData(token);
+            void fetchUserData(token);
         } else {
             toggleIsAuth({
                 isAuth: false,
@@ -32,7 +32,7 @@ function AuthContextProvider({children}) {
     function login(jwt) {
         console.log('gebruiker is ingelogd!')
         localStorage.setItem('token', jwt);
-        fetchUserData(jwt, '/profile');
+        void fetchUserData(jwt, '/profile');
     }
 
     function logout(jwt) {

@@ -24,7 +24,7 @@ function Login() {
             // log het  resultaat  in de console
 
             console.log(result.data);
-            // pass the JWT token in de login function van de context
+            // pass the JWT token in de login function van de context zonder accessToken werkt
             login(result.data.accessToken);
         } catch(e) {
             console.error(e);

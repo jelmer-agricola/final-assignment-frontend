@@ -40,7 +40,8 @@ function SignUp() {
     return(
         <>
             <h1>Registreren</h1>
-            <p>>Lorem ipsum dolor sit amet </p>
+            <p>Vul hieronder je gegevens in om je te registeren. Heb je al een account? Je kunt je <Link to="/login">hier</Link> inloggen.</p>
+
             <form onSubmit={handleSubmit}>
                 <label htmlFor="email-field">
                     Email adres:</label><br/>
@@ -75,7 +76,6 @@ function SignUp() {
                 </button>
 
             </form>
-            <p>Heb je al een account? Je kunt je <Link to="/login">hier</Link> inloggen.</p>
         </>
 
     );
