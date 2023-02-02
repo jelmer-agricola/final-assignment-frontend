@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
-import "./Searchbar.css";
+import "./SearchBar.css";
 //gegevens moeten op andere plek terugkomen
+//git issue
 
 function Searchbar() {
     const[query, setQuery] = useState( '');
