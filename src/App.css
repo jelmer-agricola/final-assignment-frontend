@@ -1,3 +1,76 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap');*/
+
+.App {
+    text-align: center;
+}
+
+:root {
+    /*colors*/
+    --primary: #0B5351;
+    --primary-light: #00A9A5 ;
+    --secondary:#4E8098;
+    --secondary-light: #90C2E7;
+    --tertiary: #092327;
+    --black: #292929;
+    --white: #FFFFFF;
+    /*--light-grey: HSL(210, 33%, 96%);*/
+
+    /*fonts*/
+    --header-fonts: 'Arial', sans-serif;
+
+    --body-fonts: '', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: lawngreen solid 1px;*/
+}
+
+body {
+    font-family: var(--body-fonts);
+    font-weight: 300;
+    color: var(--black);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--header-fonts);
+}
+
+a,
+a:link,
+a:visited {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* De buitenste container is altijd de volledige schermbreedte. Het is een flexbox container die zijn inhoud altijd netjes horizontaal centreert */
+.outer-content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/*De binnenste container is maximaal 1400px breed, zodat het er ook goed uitziet op brede schermen.
+Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer ruimte is.*/
+/*shrink en grow nog uitzoeken*/
+.inner-content-container {
+    flex-basis: 1400px;
+    /*flex-shrink: ;*/
+    /*flex-grow: ;*/
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer{
+    color: var(--white);
+    background-color: var(--black);
+    text-align: center;
+}
+
 /*.App {*/
 /*  text-align: center;*/
 /*}*/

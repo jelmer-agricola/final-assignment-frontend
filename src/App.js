@@ -9,22 +9,21 @@ import Home from "./pages/Home/Home";
 import NavBar from "./components/NavBar/NavBar";
 import SearchBar from "./components/SearchBar/SearchBar";
 import useFetch from "./hooks/useFetch";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
-    const { data } = useFetch(`https://frontend-educational-backend.herokuapp.com/api/test/all`)
-    console.log(data)
-    // async function fetchData(e) {
-    //     e.preventDefault();
-    //
-    //     try {
-    //         const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/test/all`)
-    //         console.log(result);
-    //
-    //     } catch (e) {
-    //         console.error(e);
-    //     }
-    // }
+
+
+    // succesvol post request
+    const { data, catchError, isLoading} = useFetch("https://frontend-educational-backend.herokuapp.com/api/auth/signup", 'POST', {}, {
+        username: "testtest2",
+        email: "henkiepenkie2fdf@novi.nl",
+        password: "123456",
+        role: ["user"],
+    });
+
+    console.log(data, isLoading, catchError);
 
 
     return (
@@ -34,7 +33,8 @@ function App() {
 
             {/*<button onClick={data}>api data</button>*/}
             {/*<button onClick={fetchData}>api data</button>*/}
-
+            {isLoading && <p>Loading...</p>}
+            {catchError && <p>{catchError}</p>}
 
             <div>
                 <Routes>
@@ -49,7 +49,7 @@ function App() {
 
                 </Routes>
             </div>
-
+<Footer/>
 
         </>
         // <>
