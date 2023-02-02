@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import "./Searchbar.css";
+//gegevens moeten op andere plek terugkomen
 
 function Searchbar() {
     const[query, setQuery] = useState( '');

@@ -3,7 +3,7 @@ import axios from "axios";
 
 // HERSCRIJVEN ZODAT DE PARAMS MEEGEGEVEN WORDEN EN EVT. MEER
 // MET IF STATMENT DUS ALS Het params object niet wordt meegegeven niet omschrijven.
-
+// ev.t zelfs post request toevoegen
 
 const useFetch = (dataUrl) => {
 // Set initial state variables
