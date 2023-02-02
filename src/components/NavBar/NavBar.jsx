@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {AuthContext} from '../../context/AuthContext';
-import { useNavigate, Link } from 'react-router-dom';
+import {useNavigate, Link} from 'react-router-dom';
 import './NavBar.css';
 import Button from "../Button/Button";
 
@@ -9,42 +9,54 @@ function NavBar() {
     const navigate = useNavigate();
 
 
-return (
-    <nav>
-        <Link to="/">
-            <h3>
-                Home
-            </h3>
-        </Link>
+    return (
+        <nav>
+            <Link to="/">
+                <h3>
+                    Home
+                </h3>
+            </Link>
 
-        {isAuth ?
-            <>
-                <span>{user.username}</span>
-                <Button
-                    children="uitloggen"
-                    type="button"
-                    onClick={logout}
-                />
+            {isAuth ?
+                <>
 
-            </>
-            :
-            <div>
-                <Button
-                    children="Log in"
-                    type="button"
-                    onClick={() => navigate('/login')}
-                />
+                    <span>{user.username}</span>
 
-                <Button
-                    children= "Registreren"
-                    type="button"
-                    onClick={() => navigate('/signup')}
-                />
+                    <ul>
+                        <li>
+                            <Link to="/watchlist"><h3> Watchlist</h3></Link></li>
+                        <li>
+                            <Link to="/add"><h3>Add</h3></Link>
+                        </li>
+                        <li>
+                            <Button
+                                children="uitloggen"
+                                type="button"
+                                onClick={logout}
+                            />
+                        </li>
+                    </ul>
 
-            </div>
-        }
-    </nav>
-);
+
+                </>
+                :
+                <div>
+                    <Button
+                        children="Log in"
+                        type="button"
+                        onClick={() => navigate('/login')}
+                    />
+
+                    <Button
+                        children="Registreren"
+                        type="button"
+                        onClick={() => navigate('/signup')}
+                    />
+
+                </div>
+            }
+        </nav>
+    );
 }
 
 export default NavBar;

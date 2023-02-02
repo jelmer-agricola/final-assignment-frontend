@@ -13,7 +13,7 @@ function Searchbar() {
     const [isLoading, setLoading] = useState(false);
 
 
-    // hier heb ik geen custom hook gebruikt. Omdat deze datafetch getriggerd wordt door een submit event en niet op pageload.
+    // hier heb ik geen custom hook useFetch gebruikt. Omdat deze datafetch getriggerd wordt door een submit event en niet op pageload.
     const handleSubmit = async (event) => {
         event.preventDefault();
          try{
