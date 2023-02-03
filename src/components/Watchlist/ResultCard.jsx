@@ -1,7 +1,10 @@
-import React from 'react';
-import Button from "../Button/Button";
+import React, {useContext} from "react";
+import {GlobalContext} from "../../context/GlobalState";
+
 
 const ResultCard = ({mediaTitle}) => {
+    const{addMediaTitleToWatchlist} = useContext(GlobalContext);
+
     return (
         <div className="result-card">
             <div className="poster-wrapper">
@@ -19,10 +22,14 @@ const ResultCard = ({mediaTitle}) => {
                     <h4 className="release-date">  {mediaTitle.release_date || mediaTitle.first_air_date}</h4>
                 </div>
                 <div className="controls">
-                    <Button
-                        children="Add to watchlist"
-                        type = "button"
-                    />
+
+                    <button
+                        className="btn"
+                        onClick={()=>addMediaTitleToWatchlist(mediaTitle)}
+                    >
+                        Add to Watched
+                    </button>
+
                 </div>
             </div>
 

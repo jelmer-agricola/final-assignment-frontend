@@ -1,6 +1,5 @@
 import React, {useContext} from "react";
 import axios from 'axios';
-
 import {Route, Routes} from "react-router-dom";
 import './App.css';
 import Login from "./pages/Login/Login";
@@ -12,7 +11,6 @@ import useFetch from "./hooks/useFetch";
 import Footer from "./components/Footer/Footer";
 import Watchlist from "./components/Watchlist/Watchlist";
 import AddPage from "./components/Watchlist/AddPage";
-
 
 
 function App() {
@@ -32,7 +30,7 @@ function App() {
 
     return (
         <>
-<NavBar/>
+        <NavBar/>
 {/*<SearchBar/>*/}
 
             {/*<button onClick={data}>api data</button>*/}
@@ -57,11 +55,7 @@ function App() {
                 </Routes>
             </div>
 <Footer/>
-
         </>
-        // <>
-
-        // </>
     );
 }
 
