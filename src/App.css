@@ -34,6 +34,18 @@
 /*    color: var(--black);*/
 /*}*/
 
+/*mag weer de filler poster */
+
+.filler-poster {
+    width: 75px;
+    height: 113px;
+    background-color: #dbdada;
+    border-radius: 5px;
+    margin-right: 15px;
+    display: block;
+    color: transparent;
+}
+
 body {
     margin: 0;
     padding: 0;

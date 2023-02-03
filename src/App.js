@@ -13,6 +13,8 @@ import Footer from "./components/Footer/Footer";
 import Watchlist from "./components/Watchlist/Watchlist";
 import AddPage from "./components/Watchlist/AddPage";
 
+
+
 function App() {
 
 
@@ -31,7 +33,7 @@ function App() {
     return (
         <>
 <NavBar/>
-<SearchBar/>
+{/*<SearchBar/>*/}
 
             {/*<button onClick={data}>api data</button>*/}
             {/*<button onClick={fetchData}>api data</button>*/}

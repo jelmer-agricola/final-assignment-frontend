@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
+import ResultCard from "./ResultCard";
 
 const AddPage = () => {
     const [query, setQuery] = useState('');
@@ -16,14 +17,13 @@ const AddPage = () => {
             );
             setResults(res.data.results);
             console.log(results);
+            setResults(res.data.results.slice(0, 10));
+
         } catch (error) {
+
             setResults([]);
         }
     };
-
-
-
-
 
     return (
         <div className="add-page">
@@ -37,8 +37,11 @@ const AddPage = () => {
                 </div>
                 {results.length > 0 && (
                     <ul className="results">
-                        {results.map((title) =>(
-                            <li>{title.title || title.name}</li>
+                        {results.map((mediaTitle) =>(
+                            <li key={mediaTitle.id}>{mediaTitle.title || mediaTitle.name}
+                            <ResultCard mediaTitle={mediaTitle}></ResultCard>
+                            </li>
+
                         ))}
 
                     </ul>
