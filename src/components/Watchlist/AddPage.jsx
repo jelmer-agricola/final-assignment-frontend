@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import axios from "axios";
 import ResultCard from "./ResultCard";
+import './Watchlist.css';
 
 const AddPage = () => {
     const [query, setQuery] = useState('');
@@ -27,10 +28,11 @@ const AddPage = () => {
 
     return (
         <div className="add-page">
-            <div>
+            <div className="container">
+                <div className="add-content">
                 <div className="input-wrapper">
                     <input type="text "
-                           placeholder="Search for"
+                           placeholder="Search for a Movie or Serie"
                            value={query}
                            onChange={onChange}
                     />
@@ -46,6 +48,7 @@ const AddPage = () => {
 
                     </ul>
                 )}
+                </div>
             </div>
         </div>
     );

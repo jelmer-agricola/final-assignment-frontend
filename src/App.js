@@ -11,6 +11,7 @@ import useFetch from "./hooks/useFetch";
 import Footer from "./components/Footer/Footer";
 import Watchlist from "./components/Watchlist/Watchlist";
 import AddPage from "./components/Watchlist/AddPage";
+import "./lib/font-awesome/css/all.min.css";
 
 
 function App() {

@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import {GlobalContext} from "../../context/GlobalState";
+import './Watchlist.css';
 
 
 const ResultCard = ({mediaTitle}) => {
@@ -28,7 +29,7 @@ const ResultCard = ({mediaTitle}) => {
                 <div className="controls">
 
                     <button
-                        className="btn-watchlist"
+                        className="btn"
                         disabled={watchlistDisabled}
                         onClick={()=>addMediaTitleToWatchlist(mediaTitle)}
                     >

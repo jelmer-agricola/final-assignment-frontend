@@ -1,25 +1,27 @@
 import React, {useContext} from 'react';
 import {GlobalContext} from "../../context/GlobalState";
 import MediaTitleCard from "./MediaTitleCard";
+import './Watchlist.css' ;
 
 const Watchlist = () => {
     const {watchlist} = useContext(GlobalContext);
     return (
-        <div className={"media-title-page"}>
-
-            {/* container*/}
-            <div>
-                {/*header*/}
-                <div>
-                    <h1 className="heading"> My Watchlist
-                    </h1>
-
+        <div className="media-title-page">
+            <div className="container">
+                <div className="header">
+                    <h1 className="heading"> My Watchlist</h1>
                 </div>
-                {}
-                {watchlist.length}
-                {watchlist.map((mediaTitle) => (
-                    <MediaTitleCard mediaTitle={mediaTitle}/>
-                ))}
+
+                {watchlist.length > 0 ? (
+                    <div className="media-title-grid">
+                    {watchlist.map((mediaTitle) => (
+                            <MediaTitleCard mediaTitle={mediaTitle} key={mediaTitle.id}/>
+                        ))}
+                               </div>
+                ) : (
+                    <h2 className= "no-media-titles">No movies or series in your watchlist add some!</h2>
+                )
+                }
             </div>
 
         </div>
