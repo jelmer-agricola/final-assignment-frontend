@@ -1,7 +1,9 @@
 import React, {createContext, useEffect, useReducer} from 'react';
 import AppReducer from "./AppReducer";
 // initial state
-const initialState = {watchlist: []};
+const initialState = {
+    watchlist: localStorage.getItem('watchlist') ? JSON.parse(localStorage.getItem('watchlist')) : []
+};
 
 //Create context
 export const GlobalContext = createContext(initialState);
@@ -9,6 +11,11 @@ export const GlobalContext = createContext(initialState);
 // Provider component
 export const GlobalProvider = (props) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
+
+    //triggered when state changes and anything is added to the watchlist
+    useEffect(()=>{
+        localStorage.setItem('watchlist', JSON.stringify(state.watchlist))
+    }, [state])
 
     // actions
     const addMediaTitleToWatchlist = mediaTitle => {
@@ -19,7 +26,7 @@ export const GlobalProvider = (props) => {
         <GlobalContext.Provider
             value={{
                 watchlist: state.watchlist,
-                addMediaTitleToWatchlist : addMediaTitleToWatchlist,
+                addMediaTitleToWatchlist: addMediaTitleToWatchlist,
             }}
         >
             {props.children}

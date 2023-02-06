@@ -3,7 +3,11 @@ import {GlobalContext} from "../../context/GlobalState";
 
 
 const ResultCard = ({mediaTitle}) => {
-    const{addMediaTitleToWatchlist} = useContext(GlobalContext);
+    const{addMediaTitleToWatchlist, watchlist} = useContext(GlobalContext);
+
+    let storedMediaTitle = watchlist.find(o =>  o.id === mediaTitle.id);
+    //if there is a movie or series found the watchlist will be disabled if not the title can be added to the watchlist in case it is false.
+    const watchlistDisabled = storedMediaTitle ? true : false;
 
     return (
         <div className="result-card">
@@ -24,10 +28,11 @@ const ResultCard = ({mediaTitle}) => {
                 <div className="controls">
 
                     <button
-                        className="btn"
+                        className="btn-watchlist"
+                        disabled={watchlistDisabled}
                         onClick={()=>addMediaTitleToWatchlist(mediaTitle)}
                     >
-                        Add to Watched
+                        Add to Watchlist
                     </button>
 
                 </div>

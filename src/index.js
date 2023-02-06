@@ -10,13 +10,15 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     // <React.StrictMode>
+    // Router component should wrap all components. Because you need to be able to use the routing all over the website.
         <Router>
+           <AuthContextProvider>
             <GlobalProvider>
-            <AuthContextProvider>
                 <App/>
 
-            </AuthContextProvider>
             </GlobalProvider>
+           </AuthContextProvider>
+
         </Router>
     // </React.StrictMode>
     ,
