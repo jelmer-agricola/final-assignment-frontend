@@ -14,6 +14,7 @@ export const GlobalProvider = (props) => {
 
     //triggered when state changes and anything is added to the watchlist
     useEffect(()=>{
+        console.log(state.watchlist)
         localStorage.setItem('watchlist', JSON.stringify(state.watchlist))
     }, [state])
 
