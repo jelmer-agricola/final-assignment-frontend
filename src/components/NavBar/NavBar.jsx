@@ -29,6 +29,9 @@ function NavBar() {
                             <Link to="/add"><h3>Add</h3></Link>
                         </li>
                         <li>
+                            <Link to="/favorites"><h3>Favorites</h3></Link>
+                        </li>
+                        <li>
                             <Button
                                 children="uitloggen"
                                 type="button"

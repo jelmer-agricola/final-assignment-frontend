@@ -66,6 +66,10 @@
     opacity: 1;
     cursor: pointer;
 }
+.btn:disabled{
+    background-color: var(--black);
+    cursor: pointer;
+}
 
 /*body {*/
 /*    font-family: var(--body-fonts);*/

@@ -66,11 +66,11 @@
 }
 
 /* Movie Page */
-.movie-page {
+.media-title-page {
     padding: 30px 0;
 }
 
-.movie-page .header {
+.media-title-page .header {
     display: flex;
     align-items: center;
     justify-content: space-between;

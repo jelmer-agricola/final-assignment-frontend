@@ -11,10 +11,10 @@ import useFetch from "./hooks/useFetch";
 import Footer from "./components/Footer/Footer";
 import Watchlist from "./components/Watchlist/Watchlist";
 import AddPage from "./components/Watchlist/AddPage";
+import Favorites from "./pages/Favorites/Favorites";
 
 
 function App() {
-
 
 
 //     succesvol post request
@@ -30,8 +30,8 @@ function App() {
 
     return (
         <>
-        <NavBar/>
-{/*<SearchBar/>*/}
+            <NavBar/>
+            {/*<SearchBar/>*/}
 
             {/*<button onClick={data}>api data</button>*/}
             {/*<button onClick={fetchData}>api data</button>*/}
@@ -41,20 +41,20 @@ function App() {
             <div>
                 <Routes>
 
-                    <Route path="/" element={<Home/>} />
+                    <Route path="/" element={<Home/>}/>
                     {/*dynamische routing voor verschillende dingen .5*/}
-                    <Route path="/watchlist" element={<Watchlist/>} />
-                    <Route path="/add" element={<AddPage/>} />
-
+                    <Route path="/watchlist" element={<Watchlist/>}/>
+                    <Route path="/add" element={<AddPage/>}/>
+                    <Route path="/favorites" element={<Favorites/>}/>
                     <Route path="/movie/:id"/>
                     <Route path="/"/>
                     {/*<Route exact path="/login" element=<Login toggleAuthenticated={toggleAuth}/>}/>*/}
-                    <Route path="/login" element={ <Login />} />
-                    <Route path="/signup" element={<SignUp />}/>
+                    <Route path="/login" element={<Login/>}/>
+                    <Route path="/signup" element={<SignUp/>}/>
 
                 </Routes>
             </div>
-<Footer/>
+            <Footer/>
         </>
     );
 }
