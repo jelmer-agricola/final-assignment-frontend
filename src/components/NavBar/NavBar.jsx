@@ -26,7 +26,7 @@ function NavBar() {
                         <li>
                             <Link to="/watchlist"><h3> Watchlist</h3></Link></li>
                         <li>
-                            <Link to="/add"><h3>Add</h3></Link>
+                            <Link to="/"><h3>Add</h3></Link>
                         </li>
                         <li>
                             <Link to="/favorites"><h3>Favorites</h3></Link>

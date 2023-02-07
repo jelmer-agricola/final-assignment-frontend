@@ -4,13 +4,13 @@ import {Route, Routes} from "react-router-dom";
 import './App.css';
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
-import Home from "./pages/Home/Home";
+import Home from "./pages/Home/Home"
 import NavBar from "./components/NavBar/NavBar";
 import SearchBar from "./components/SearchBar/SearchBar";
 import useFetch from "./hooks/useFetch";
 import Footer from "./components/Footer/Footer";
 import Watchlist from "./components/Watchlist/Watchlist";
-import AddPage from "./components/Watchlist/AddPage";
+
 import Favorites from "./pages/Favorites/Favorites";
 
 
@@ -44,10 +44,8 @@ function App() {
                     <Route path="/" element={<Home/>}/>
                     {/*dynamische routing voor verschillende dingen .5*/}
                     <Route path="/watchlist" element={<Watchlist/>}/>
-                    <Route path="/add" element={<AddPage/>}/>
                     <Route path="/favorites" element={<Favorites/>}/>
                     <Route path="/movie/:id"/>
-                    <Route path="/"/>
                     {/*<Route exact path="/login" element=<Login toggleAuthenticated={toggleAuth}/>}/>*/}
                     <Route path="/login" element={<Login/>}/>
                     <Route path="/signup" element={<SignUp/>}/>
