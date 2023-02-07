@@ -11,14 +11,13 @@ import useFetch from "./hooks/useFetch";
 import Footer from "./components/Footer/Footer";
 import Watchlist from "./components/Watchlist/Watchlist";
 import AddPage from "./components/Watchlist/AddPage";
-import "./lib/font-awesome/css/all.min.css";
 
 
 function App() {
 
 
 
-    // succesvol post request
+//     succesvol post request
 // const { data, catchError, isLoading} = useFetch("https://frontend-educational-backend.herokuapp.com/api/auth/signup", 'POST', {}, {
 //     username: "testtedsafst2",
 //     email: "henkiepenasdfkie2fdf@novi.nl",

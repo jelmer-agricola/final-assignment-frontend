@@ -3,6 +3,7 @@ import axios from "axios";
 import ResultCard from "./ResultCard";
 import './Watchlist.css';
 
+
 const AddPage = () => {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
@@ -27,6 +28,8 @@ const AddPage = () => {
     };
 
     return (
+        <>
+<h2>Don't know what to watch? Clikc here.. </h2>
         <div className="add-page">
             <div className="container">
                 <div className="add-content">
@@ -51,6 +54,7 @@ const AddPage = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 

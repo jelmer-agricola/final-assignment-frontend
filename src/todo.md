@@ -1,1 +1,2 @@
--verder bij 46:38
+-verder bij 1:03
+- isseu resolven met controlled buttons pseudo elements 
