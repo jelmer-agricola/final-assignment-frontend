@@ -10,7 +10,7 @@ const Favorites = () => {
         <div className="media-title-page">
             <div className="container">
                 <div className="header">
-                    <h1 className="heading"> Movies</h1>
+                    <h1 className="heading"> Your most favorite and dearest series</h1>
                 </div>
 
                 {favorites.length > 0 ? (

@@ -29,7 +29,7 @@ const AddPage = () => {
 
     return (
         <>
-<h2>Don't know what to watch? Clikc here.. </h2>
+<h2>Don't know what to watch and too lazy to use the searchbar click here.. </h2>
         <div className="add-page">
             <div className="container">
                 <div className="add-content">

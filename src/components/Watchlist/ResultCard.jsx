@@ -4,17 +4,27 @@ import './Watchlist.css';
 
 
 const ResultCard = ({mediaTitle}) => {
-    const{addMediaTitleToWatchlist, watchlist} = useContext(GlobalContext);
+    const {addMediaTitleToWatchlist, watchlist, favorites, addMediaTitleToFavorites} = useContext(GlobalContext);
 
-    let storedMediaTitle = watchlist.find(o =>  o.id === mediaTitle.id);
+    let storedMediaTitle = watchlist.find(o => o.id === mediaTitle.id);
     //if there is a movie or series found the watchlist will be disabled if not the title can be added to the watchlist in case it is false.
-    const watchlistDisabled = storedMediaTitle ? true : false;
+    let storedMediaTitleFavorites = favorites.find(o => o.id === mediaTitle.id);
+
+    const watchlistDisabled = storedMediaTitle
+        ? true
+        : storedMediaTitleFavorites
+            ? true
+            : false;
+
+    const favoritesDisabled =storedMediaTitleFavorites ? true : false;
+
 
     return (
         <div className="result-card">
             <div className="poster-wrapper">
                 {mediaTitle.poster_path ? (
-                    <img src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`} alt={`{title.title || title.name}`}
+                    <img src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
+                         alt={`{title.title || title.name}`}
                     />
                 ) : (
                     <div className="filler-poster">Filler Poster</div>
@@ -31,9 +41,16 @@ const ResultCard = ({mediaTitle}) => {
                     <button
                         className="btn"
                         disabled={watchlistDisabled}
-                        onClick={()=>addMediaTitleToWatchlist(mediaTitle)}
+                        onClick={() => addMediaTitleToWatchlist(mediaTitle)}
                     >
                         Add to Watchlist
+                    </button>
+                    <button
+                        className="btn"
+                        disabled={favoritesDisabled}
+                        onClick={() => addMediaTitleToFavorites(mediaTitle)}
+                    >
+                        Add to Favorites
                     </button>
 
                 </div>
@@ -42,7 +59,6 @@ const ResultCard = ({mediaTitle}) => {
         </div>
     );
 };
-
 
 
 export default ResultCard;

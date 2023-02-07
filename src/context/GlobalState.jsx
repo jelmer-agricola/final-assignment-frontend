@@ -28,7 +28,6 @@ export const GlobalProvider = (props) => {
     }, [state])
 
 
-
     // actions
     const addMediaTitleToWatchlist = mediaTitle => {
         dispatch({type: "ADD_TITLE_TO_WATCHLIST", payload: mediaTitle});
@@ -42,11 +41,24 @@ export const GlobalProvider = (props) => {
         dispatch({type: "ADD_TITLE_TO_FAVORITES", payload: mediaTitle});
     };
 
+    //Move from favorites to watchlist
+    const moveToWatchList = mediaTitle => {
+        dispatch({type: "MOVE_TO_WATCHLIST", payload: mediaTitle});
+    };
+
+    //delete form favorites
+    const removeFromFavorites = id => {
+        dispatch({type: "REMOVE_FROM_FAVORITES", payload: id})
+    }
+
+
     const contextData = {
         ...state,
         addMediaTitleToWatchlist: addMediaTitleToWatchlist,
         removeMediaTitleFromWatchList: removeMediaTitleFromWatchList,
         addMediaTitleToFavorites: addMediaTitleToFavorites,
+        moveToWatchList: moveToWatchList,
+        removeFromFavorites: removeFromFavorites,
     }
 
     return (

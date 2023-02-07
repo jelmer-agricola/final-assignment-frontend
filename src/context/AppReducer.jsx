@@ -23,8 +23,27 @@ export default (state, action) => {
                     (mediaTitle) => mediaTitle.id !== action.payload.id
                 ),
                 favorites: [action.payload, ...state.favorites],
-                jelmer: 'HALLO',
             };
+
+        case "MOVE_TO_WATCHLIST":
+            return{
+                ...state,
+                favorites: state.favorites.filter(
+                    (mediaTitle) => mediaTitle.id !== action.payload.id
+                ),
+                watchlist: [action.payload, ...state.watchlist]
+            }
+
+        case "REMOVE_FROM_FAVORITES":
+            return{
+                ...state,
+                favorites: state.favorites.filter(
+                    (mediaTitle => mediaTitle.id !== action.payload )
+
+                ),
+
+            }
+
 
         default:
             return state;

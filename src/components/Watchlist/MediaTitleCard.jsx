@@ -9,13 +9,13 @@ const MediaTitleCard = ({mediaTitle, type}) => {
         <article className="media-title-card">
             <div className="overlay"></div>
 
-            {mediaTitle.poster_path ? (
+            {/*{mediaTitle.poster_path ? (*/}
                 <img src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
                      alt={`{title.title || title.name}`}
                 />
-            ) : (
-                <div className="filler-poster">Filler Poster</div>
-            )}
+            {/*) : (*/}
+            {/*    <div className="filler-poster">Filler Poster</div>*/}
+            {/*)}*/}
 
             <MediaTitleControls type={type} mediaTitle={mediaTitle}/>
         </article>

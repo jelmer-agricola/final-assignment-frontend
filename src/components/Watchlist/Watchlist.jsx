@@ -15,7 +15,7 @@ const Watchlist = () => {
                 {watchlist.length > 0 ? (
                     <div className="media-title-grid">
                     {watchlist.map((mediaTitle) => (
-                            <MediaTitleCard mediaTitle={mediaTitle} key={mediaTitle.id}/>
+                            <MediaTitleCard mediaTitle={mediaTitle} key={mediaTitle.id} type="watchlist"/>
                         ))}
                                </div>
                 ) : (
