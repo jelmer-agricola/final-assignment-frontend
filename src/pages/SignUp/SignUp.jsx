@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
+import Button from '../../components/Button/Button';
 
 function SignUp() {
     const [username, setUsername] = useState('');
@@ -69,11 +70,11 @@ function SignUp() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 /><br/>
-                <button
+                <Button
+                    children="Registreren"
                     type="submit"
-                    className="registreren" >
-                    Registeren
-                </button>
+                />
+
 
             </form>
         </>

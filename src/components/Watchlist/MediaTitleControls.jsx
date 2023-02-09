@@ -40,6 +40,7 @@ const MediaTitleControls = ({type, mediaTitle}) => {
                         className="ctrl-btn"
                         onClick={() => moveToWatchList (mediaTitle)}
                     >
+
                         <FontAwesomeIcon icon={faEyeSlash}/>
                     </button>
                     <button

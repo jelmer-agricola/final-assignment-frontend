@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import { Link } from 'react-router-dom';
 import {AuthContext} from "../../context/AuthContext";
 import axios from 'axios';
-
+import Button from '../../components/Button/Button';
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -61,6 +61,9 @@ function Login() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 /><br/>
+                {/* Hier button nog omwisselen */}
+
+
                 <button type="submit" className="registreren"> Inloggen </button>
 
             </form>

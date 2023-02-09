@@ -40,6 +40,8 @@ function AuthContextProvider({children}) {
         console.log('Gebruiker is uitgelogd');
         // navigate('/');
         localStorage.clear();
+        // localStorage.token(); set token tot niks
+
         toggleIsAuth({
             isAuth: false,
             user: null,
@@ -48,54 +50,54 @@ function AuthContextProvider({children}) {
         console.log('Gebruiker is uitgelogd!');
         navigate('/');
     }
+
 //  Omdat deze fetchdata functie zowel in de login wordt gebruikt als voor de mounting cyclus wordt gebruikt is die hieronder pas gedeclareerd
-        async function fetchUserData(token, redirectUrl) {
-            try {
-                const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`, {
-                    headers: {
-                        "Content-Type": "application/json",
-                        Authorization: `Bearer ${token}`,
-                    },
-                });
-                console.log(result);
-                toggleIsAuth({
-                    ...isAuth,
-                    isAuth: true,
-                    user: {
-                        username: result.data.username,
-                        email: result.data.email,
-                        id: result.data.id,
-                    },
-                    status: 'done',
-                });
-                if (redirectUrl) {
-                    navigate(redirectUrl);
-                }
-            } catch (e) {
-                console.error(e);
-
-                toggleIsAuth({
-                    isAuth: false,
-                    user: null,
-                    status: 'done',
-
-                });
+    async function fetchUserData(token, redirectUrl) {
+        try {
+            const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+            console.log(result);
+            toggleIsAuth({
+                ...isAuth,
+                isAuth: true,
+                user: {
+                    username: result.data.username,
+                    email: result.data.email,
+                    id: result.data.id,
+                },
+                status: 'done',
+            });
+            if (redirectUrl) {
+                navigate(redirectUrl);
             }
-        }
+        } catch (e) {
+            console.error(e);
 
-        const contextData = {
-            isAuth: isAuth.isAuth,
-            user: isAuth.user,
-            login: login,
-            logout: logout,
-        };
-        return (
-            <AuthContext.Provider value={contextData}>
-                {isAuth.status === 'done' ? children : <p>Loading...</p>}
-            </AuthContext.Provider>
-        );
+            toggleIsAuth({
+                isAuth: false,
+                user: null,
+                status: 'done',
+
+            });
+        }
     }
 
+    const contextData = {
+        isAuth: isAuth.isAuth,
+        user: isAuth.user,
+        login: login,
+        logout: logout,
+    };
+    return (
+        <AuthContext.Provider value={contextData}>
+            {isAuth.status === 'done' ? children : <p>Loading...</p>}
+        </AuthContext.Provider>
+    );
+}
 
 
 export default AuthContextProvider;

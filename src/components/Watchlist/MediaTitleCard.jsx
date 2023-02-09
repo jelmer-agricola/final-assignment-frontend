@@ -8,7 +8,7 @@ const MediaTitleCard = ({mediaTitle, type}) => {
 
         <article className="media-title-card">
             <div className="overlay"></div>
-
+            {/* Hieronder uitgecomment of je wel of niet een filler poster wil */}
             {/*{mediaTitle.poster_path ? (*/}
                 <img src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
                      alt={`{title.title || title.name}`}

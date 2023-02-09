@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {GlobalContext} from "../../context/GlobalState";
 import './Watchlist.css';
-
+import Button from "../Button/Button";
 
 const ResultCard = ({mediaTitle}) => {
     const {addMediaTitleToWatchlist, watchlist, favorites, addMediaTitleToFavorites} = useContext(GlobalContext);
@@ -37,6 +37,18 @@ const ResultCard = ({mediaTitle}) => {
                     <h4 className="release-date">  {mediaTitle.release_date || mediaTitle.first_air_date}</h4>
                 </div>
                 <div className="controls">
+
+
+                    <Button
+                        children="Add to WatchlistAAAA"
+                        type="button"
+                        onClick={() => addMediaTitleToWatchlist(mediaTitle)}
+                        disabled={watchlistDisabled}
+                        className="btn"
+
+
+                    />
+
 
                     <button
                         className="btn"
