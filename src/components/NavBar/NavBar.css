@@ -12,10 +12,10 @@ nav a:visited,
 nav a:active {
     color: white;
 }
-/* kleuren pallet
-#092327
-#0B5351
-#00A9A5
-#4E8098
-#90C2E7
-*/
+header .nav-links {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}

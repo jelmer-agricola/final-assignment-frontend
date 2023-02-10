@@ -1,22 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import { BrowserRouter as Router } from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import AuthContextProvider from './context/AuthContext';
-
+import {GlobalProvider} from "./context/GlobalState";
 
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
+    // <React.StrictMode>
+    // Router component should wrap all components. Because you need to be able to use the routing all over the website.
         <Router>
-            <AuthContextProvider>
+           <AuthContextProvider>
+            <GlobalProvider>
                 <App/>
-            </AuthContextProvider>
+
+            </GlobalProvider>
+           </AuthContextProvider>
+
         </Router>
-    </React.StrictMode>,
+    // </React.StrictMode>
+    ,
 );
 
 // If you want to start measuring performance in your app, pass a function

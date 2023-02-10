@@ -1,53 +1,59 @@
 import React, {useContext} from "react";
+import axios from 'axios';
 import {Route, Routes} from "react-router-dom";
-import logo from './logo.svg';
 import './App.css';
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
-import Home from "./pages/Home/Home";
-import axios from 'axios';
+import Home from "./pages/Home/Home"
 import NavBar from "./components/NavBar/NavBar";
+import SearchBar from "./components/SearchBar/SearchBar";
+import useFetch from "./hooks/useFetch";
+import Footer from "./components/Footer/Footer";
+import Watchlist from "./components/Watchlist/Watchlist";
+
+import Favorites from "./pages/Favorites/Favorites";
+
 
 function App() {
 
 
-    async function fetchData(e) {
-        e.preventDefault();
+//     succesvol post request
+// const { data, catchError, isLoading} = useFetch("https://frontend-educational-backend.herokuapp.com/api/auth/signup", 'POST', {}, {
+//     username: "testtedsafst2",
+//     email: "henkiepenasdfkie2fdf@novi.nl",
+//     password: "123asdf456",
+//     role: ["user"],
+// });
 
-        try {
-            const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/test/all`)
-            console.log(result);
-
-        } catch (e) {
-            console.error(e);
-        }
-    }
+    // console.log(data, isLoading, catchError);
 
 
     return (
         <>
-<NavBar></NavBar>
-            <button onClick={fetchData}>api data</button>
+            <NavBar/>
+            {/*<SearchBar/>*/}
 
+            {/*<button onClick={data}>api data</button>*/}
+            {/*<button onClick={fetchData}>api data</button>*/}
+            {/*{isLoading && <p>Loading...</p>}*/}
+            {/*{catchError && <p>{catchError}</p>}*/}
 
             <div>
                 <Routes>
 
-                    <Route path="/" element={<Home/>} />
+                    <Route path="/" element={<Home/>}/>
                     {/*dynamische routing voor verschillende dingen .5*/}
+                    <Route path="/watchlist" element={<Watchlist/>}/>
+                    <Route path="/favorites" element={<Favorites/>}/>
                     <Route path="/movie/:id"/>
                     {/*<Route exact path="/login" element=<Login toggleAuthenticated={toggleAuth}/>}/>*/}
-                    <Route path="/login" element={ <Login />} />
-                    <Route path="/signup" element={<SignUp />}/>
+                    <Route path="/login" element={<Login/>}/>
+                    <Route path="/signup" element={<SignUp/>}/>
 
                 </Routes>
             </div>
-
-
+            <Footer/>
         </>
-        // <>
-
-        // </>
     );
 }
 

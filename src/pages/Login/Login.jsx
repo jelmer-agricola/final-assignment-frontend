@@ -1,13 +1,14 @@
 import React, {useContext, useState} from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {AuthContext} from "../../context/AuthContext";
 import axios from 'axios';
+import Button from '../../components/Button/Button';
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, toggleError] = useState(false);
-    const { login } = useContext(AuthContext);
+    const {login} = useContext(AuthContext);
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -19,22 +20,27 @@ function Login() {
             const result = await axios.post(`https://frontend-educational-backend.herokuapp.com/api/auth/signin`,
                 {
                     username: username,
-                    password: password,            });
+                    password: password,
+                });
             // log het  resultaat  in de console
 
             console.log(result.data);
-            // pass the JWT token to the login function of the context
-
-        } catch(e) {
+            // pass the JWT token in de login function van de context zonder accessToken werkt
+            login(result.data.accessToken);
+        } catch (e) {
             console.error(e);
             toggleError(true);
         }
+
+
     }
+
 //     console.log({
 //     email: email,
 //     wachtwoord: password,
 // });
 // login();
+
 
     return (
         <>
@@ -49,7 +55,7 @@ function Login() {
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}/> <br/>
                 <label htmlFor="password-field">
-                    Wachtwoord: </label><br />
+                    Wachtwoord: </label><br/>
                 <input
                     type="password"
                     id="password-field"
@@ -57,10 +63,18 @@ function Login() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 /><br/>
-                <button type="submit" className="registreren"> Inloggen </button>
 
-            </form>            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
-        </>    );
+                <Button
+                    type="submit"
+                    className="registeren"
+                    children="Inloggen"
+                />
+
+            </form>
+            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
+        </>
+    );
 
 }
+
 export default Login;

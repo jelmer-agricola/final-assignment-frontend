@@ -1,6 +1,7 @@
-import React, {useState, useNavigate} from "react";
-import {Link} from "react-router-dom";
+import React, {useState} from "react";
+import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
+import Button from '../../components/Button/Button';
 
 function SignUp() {
     const [username, setUsername] = useState('');
@@ -40,7 +41,8 @@ function SignUp() {
     return(
         <>
             <h1>Registreren</h1>
-            <p>>Lorem ipsum dolor sit amet </p>
+            <p>Vul hieronder je gegevens in om je te registeren. Heb je al een account? Je kunt je <Link to="/login">hier</Link> inloggen.</p>
+
             <form onSubmit={handleSubmit}>
                 <label htmlFor="email-field">
                     Email adres:</label><br/>
@@ -68,14 +70,13 @@ function SignUp() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 /><br/>
-                <button
+                <Button
+                    children="Registreren"
                     type="submit"
-                    className="registreren" >
-                    Registeren
-                </button>
+                />
+
 
             </form>
-            <p>Heb je al een account? Je kunt je <Link to="/login">hier</Link> inloggen.</p>
         </>
 
     );
