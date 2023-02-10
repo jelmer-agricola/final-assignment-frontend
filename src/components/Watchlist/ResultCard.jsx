@@ -39,31 +39,35 @@ const ResultCard = ({mediaTitle}) => {
                 <div className="controls">
 
 
+
                     <Button
-                        children="Add to WatchlistAAAA"
-                        type="button"
+                        children="Add to Watchlist"
                         onClick={() => addMediaTitleToWatchlist(mediaTitle)}
                         disabled={watchlistDisabled}
                         className="btn"
-
-
                     />
+                    {/*<button*/}
+                    {/*    className="btn"*/}
+                    {/*    disabled={watchlistDisabled}*/}
+                    {/*    onClick={() => addMediaTitleToWatchlist(mediaTitle)}*/}
+                    {/*>*/}
+                    {/*    Add to Watchlist*/}
+                    {/*</button>*/}
 
 
-                    <button
-                        className="btn"
-                        disabled={watchlistDisabled}
-                        onClick={() => addMediaTitleToWatchlist(mediaTitle)}
-                    >
-                        Add to Watchlist
-                    </button>
-                    <button
-                        className="btn"
-                        disabled={favoritesDisabled}
+                    <Button
+                        children="Add to Favorites"
                         onClick={() => addMediaTitleToFavorites(mediaTitle)}
-                    >
-                        Add to Favorites
-                    </button>
+                        disabled={favoritesDisabled}
+                        className="btn"
+                    />
+                    {/*<button*/}
+                    {/*    className="btn"*/}
+                    {/*    disabled={favoritesDisabled}*/}
+                    {/*    onClick={() => addMediaTitleToFavorites(mediaTitle)}*/}
+                    {/*>*/}
+                    {/*    Add to Favorites*/}
+                    {/*</button>*/}
 
                 </div>
             </div>

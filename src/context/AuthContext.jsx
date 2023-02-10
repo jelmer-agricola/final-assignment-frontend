@@ -39,8 +39,10 @@ function AuthContextProvider({children}) {
         // setIsAuth(false);
         console.log('Gebruiker is uitgelogd');
         // navigate('/');
-        localStorage.clear();
-        // localStorage.token(); set token tot niks
+        localStorage.removeItem('token');
+        // localStorage.token(); token tot niks
+        //
+
 
         toggleIsAuth({
             isAuth: false,

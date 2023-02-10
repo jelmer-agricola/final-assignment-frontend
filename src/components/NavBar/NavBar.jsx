@@ -34,7 +34,6 @@ function NavBar() {
                         <li>
                             <Button
                                 children="uitloggen"
-                                type="button"
                                 onClick={logout}
                             />
                         </li>
@@ -46,13 +45,11 @@ function NavBar() {
                 <div>
                     <Button
                         children="Log in"
-                        type="button"
                         onClick={() => navigate('/login')}
                     />
 
                     <Button
                         children="Registreren"
-                        type="button"
                         onClick={() => navigate('/signup')}
                     />
 
