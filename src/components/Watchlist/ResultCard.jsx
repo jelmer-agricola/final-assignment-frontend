@@ -44,7 +44,7 @@ const ResultCard = ({mediaTitle}) => {
                         children="Add to Watchlist"
                         onClick={() => addMediaTitleToWatchlist(mediaTitle)}
                         disabled={watchlistDisabled}
-                        className="btn"
+                        className="add-btn"
                     />
                     {/*<button*/}
                     {/*    className="btn"*/}
@@ -59,7 +59,7 @@ const ResultCard = ({mediaTitle}) => {
                         children="Add to Favorites"
                         onClick={() => addMediaTitleToFavorites(mediaTitle)}
                         disabled={favoritesDisabled}
-                        className="btn"
+                        className="add-btn"
                     />
                     {/*<button*/}
                     {/*    className="btn"*/}

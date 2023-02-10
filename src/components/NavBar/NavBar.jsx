@@ -24,9 +24,9 @@ function NavBar() {
 
                     <ul>
                         <li>
-                            <Link to="/watchlist"><h3> Watchlist</h3></Link></li>
+                            <Link to="/watchlist" ><h3 className= "nav-links"> Watchlist</h3></Link></li>
                         <li>
-                            <Link to="/"><h3>Add</h3></Link>
+                            <Link to="/"><h3>+ Add</h3></Link>
                         </li>
                         <li>
                             <Link to="/favorites"><h3>Favorites</h3></Link>
@@ -35,6 +35,7 @@ function NavBar() {
                             <Button
                                 children="uitloggen"
                                 onClick={logout}
+                                className="login-btn"
                             />
                         </li>
                     </ul>
@@ -46,11 +47,14 @@ function NavBar() {
                     <Button
                         children="Log in"
                         onClick={() => navigate('/login')}
+                        className="login-btn"
+
                     />
 
                     <Button
                         children="Registreren"
                         onClick={() => navigate('/signup')}
+                        className="login-btn"
                     />
 
                 </div>

@@ -65,7 +65,7 @@
     margin-right: 10px;
 }
 
-/* Movie Page */
+/* media-title Page */
 .media-title-page {
     padding: 30px 0;
 }
@@ -77,15 +77,15 @@
     margin-bottom: 30px;
 }
 
-.count-pill {
-    display: block;
-    background-color: var(--secondary);
-    padding: 5px 15px;
-    font-size: 1.125rem;
-    font-weight: 600;
-    border-radius: 999px;
-    color: var(--primary);
-}
+/*.count-pill {*/
+/*    display: block;*/
+/*    background-color: var(--secondary);*/
+/*    padding: 5px 15px;*/
+/*    font-size: 1.125rem;*/
+/*    font-weight: 600;*/
+/*    border-radius: 999px;*/
+/*    color: var(--primary);*/
+/*}*/
 
 
 .media-title-page . heading{
@@ -153,17 +153,3 @@
     opacity: 1;
 }
 
-.ctrl-btn {
-    color: #fefefe;
-    background-color: transparent;
-    border: none;
-    transition: all 0.3s ease;
-    font-size: 1.25rem;
-    padding: 5px;
-    margin: 0;
-}
-
-.ctrl-btn:hover {
-    color: var(--secondary);
-    cursor: pointer;
-}
