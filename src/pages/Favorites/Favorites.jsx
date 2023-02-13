@@ -7,8 +7,8 @@ const Favorites = () => {
     const { favorites } =  useContext(GlobalContext);
 
     return (
-        <div className="media-title-page">
-            <div className="container">
+        <section className="outer-content-container">
+            <div className="inner-content-container">
                 <div className="header">
                     <h1 className="heading"> Your most favorite and dearest series</h1>
                 </div>
@@ -23,7 +23,7 @@ const Favorites = () => {
                     <h2 className="no-movies">No movies in your list! Add some!</h2>
                 )}
             </div>
-        </div>
+        </section>
     // <h1>hoi</h1>
     );
 };

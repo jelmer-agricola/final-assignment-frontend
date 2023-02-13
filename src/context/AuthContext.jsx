@@ -40,6 +40,7 @@ function AuthContextProvider({children}) {
         console.log('Gebruiker is uitgelogd');
         // navigate('/');
         localStorage.removeItem('token');
+        // localStorage.clear(); Dit haalt local storage leeg na uitloggen
         // localStorage.token(); token tot niks
         //
 

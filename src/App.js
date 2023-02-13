@@ -5,7 +5,7 @@ import './App.css';
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Home from "./pages/Home/Home"
-import NavBar from "./components/NavBar/NavBar";
+import Header from "./components/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
 import useFetch from "./hooks/useFetch";
 import Footer from "./components/Footer/Footer";
@@ -30,7 +30,7 @@ function App() {
 
     return (
         <>
-            <NavBar/>
+            <Header/>
             {/*<SearchBar/>*/}
 
             {/*<button onClick={data}>api data</button>*/}

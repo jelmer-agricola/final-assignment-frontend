@@ -2,6 +2,8 @@ import React, {useContext} from "react";
 import {GlobalContext} from "../../context/GlobalState";
 import './Watchlist.css';
 import Button from "../Button/Button";
+// import { limitCharacters } from '../../helpers/LimitCharacters'
+
 
 const ResultCard = ({mediaTitle}) => {
     const {addMediaTitleToWatchlist, watchlist, favorites, addMediaTitleToFavorites} = useContext(GlobalContext);
@@ -19,6 +21,11 @@ const ResultCard = ({mediaTitle}) => {
     const favoritesDisabled =storedMediaTitleFavorites ? true : false;
 
 
+// minimaliseren aantal characters
+    // const mediaTitleOverview = mediaTitle.overview;
+    // const limitedOverview = limitCharacters(mediaTitleOverview);
+    // console.log(limitedOverview);
+
     return (
         <div className="result-card">
             <div className="poster-wrapper">
@@ -33,7 +40,8 @@ const ResultCard = ({mediaTitle}) => {
 
             <div className="info">
                 <div className="header">
-                    <div className="title">{mediaTitle.title}</div>
+                    {/*<div className="title">{mediaTitle.title}</div>*/}
+                    <div>{mediaTitle.overview}</div>
                     <h4 className="release-date">  {mediaTitle.release_date || mediaTitle.first_air_date}</h4>
                 </div>
                 <div className="controls">

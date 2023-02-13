@@ -1,7 +1,11 @@
+[ ]Homepagina?? ? --> lijsten met trending?
+[ ]  
 
 
 **Watchlist maken**
 - [x]   watchlist maken
+- [ ] zoekbalk net zo breed als tile eronder
+- [ ] info naast tile voor be\zoeker
 - [ ] Bij inloggen id van user koppelen aan favorieten en watchlist
 
 
@@ -28,7 +32,7 @@
 componenten
 - [x] footer 
 - [x] Button component 
-- [ ] button overal toevoegen
+- [x] button overal toevoegen
 
 
 - [x] add button bij aanklikken laten verandern

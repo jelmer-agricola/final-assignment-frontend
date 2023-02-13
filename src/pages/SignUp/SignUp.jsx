@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import Button from '../../components/Button/Button';
+import '../../App.css'
 
 function SignUp() {
     const [username, setUsername] = useState('');
@@ -39,7 +40,8 @@ function SignUp() {
     }
 
     return(
-        <>
+        <section className="outer-content-container">
+            <div className="inner-content-container">
             <h1>Registreren</h1>
             <p>Vul hieronder je gegevens in om je te registeren. Heb je al een account? Je kunt je <Link to="/login">hier</Link> inloggen.</p>
 
@@ -74,10 +76,9 @@ function SignUp() {
                     children="Registreren"
                     type="submit"
                 />
-
-
             </form>
-        </>
+            </div>
+        </section>
 
     );
 

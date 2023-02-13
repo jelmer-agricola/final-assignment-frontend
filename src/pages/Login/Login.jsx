@@ -3,6 +3,8 @@ import {Link} from 'react-router-dom';
 import {AuthContext} from "../../context/AuthContext";
 import axios from 'axios';
 import Button from '../../components/Button/Button';
+import '../../App.css';
+
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -43,7 +45,8 @@ function Login() {
 
 
     return (
-        <>
+        <section className="outer-content-container">
+            <div className="inner-content-container">
             <h1>Inloggen</h1>
             <p>Dit is Login Pagina</p>
             <form onSubmit={handleSubmit}>
@@ -72,7 +75,8 @@ function Login() {
 
             </form>
             <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
-        </>
+            </div>
+        </section>
     );
 
 }

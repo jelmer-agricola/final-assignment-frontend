@@ -80,6 +80,10 @@ h1,h2,h3,h4,h5,h6{
     font-family: var(--header-fonts);
 }
 
+h2{
+    text-align: center;
+}
+
 a,
 a:link,
 a:visited {
@@ -99,10 +103,10 @@ a:visited {
 Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer ruimte is.*/
 /*shrink en grow nog uitzoeken*/
 .inner-content-container {
-    flex-basis: 1400px;
+    flex-basis: 1200px;
     /*flex-shrink: ;*/
     /*flex-grow: ;*/
-    margin: 0 20px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;

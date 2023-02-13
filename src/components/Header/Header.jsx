@@ -1,16 +1,19 @@
 import React, {useContext} from "react";
 import {AuthContext} from '../../context/AuthContext';
 import {useNavigate, Link} from 'react-router-dom';
-import './NavBar.css';
+import './Header.css';
+import '../../App.css'
 import Button from "../Button/Button";
 
-function NavBar() {
+function Header() {
     const {isAuth, logout, user} = useContext(AuthContext);
     const navigate = useNavigate();
 
 
     return (
-        <nav>
+        <header className="outer-content-container">
+        <nav className="inner-content-container">
+            <div className= "navbar-items">
             <Link to="/">
                 <h3>
                     Home
@@ -20,16 +23,23 @@ function NavBar() {
             {isAuth ?
                 <>
 
-                    <span>{user.username}</span>
+                    <span className="username">{user.username}</span>
 
-                    <ul>
-                        <li>
-                            <Link to="/watchlist" ><h3 className= "nav-links"> Watchlist</h3></Link></li>
-                        <li>
-                            <Link to="/"><h3>+ Add</h3></Link>
+                    <ul className= "nav-list">
+
+                        <li className= "nav-links">
+                            <Link to="/watchlist" ><h3 > Watchlist</h3></Link></li>
+
+                        <li className= "nav-links">
+                            <Link to="/favorites"><h3 >Favorites</h3></Link>
                         </li>
-                        <li>
-                            <Link to="/favorites"><h3>Favorites</h3></Link>
+                        <li className= "nav-links">
+                            <Button
+                                children="ADD +"
+                                onClick= {() => navigate('/')}
+                                className="login-btn"
+                            />
+
                         </li>
                         <li>
                             <Button
@@ -38,12 +48,13 @@ function NavBar() {
                                 className="login-btn"
                             />
                         </li>
+
                     </ul>
 
 
                 </>
                 :
-                <div>
+                <div className="login-btns">
                     <Button
                         children="Log in"
                         onClick={() => navigate('/login')}
@@ -59,8 +70,10 @@ function NavBar() {
 
                 </div>
             }
+            </div>
         </nav>
+        </header>
     );
 }
 
-export default NavBar;
+export default Header;
