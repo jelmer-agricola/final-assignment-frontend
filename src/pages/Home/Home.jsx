@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom';
 import axios from "axios";
 import ResultCard from "../../components/Watchlist/ResultCard";
 import './Home.css'
-import '../../components/Watchlist/Watchlist.css'
+import '../../components/Watchlist/Watchlist.css';
+
 
 function Home() {
     const [query, setQuery] = useState('');
@@ -14,29 +15,45 @@ function Home() {
 
         setQuery(e.target.value);
 
+
+        const searchTimeout = setTimeout(async () => {
+
         //  met use fetch.  niet mogelijk, omdat de de gebruiker input invoerd.
         try {
-            const res = await axios.get(
+            const result = await axios.get(
                 `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
             );
-            setResults(res.data.results);
-            console.log(results);
-            setResults(res.data.results.slice(0, 10));
 
+//             const result = await axios.get(
+//                 `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}&media_type=movie,tv
+// `
+//             );
+
+
+            // setResults(res.data.results);
+
+            setResults(result.data.results.slice(0, 10));
         } catch (error) {
 
             setResults([]);
         }
+            clearTimeout(searchTimeout);
+
+        }, 1000);
+        console.log(results);
+
     };
+
 
     return (
         <main>
 
-            <h2 className="inner-content-container">Don't know what to watch and too lazy to use the searchbar click
-                here.. </h2>
+
 
             <section className="outer-content-container">
                 <div className="inner-content-container">
+                    <h2> Don't know what to watch and too lazy to use the searchbar <Link to="/mediatitlepicker" >click here</Link>  </h2>
+
                     <div >
                         <div className="add-content">
                             <div className="input-wrapper">
@@ -64,6 +81,6 @@ function Home() {
             </section>
         </main>
     );
-};
+}
 
 export default Home;

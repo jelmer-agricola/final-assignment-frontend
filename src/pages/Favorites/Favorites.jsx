@@ -7,6 +7,7 @@ const Favorites = () => {
     const { favorites } =  useContext(GlobalContext);
 
     return (
+        <div className="view-height">
         <section className="outer-content-container">
             <div className="inner-content-container">
                 <div className="header">
@@ -24,6 +25,7 @@ const Favorites = () => {
                 )}
             </div>
         </section>
+        </div>
     // <h1>hoi</h1>
     );
 };

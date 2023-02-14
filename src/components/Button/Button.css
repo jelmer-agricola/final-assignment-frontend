@@ -20,7 +20,7 @@
 }
 
 .add-btn:disabled {
-    color: #4E8098;
+    color: var(--white);
     background-color: var(--tertiary);
     cursor: pointer;
 }

@@ -1,9 +1,10 @@
 header {
     background-color: var(--primary);
+    min-height: 7vh;
 
 }
-span{
-    padding-left: 23vh;
+.username{
+    padding-left: 13vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,10 +12,9 @@ span{
 }
 
 nav {
-    color: white;
+    color: var(--white);
     display: flex;
     /*margin: 0 32px;*/
-    display: flex;
     flex-direction: row;
     justify-content: flex-end;
     border: black 1px solid;

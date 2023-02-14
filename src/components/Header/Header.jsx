@@ -12,66 +12,66 @@ function Header() {
 
     return (
         <header className="outer-content-container">
-        <nav className="inner-content-container">
-            <div className= "navbar-items">
-            <Link to="/">
-                <h3>
-                    Home
-                </h3>
-            </Link>
+            <nav className="inner-content-container">
+                <div className="navbar-items">
+                    <Link to="/" className="nav-links">
+                        <h3 >
+                            Home
+                        </h3>
+                    </Link>
 
-            {isAuth ?
-                <>
+                    {isAuth ?
+                        <>
 
-                    <span className="username">{user.username}</span>
+                            <span className="username">{user.username}</span>
 
-                    <ul className= "nav-list">
+                            <ul className="nav-list">
 
-                        <li className= "nav-links">
-                            <Link to="/watchlist" ><h3 > Watchlist</h3></Link></li>
+                                <li className="nav-links">
+                                    <Link to="/watchlist"><h3> Watchlist</h3></Link></li>
 
-                        <li className= "nav-links">
-                            <Link to="/favorites"><h3 >Favorites</h3></Link>
-                        </li>
-                        <li className= "nav-links">
+                                <li className="nav-links">
+                                    <Link to="/favorites"><h3>Favorites</h3></Link>
+                                </li>
+                                <li className="nav-links">
+                                    <Button
+                                        children="ADD +"
+                                        onClick={() => navigate('/')}
+                                        className="login-btn"
+                                    />
+
+                                </li>
+                                <li className="nav-links">
+                                    <Button
+                                        children="uitloggen"
+                                        onClick={logout}
+                                        className="login-btn"
+                                    />
+                                </li>
+
+                            </ul>
+
+
+                        </>
+                        :
+                        <div className="login-btns">
                             <Button
-                                children="ADD +"
-                                onClick= {() => navigate('/')}
+                                children="Log in"
+                                onClick={() => navigate('/login')}
+                                className="login-btn"
+
+                            />
+
+                            <Button
+                                children="Registreren"
+                                onClick={() => navigate('/signup')}
                                 className="login-btn"
                             />
 
-                        </li>
-                        <li>
-                            <Button
-                                children="uitloggen"
-                                onClick={logout}
-                                className="login-btn"
-                            />
-                        </li>
-
-                    </ul>
-
-
-                </>
-                :
-                <div className="login-btns">
-                    <Button
-                        children="Log in"
-                        onClick={() => navigate('/login')}
-                        className="login-btn"
-
-                    />
-
-                    <Button
-                        children="Registreren"
-                        onClick={() => navigate('/signup')}
-                        className="login-btn"
-                    />
-
+                        </div>
+                    }
                 </div>
-            }
-            </div>
-        </nav>
+            </nav>
         </header>
     );
 }

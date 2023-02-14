@@ -6,6 +6,9 @@ import './Watchlist.css' ;
 const Watchlist = () => {
     const {watchlist} = useContext(GlobalContext);
     return (
+
+
+        <div className="view-height">
         <section className="outer-content-container">
             <div className="inner-content-container">
                 <div className="header">
@@ -25,6 +28,7 @@ const Watchlist = () => {
             </div>
 
         </section>
+</div>
 //         <div>
 //             <h1>Watchlist page</h1>
 //             {watchlist.map((mediaTitle) =>(
