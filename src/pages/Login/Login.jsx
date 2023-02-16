@@ -45,6 +45,7 @@ function Login() {
 
 
     return (
+        <main>
         <section className="outer-content-container">
             <div className="inner-content-container">
             <h1>Inloggen</h1>
@@ -77,6 +78,7 @@ function Login() {
             <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
             </div>
         </section>
+        </main>
     );
 
 }

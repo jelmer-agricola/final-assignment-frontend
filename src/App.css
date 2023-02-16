@@ -4,6 +4,9 @@
     text-align: center;
 }
 
+
+
+
 :root {
     /*colors*/
     /*--primary: #0B5351;*/
@@ -40,6 +43,14 @@
     /*--secondary: hsla(353, 81%, 51%, 1);*/
     /*--secondary-light: hsla(71, 58%, 64%, 1);*/
 
+
+    /*--primary: hsla(145, 97%, 46%, 1);*/
+    /*--primary-light: hsla(87, 100%, 49%, 1);*/
+    /*--secondary: hsla(329, 100%, 43%, 1);*/
+    /*--tertiary:  hsla(45, 100%, 48%, 1);*/
+    /*--secondary-light: hsla(206, 100%, 49%, 1);*/
+
+
     /*--tertiary: hsla(0, 0%, 0%, 1);*/
     /*--primary: hsla(200, 15%, 43%, 1);*/
     /*--primary-light: hsla(53, 100%, 74%, 1);*/
@@ -47,28 +58,32 @@
     /*--secondary-light: hsla(151, 28%, 63%, 1);*/
 
     /*fonts*/
-    --header-fonts: 'Arial', sans-serif;
-    --body-fonts: '', sans-serif;
+    --header-fonts: 'Arial', 'Helvetica Neue', sans-serif;
+    --body-fonts: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    sans-serif;
+}
+
+::placeholder {
+    color: var(--white);
+    opacity: 0.5;
 }
 
 /* hier nog aan toe voegen  . container */
-@media (min-width: 768px) {
-    .container {
-        width: 750px;
-    }
-}
 
-@media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
-}
 
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
-}
+/*@media (min-width: 992px) {*/
+/*    .inner-content-container {*/
+/*        width: 970px;*/
+/*    }*/
+/*}*/
+
+/*@media (min-width: 1200px) {*/
+/*    .inner-content-container {*/
+/*        width: 1170px;*/
+/*    }*/
+/*}*/
+
 *,
 *:before,
 *:after {
@@ -79,10 +94,11 @@
 }
 
 
-main{
+main {
     /*background-color: #f1faee;*/
     min-height: 88vh;
 }
+
 /*body {*/
 /*    font-family: var(--body-fonts);*/
 /*    font-weight: 300;*/
@@ -94,27 +110,25 @@ main{
 .filler-poster {
     width: 75px;
     height: 113px;
-    background-color: #dbdada;
+    background-color: var(--white);
     border-radius: 5px;
     margin-right: 15px;
     display: block;
     color: transparent;
+
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--body-fonts);
+    /*-webkit-font-smoothing: antialiased;*/
+    /*-moz-osx-font-smoothing: grayscale;*/
 }
-h1,h2,h3,h4,h5,h6{
+
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-fonts);
 }
 
-h2{
+h2 {
     text-align: center;
 }
 
@@ -138,8 +152,8 @@ Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer
 /*shrink en grow nog uitzoeken*/
 .inner-content-container {
     flex-basis: 1200px;
-    /*flex-shrink: ;*/
-    /*flex-grow: ;*/
+    flex-shrink: 1;
+    flex-grow: 0;
     padding: 0 20px;
     display: flex;
     flex-direction: column;
@@ -147,6 +161,70 @@ Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer
 }
 
 
+@media screen and (max-device-width: 360px) {
+.username{
+    /*color: var(--primary);*/
+
+}
+}
+
+@media screen and  (max-width: 900px) {
+    .username{
+        color: var(--primary);
+
+    }
+}
+
+
+/* SCROLLBAR*/
+/* width */
+/*::-webkit-scrollbar {*/
+/*    width: 100px;*/
+/*}*/
+
+/*!* Track *!*/
+/*::-webkit-scrollbar-track {*/
+/*    background: #f1f1f1;*/
+/*}*/
+
+/*!* Handle *!*/
+/*::-webkit-scrollbar-thumb {*/
+/*    background: #888;*/
+/*}*/
+
+/*!* Handle on hover *!*/
+/*::-webkit-scrollbar-thumb:hover {*/
+/*    background: #555;*/
+/*}*/
+
+
+
+/*@media screen and  (min-height: 1400px) {*/
+
+/*!* SCROLLBAR*!*/
+/*!* width *!*/
+/*::-webkit-scrollbar {*/
+/*    width: 10px;*/
+/*}*/
+
+/*!* Track *!*/
+/*::-webkit-scrollbar-track {*/
+/*    background: #f1f1f1;*/
+/*}*/
+
+/*!* Handle *!*/
+/*::-webkit-scrollbar-thumb {*/
+/*    background: #888;*/
+/*}*/
+
+/*!* Handle on hover *!*/
+/*::-webkit-scrollbar-thumb:hover {*/
+/*    background: #555;*/
+/*}*/
+
+
+
+/*}*/
 
 /*.App {*/
 /*  text-align: center;*/

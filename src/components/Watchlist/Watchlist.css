@@ -37,9 +37,8 @@
 
 .result-card .poster-wrapper img,
 .filler-poster {
-    width: 75px;
-    height: 113px;
-    background-color: var(--white);
+    width: 125px;
+    background-color: var(--light-grey);
     border-radius: 5px;
     margin-right: 15px;
     display: block;
@@ -101,7 +100,7 @@
 /*}*/
 
 
-.media-title-page . heading{
+.media-title-page .heading{
     color: var(--primary-light);
     margin: 0;
 }
@@ -127,24 +126,31 @@
     display: block;
 }
 
-.media-title img {
+.media-title-img {
     width: 100%;
     display: block;
+    border-radius: 5px;
+    border: 1px solid lawngreen;
+
+
 }
 
-/*.media-title-card .overlay {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    border: 2px solid transparent;*/
-/*    transition: all 0.3s ease;*/
-/*}*/
+.media-title-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    transition: all 0.1s ease;
 
-/*.media-title-card:hover .overlay {*/
-/*    border: 3px solid var(--secondary);*/
-/*}*/
+}
+
+.media-title-card:hover .overlay {
+    width: 201px;
+    border: 4px solid var(--secondary);
+
+}
 
 
 

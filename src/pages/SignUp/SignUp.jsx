@@ -40,6 +40,7 @@ function SignUp() {
     }
 
     return(
+        <main>
         <section className="outer-content-container">
             <div className="inner-content-container">
             <h1>Registreren</h1>
@@ -79,7 +80,7 @@ function SignUp() {
             </form>
             </div>
         </section>
-
+        </main>
     );
 
 }

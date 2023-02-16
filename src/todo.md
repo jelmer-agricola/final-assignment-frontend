@@ -23,6 +23,7 @@
 **CSS**
 - [ ] opmaak van watchlist meer als lijst
 - []  Overlay van cards aanpassen werken nu niet goed +
+- [] icon voor zoekbalk
 
 **Formulier stemming**
 -[x] Stemming aan genre gekoppeld

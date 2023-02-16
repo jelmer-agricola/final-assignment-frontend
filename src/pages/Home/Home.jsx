@@ -23,6 +23,7 @@ function Home() {
             const result = await axios.get(
                 `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
             );
+// poging om oop person te zoeken te excluden hieronder
 
 //             const result = await axios.get(
 //                 `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}&media_type=movie,tv
