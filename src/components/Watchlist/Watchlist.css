@@ -146,7 +146,7 @@
 }
 
 .media-title-card:hover .overlay {
-    width: 201px;
+    width: 100%;
     border: 4px solid var(--secondary);
 
 }
