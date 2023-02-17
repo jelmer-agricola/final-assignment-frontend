@@ -12,6 +12,7 @@ import Footer from "./components/Footer/Footer";
 import Watchlist from "./components/Watchlist/Watchlist";
 
 import Favorites from "./pages/Favorites/Favorites";
+import GenreForm from "./pages/GenreForm/GenreForm";
 
 
 function App() {
@@ -46,6 +47,8 @@ function App() {
                     <Route path="/watchlist" element={<Watchlist/>}/>
                     <Route path="/favorites" element={<Favorites/>}/>
                     <Route path="/movie/:id"/>
+                    <Route path="genreform" element={<GenreForm/>} />
+
                     {/*<Route exact path="/login" element=<Login toggleAuthenticated={toggleAuth}/>}/>*/}
                     <Route path="/login" element={<Login/>}/>
                     <Route path="/signup" element={<SignUp/>}/>

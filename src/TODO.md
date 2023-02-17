@@ -4,8 +4,9 @@
 
 **Watchlist maken**
 - [x]   watchlist maken
-- [ ] zoekbalk net zo breed als tile eronder
-- [ ] info naast tile voor be\zoeker
+- [x] zoekbalk net zo breed als tile eronder
+- [x] info naast tile voor bezoeker
+- [] info naast tile voor bezoeker meer info geven 
 - [ ] Bij inloggen id van user koppelen aan favorieten en watchlist
 
 
@@ -21,8 +22,8 @@
 - [x] In app.js plaastend
 
 **CSS**
-- [ ] opmaak van watchlist meer als lijst
-- []  Overlay van cards aanpassen werken nu niet goed +
+- [] opmaak van watchlist meer als lijst
+- [x]  Overlay van cards aanpassen werken nu niet goed +
 - [] icon voor zoekbalk
 
 **Formulier stemming**
