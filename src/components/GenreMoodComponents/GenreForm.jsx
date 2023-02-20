@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import ResultCard from '../../components/Watchlist/ResultCard';
-import '../../components/Watchlist/Watchlist.css';
+import ResultCard from '../Watchlist/ResultCard';
+import '../Watchlist/Watchlist.css';
 
 function GenreForm() {
     const [genre, setGenre] = useState('');
@@ -35,10 +35,13 @@ function GenreForm() {
         }
     };
 
+
+
     const handleGenreChange = (event) => {
         setGenre(event.target.value);
         setResults([]);
     };
+    console.log(results);
 
     return (
         <div className="view-height">
@@ -75,6 +78,9 @@ function GenreForm() {
                             </select>
                         </label>
                         <button type="submit">Search</button>
+                        {/*<button onClick={handleCurious}>Curious</button>*/}
+
+
                     </form>
                     {isLoading ? <p>Loading...</p> : null}
                     {error ? <p>{error}</p> : null}
@@ -90,8 +96,10 @@ function GenreForm() {
                             ))}
                         </ul>
                     ) : null}
+
                 </section>
             </div>
+
         </div>
     );
 }

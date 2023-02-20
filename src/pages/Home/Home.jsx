@@ -4,7 +4,6 @@ import axios from "axios";
 import ResultCard from "../../components/Watchlist/ResultCard";
 import './Home.css'
 import '../../components/Watchlist/Watchlist.css';
-
 // loading etc hier toevoegen
 
 function Home() {
@@ -54,7 +53,9 @@ function Home() {
 
             <section className="outer-content-container">
                 <div className="inner-content-container">
-                    <h2> Don't know what to watch and too lazy to use the searchbar <Link to="/genreform" >click here</Link>  </h2>
+                    <h2> Don't know what to watch and too lazy to use the searchbar <Link to="/genre-page" >click here</Link>  </h2>
+
+
 
                     <div >
                         <div className="add-content">

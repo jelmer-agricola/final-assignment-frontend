@@ -6,13 +6,11 @@ import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Home from "./pages/Home/Home"
 import Header from "./components/Header/Header";
-import SearchBar from "./components/SearchBar/SearchBar";
 import useFetch from "./hooks/useFetch";
 import Footer from "./components/Footer/Footer";
-import Watchlist from "./components/Watchlist/Watchlist";
-
+import Watchlist from "./pages/Watchlist/Watchlist";
 import Favorites from "./pages/Favorites/Favorites";
-import GenreForm from "./pages/GenreForm/GenreForm";
+import GenrePage from "./pages/GenrePage/GenrePage";
 
 
 function App() {
@@ -47,7 +45,7 @@ function App() {
                     <Route path="/watchlist" element={<Watchlist/>}/>
                     <Route path="/favorites" element={<Favorites/>}/>
                     <Route path="/movie/:id"/>
-                    <Route path="genreform" element={<GenreForm/>} />
+                    <Route path="genre-page" element={<GenrePage/>} />
 
                     {/*<Route exact path="/login" element=<Login toggleAuthenticated={toggleAuth}/>}/>*/}
                     <Route path="/login" element={<Login/>}/>

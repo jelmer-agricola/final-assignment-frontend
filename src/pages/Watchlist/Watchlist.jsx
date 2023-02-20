@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {GlobalContext} from "../../context/GlobalState";
-import MediaTitleCard from "./MediaTitleCard";
-import './Watchlist.css' ;
+import MediaTitleCard from "../../components/Watchlist/MediaTitleCard";
+import '../../components/Watchlist/Watchlist.css' ;
 
 const Watchlist = () => {
     const {watchlist} = useContext(GlobalContext);
