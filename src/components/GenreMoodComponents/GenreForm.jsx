@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
 import ResultCard from '../Watchlist/ResultCard';
 import '../Watchlist/Watchlist.css';
@@ -36,7 +36,6 @@ function GenreForm() {
     };
 
 
-
     const handleGenreChange = (event) => {
         setGenre(event.target.value);
         setResults([]);
@@ -44,63 +43,60 @@ function GenreForm() {
     console.log(results);
 
     return (
-        <div className="view-height">
-            <div className="outer-content-container">
-                <section className="inner-content-container">
-                    <form
-                        onSubmit={(event) => {
-                            event.preventDefault();
-                            handleSearch();
-                        }}
-                    >
-                        <label>
-                            Genre:
-                            <select value={genre} onChange={handleGenreChange}>
-                                <option value="">All</option>
-                                <option value="28">Action</option>
-                                <option value="12">Adventure</option>
-                                <option value="16">Animation</option>
-                                <option value="35">Comedy</option>
-                                <option value="80">Crime</option>
-                                <option value="99">Documentary</option>
-                                <option value="18">Drama</option>
-                                <option value="10751">Family</option>
-                                <option value="14">Fantasy</option>
-                                <option value="36">History</option>
-                                <option value="27">Horror</option>
-                                <option value="10402">Music</option>
-                                <option value="9648">Mystery</option>
-                                <option value="10749">Romance</option>
-                                <option value="878">Science Fiction</option>
-                                <option value="53">Thriller</option>
-                                <option value="10752">War</option>
-                                <option value="37">Western</option>
-                            </select>
-                        </label>
-                        <button type="submit">Search</button>
-                        {/*<button onClick={handleCurious}>Curious</button>*/}
+        <section>
+            <form
+                onSubmit={(event) => {
+                    event.preventDefault();
+                    handleSearch();
+                }}
+            >
+                <label>
+                    Genre:
+                    <select value={genre} onChange={handleGenreChange}>
+                        <option value="">All</option>
+                        <option value="28">Action</option>
+                        <option value="12">Adventure</option>
+                        <option value="16">Animation</option>
+                        <option value="35">Comedy</option>
+                        <option value="80">Crime</option>
+                        <option value="99">Documentary</option>
+                        <option value="18">Drama</option>
+                        <option value="10751">Family</option>
+                        <option value="14">Fantasy</option>
+                        <option value="36">History</option>
+                        <option value="27">Horror</option>
+                        <option value="10402">Music</option>
+                        <option value="9648">Mystery</option>
+                        <option value="10749">Romance</option>
+                        <option value="878">Science Fiction</option>
+                        <option value="53">Thriller</option>
+                        <option value="10752">War</option>
+                        <option value="37">Western</option>
+                    </select>
+                </label>
+                <button type="submit">Search</button>
+                {/*<button onClick={handleCurious}>Curious</button>*/}
 
 
-                    </form>
-                    {isLoading ? <p>Loading...</p> : null}
-                    {error ? <p>{error}</p> : null}
-                    {results.length > 0 ? (
-                        <ul>
-                            {results.map((mediaTitle) => (
-                                <li key={mediaTitle.id}>
-                                    <p className="title">
-                                        {mediaTitle.title || mediaTitle.name}
-                                    </p>
-                                    <ResultCard mediaTitle={mediaTitle}></ResultCard>
-                                </li>
-                            ))}
-                        </ul>
-                    ) : null}
+            </form>
+            {isLoading ? <p>Loading...</p> : null}
+            {error ? <p>{error}</p> : null}
+            {results.length > 0 ? (
+                <ul>
+                    {results.map((mediaTitle) => (
+                        <li key={mediaTitle.id}>
+                            <p className="title">
+                                {mediaTitle.title || mediaTitle.name}
+                            </p>
+                            <ResultCard mediaTitle={mediaTitle}></ResultCard>
+                        </li>
+                    ))}
+                </ul>
+            ) : null}
 
-                </section>
-            </div>
+        </section>
 
-        </div>
+
     );
 }
 

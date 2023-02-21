@@ -90,7 +90,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*border: lawngreen solid 1px;*/
+    border: lawngreen solid 1px;
 }
 
 
@@ -107,16 +107,7 @@ main {
 
 /*mag weer de filler poster */
 
-.filler-poster {
-    width: 75px;
-    height: 113px;
-    background-color: var(--white);
-    border-radius: 5px;
-    margin-right: 15px;
-    display: block;
-    color: transparent;
 
-}
 
 body {
     font-family: var(--body-fonts);
@@ -145,6 +136,8 @@ a:visited {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    border: blue solid 1px;
+
 }
 
 /*De binnenste container is maximaal 1400px breed, zodat het er ook goed uitziet op brede schermen.
@@ -158,8 +151,20 @@ Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer
     display: flex;
     flex-direction: column;
     justify-content: center;
+border: red solid 1px;
 }
 
+
+.filler-poster {
+    width: 75px;
+    height: 113px;
+    background-color: var(--white);
+    border-radius: 5px;
+    margin-right: 15px;
+    display: block;
+    color: transparent;
+
+}
 
 @media screen and (max-device-width: 360px) {
 .username{
@@ -174,28 +179,6 @@ Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer
 
     }
 }
-
-
-/* SCROLLBAR*/
-/* width */
-/*::-webkit-scrollbar {*/
-/*    width: 100px;*/
-/*}*/
-
-/*!* Track *!*/
-/*::-webkit-scrollbar-track {*/
-/*    background: #f1f1f1;*/
-/*}*/
-
-/*!* Handle *!*/
-/*::-webkit-scrollbar-thumb {*/
-/*    background: #888;*/
-/*}*/
-
-/*!* Handle on hover *!*/
-/*::-webkit-scrollbar-thumb:hover {*/
-/*    background: #555;*/
-/*}*/
 
 
 
@@ -241,20 +224,7 @@ Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer
 /*  }*/
 /*}*/
 
-/*.App-header {*/
-/*  background-color: #282c34;*/
-/*  min-height: 100vh;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  align-items: center;*/
-/*  justify-content: center;*/
-/*  font-size: calc(10px + 2vmin);*/
-/*  color: white;*/
-/*}*/
 
-/*.App-link {*/
-/*  color: #61dafb;*/
-/*}*/
 
 /*@keyframes App-logo-spin {*/
 /*  from {*/

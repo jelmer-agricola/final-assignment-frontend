@@ -11,7 +11,11 @@ import Footer from "./components/Footer/Footer";
 import Watchlist from "./pages/Watchlist/Watchlist";
 import Favorites from "./pages/Favorites/Favorites";
 import GenrePage from "./pages/GenrePage/GenrePage";
-
+import Happy from "./pages/GenrePage/Happy"
+import InLove from "./pages/GenrePage/InLove";
+import Angry from "./pages/GenrePage/Angry";
+import Curious from "./pages/GenrePage/Curious";
+import Sad from "./pages/GenrePage/Sad";
 
 function App() {
 
@@ -44,8 +48,16 @@ function App() {
                     {/*dynamische routing voor verschillende dingen .5*/}
                     <Route path="/watchlist" element={<Watchlist/>}/>
                     <Route path="/favorites" element={<Favorites/>}/>
+
+                    <Route path="/happy" element={<Happy/>}/>
+                    <Route path="/love" element={<InLove/>}/>
+                    <Route path="/angry" element={<Angry/>}/>
+                    <Route path="/curious" element={<Curious/>}/>
+                    <Route path="/sad" element={<Sad/>}/>
+
+
                     <Route path="/movie/:id"/>
-                    <Route path="genre-page" element={<GenrePage/>} />
+                    <Route path="genre" element={<GenrePage/>} />
 
                     {/*<Route exact path="/login" element=<Login toggleAuthenticated={toggleAuth}/>}/>*/}
                     <Route path="/login" element={<Login/>}/>

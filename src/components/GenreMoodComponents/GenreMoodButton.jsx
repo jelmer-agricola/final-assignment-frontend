@@ -1,15 +1,17 @@
-
 // import PropTypes from 'prop-types'; is used in the component to define the expected data types of the props that are passed into the component. By using PropTypes, it allows for better error checking and debugging in the development process.
 //     It is recommended to include PropTypes in components to ensure that the correct data is passed in, which can help prevent bugs and make debugging easier.
 //     Technically, you can leave out PropTypes and your code will still work, but it's generally considered a best practice to use them for larger or more complex projects.
 // import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
+import './GenreMoodButton.css'
+import ResultCard from "../Watchlist/ResultCard";
 
-const GenreMoodButton = ({ children, primaryGenre, secondaryGenre, tertiaryGenre, quaternaryGenre, quinaryGenre }) => {
+const GenreMoodButton = ({children, primaryGenre, secondaryGenre, tertiaryGenre, quaternaryGenre, quinaryGenre }) => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
     const [results, setResults] = useState([]);
+
 
     const handleButtonClick = async () => {
         setIsLoading(true);
@@ -36,20 +38,33 @@ const GenreMoodButton = ({ children, primaryGenre, secondaryGenre, tertiaryGenre
             setIsLoading(false);
         }
     };
+
     return (
         <div>
-            <button onClick={handleButtonClick}>     {children}</button>
+                <button
+                    // onRedirect ={handleButtonClick()}
+                    onClick={handleButtonClick}
+                    className="genre-btn"
+                >
+                    {children}</button>
+
             {isLoading && <div>Loading...</div>}
             {error && <div>{error}</div>}
             {results.length > 0 && (
                 <div>
                     <h2>Results:</h2>
                     <ul>
-                        {results.map((result) => (
-                            <li key={result.id}>{result.title}</li>
+                        {results.map((mediaTitle) => (
+                            <li key={mediaTitle.id}>
+                                <p className="title">
+                                    {mediaTitle.title || mediaTitle.name}
+                                </p>
+                                <ResultCard mediaTitle={mediaTitle}></ResultCard>
+                            </li>
                         ))}
                     </ul>
                 </div>
+
 
             )}
 
