@@ -53,8 +53,7 @@ function Home() {
 
             <section className="outer-content-container">
                 <div className="inner-content-container">
-                    <h2> Don't know what to watch and too lazy to use the searchbar <Link to="/genre">click
-                        here</Link></h2>
+                    <h2> Don't know what to watch and too lazy to use the searchbar <Link to="/genre">click here</Link></h2>
 
 
                     <div>

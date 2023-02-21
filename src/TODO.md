@@ -28,8 +28,9 @@
 
 **Formulier stemming**
 -[x] Stemming aan genre gekoppeld
-- [] stemming en genre voor love nog aanpassen 
 - [x] form page aanmaken
+- []  genres ding inbouwen 
+- 
 - [] zorgen dat er 1 pagina met resultaten ontstaat 
 
 componenten

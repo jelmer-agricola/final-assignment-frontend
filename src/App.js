@@ -1,5 +1,4 @@
 import React, {useContext} from "react";
-import axios from 'axios';
 import {Route, Routes} from "react-router-dom";
 import './App.css';
 import Login from "./pages/Login/Login";
@@ -7,6 +6,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import Home from "./pages/Home/Home"
 import Header from "./components/Header/Header";
 import useFetch from "./hooks/useFetch";
+
 import Footer from "./components/Footer/Footer";
 import Watchlist from "./pages/Watchlist/Watchlist";
 import Favorites from "./pages/Favorites/Favorites";
@@ -15,7 +15,10 @@ import Happy from "./pages/GenrePage/Happy"
 import InLove from "./pages/GenrePage/InLove";
 import Angry from "./pages/GenrePage/Angry";
 import Curious from "./pages/GenrePage/Curious";
+import GenreFormPage from "./pages/GenrePage/GenreFormPage";
+
 import Sad from "./pages/GenrePage/Sad";
+
 
 function App() {
 
@@ -41,7 +44,7 @@ function App() {
             {/*{isLoading && <p>Loading...</p>}*/}
             {/*{catchError && <p>{catchError}</p>}*/}
 
-            <div>
+            <main>
                 <Routes>
 
                     <Route path="/" element={<Home/>}/>
@@ -54,17 +57,17 @@ function App() {
                     <Route path="/angry" element={<Angry/>}/>
                     <Route path="/curious" element={<Curious/>}/>
                     <Route path="/sad" element={<Sad/>}/>
-
+                    <Route path="genre-form" element={<GenreFormPage/>}/>
 
                     <Route path="/movie/:id"/>
-                    <Route path="genre" element={<GenrePage/>} />
+                    <Route path="genre" element={<GenrePage/>}/>
 
                     {/*<Route exact path="/login" element=<Login toggleAuthenticated={toggleAuth}/>}/>*/}
                     <Route path="/login" element={<Login/>}/>
                     <Route path="/signup" element={<SignUp/>}/>
 
                 </Routes>
-            </div>
+            </main>
             <Footer/>
         </>
     );

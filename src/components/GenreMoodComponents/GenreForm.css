@@ -1,0 +1,22 @@
+/*form label{*/
+/*    width: 100%;*/
+/*    background-color: blue;*/
+/*    padding: 10px;*/
+/*    marginn: 10px right;*/
+/*    border-radius: 5px;*/
+/*    border: none;*/
+/*    color: var(--white);*/
+/*    font-size: 1.25rem;*/
+/*}*/
+
+
+form select{
+    list-style: none;
+    width: 80%;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: var(--white);
+    font-size: 1.25rem;
+}

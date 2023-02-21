@@ -1,13 +1,14 @@
 import Button from "./Button";
 import React from "react";
-import {useNavigate} from "react-router-dom";
 
+import {useNavigate} from "react-router-dom";
 
 const GenreButtons = () => {
     const navigate = useNavigate();
 
     return (
-<>
+<section className="outer-content-container ">
+    <div className="inner-content-container genre-btns">
             <Button
                 children="😊 Happy 😊 r"
                 onClick={() => navigate('/happy')}
@@ -37,7 +38,14 @@ const GenreButtons = () => {
                 className="genre-btn"
 
             />
-        </>
+        <Button
+            children="Genres"
+            onClick={() => navigate('/genre-form')}
+            className="genre-btn"
+
+        />
+    </div>
+</section>
     );
 };
 

@@ -2,13 +2,16 @@ import React, {useContext} from 'react';
 import {GlobalContext} from "../../context/GlobalState";
 import MediaTitleCard from "../../components/Watchlist/MediaTitleCard";
 import '../../components/Watchlist/Watchlist.css'
+import {Link} from "react-router-dom";
 
 const Favorites = () => {
     const { favorites } =  useContext(GlobalContext);
 
     return (
-        <div className="view-height">
-        <section className="outer-content-container">
+        <main>
+            <h2> Don't know what to watch and too lazy to use the searchbar <Link to="/genre">click here</Link></h2>
+
+            <section className="outer-content-container">
             <div className="inner-content-container">
                 <div className="header">
                     <h1 className="heading"> Your most favorite and dearest series</h1>
@@ -25,8 +28,7 @@ const Favorites = () => {
                 )}
             </div>
         </section>
-        </div>
-    // <h1>hoi</h1>
+        </main>
     );
 };
 

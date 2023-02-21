@@ -4,7 +4,6 @@
 // import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import axios from 'axios';
-import './GenreMoodButton.css'
 import ResultCard from "../Watchlist/ResultCard";
 
 const GenreMoodButton = ({children, primaryGenre, secondaryGenre, tertiaryGenre, quaternaryGenre, quinaryGenre }) => {

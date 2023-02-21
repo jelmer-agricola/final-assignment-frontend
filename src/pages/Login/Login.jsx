@@ -46,7 +46,8 @@ function Login() {
 
     return (
         <main>
-        <section className="outer-content-container">
+
+            <section className="outer-content-container">
             <div className="inner-content-container">
             <h1>Inloggen</h1>
             <p>Dit is Login Pagina</p>

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import ResultCard from '../Watchlist/ResultCard';
 import '../Watchlist/Watchlist.css';
+import './GenreForm.css'
 
 function GenreForm() {
     const [genre, setGenre] = useState('');
@@ -43,15 +44,16 @@ function GenreForm() {
     console.log(results);
 
     return (
-        <section>
+        <section className= "outer-content-container">
+            <div className="inner-content-container">
             <form
-                onSubmit={(event) => {
+                onChange={(event) => {
                     event.preventDefault();
                     handleSearch();
                 }}
             >
                 <label>
-                    Genre:
+                    {/*Select your Genre here: */}
                     <select value={genre} onChange={handleGenreChange}>
                         <option value="">All</option>
                         <option value="28">Action</option>
@@ -74,9 +76,7 @@ function GenreForm() {
                         <option value="37">Western</option>
                     </select>
                 </label>
-                <button type="submit">Search</button>
-                {/*<button onClick={handleCurious}>Curious</button>*/}
-
+                {/*<button type="submit">Search</button>*/}
 
             </form>
             {isLoading ? <p>Loading...</p> : null}
@@ -93,7 +93,7 @@ function GenreForm() {
                     ))}
                 </ul>
             ) : null}
-
+            </div>
         </section>
 
 

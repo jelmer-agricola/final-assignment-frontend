@@ -103,6 +103,11 @@
     margin: 3px;
 }
 
+.genre-btn:hover {
+    background-color: yellow;
+    opacity: 1;
+    cursor: pointer;
+}
 
 
 
