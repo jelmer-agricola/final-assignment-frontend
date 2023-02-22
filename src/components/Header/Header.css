@@ -39,7 +39,6 @@ nav a:active {
     /*padding-left: 13vw;*/
     /*display: block;*/
     position: absolute;
-
     text-align: center;
     width: 100%;
     z-index: 1;
@@ -57,13 +56,6 @@ nav a:active {
     z-index: 2;
 
 
-    /*padding: 0 10px;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-
-
-    /*justify-content: flex-end;*/
 }
 
 
@@ -74,5 +66,23 @@ header .nav-links {
     flex-direction: row;
     align-items: center;
     z-index: 2;
+
+}
+
+
+@media screen and  (max-width: 743px) {
+    .navbar-items {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+
+    }
+
 
 }

@@ -1,7 +1,6 @@
 import Button from "../Button/Button";
 import './GenreButton.css'
 import React from "react";
-import GenreResultsContext from "../../context/GenreResultsContext";
 import {useNavigate} from "react-router-dom";
 
 const GenreButtons = () => {
@@ -11,27 +10,27 @@ const GenreButtons = () => {
         <section className="outer-content-container ">
             <div className="inner-content-container genre-btns">
                 <Button
-                    children="😊 Happy 😊 r"
+                    children="😊 Happy 😊"
                     onClick={() => navigate('/happy')}
                     className="genre-btn"
                 />
                 <Button
-                    children="🥰 In love 🥰 r"
+                    children="🥰 In love 🥰"
                     onClick={() => navigate('/love')}
                     className="genre-btn"
                 />
                 <Button
-                    children="😡 Angry 😡 r"
+                    children="😡 Angry 😡"
                     onClick={() => navigate('/angry')}
                     className="genre-btn"
                 />
                 <Button
-                    children="🤔 Curious  🤔 r"
+                    children="🤔 Curious  🤔"
                     onClick={() => navigate('/curious')}
                     className="genre-btn"
                 />
                 <Button
-                    children="😢 Sad 😢 r"
+                    children="😢 Sad 😢"
                     onClick={() => navigate('/sad')}
                     className="genre-btn"
                 />

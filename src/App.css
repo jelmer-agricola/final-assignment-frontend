@@ -90,7 +90,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: lawngreen solid 1px;
+    /*border: lawngreen solid 1px;*/
 }
 
 
@@ -115,11 +115,12 @@ body {
     /*-moz-osx-font-smoothing: grayscale;*/
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
     font-family: var(--header-fonts);
 }
 
 h2 {
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -136,7 +137,7 @@ a:visited {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: blue solid 1px;
+    /*border: blue solid 1px;*/
 
 }
 
@@ -151,7 +152,7 @@ Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer
     display: flex;
     flex-direction: column;
     justify-content: center;
-border: red solid 1px;
+/*border: red solid 1px;*/
 }
 
 

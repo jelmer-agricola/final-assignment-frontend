@@ -1,11 +1,8 @@
-import React, { useContext } from 'react';
-import GenreResultsContext from '../../context/GenreResultsContext';
+import React from 'react';
 
-function GenreSelect() {
-        const { genre, handleGenreChange } = useContext(GenreResultsContext);
-
+function GenreSelect({ value, onGenreChange }) {
         return (
-            <select value={genre} onChange={handleGenreChange}>
+            <select value={value} onChange={onGenreChange}>
                     <option value="">All</option>
                     <option value="28">Action</option>
                     <option value="12">Adventure</option>
@@ -30,5 +27,3 @@ function GenreSelect() {
 }
 
 export default GenreSelect;
-
-

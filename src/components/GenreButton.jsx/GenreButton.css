@@ -7,14 +7,14 @@
     font-weight: 600;
     color: var(--white);
     /*background-color: var(--secondary);*/
-    background-color: pink;
+    background-color: #4C9F70;
     cursor: pointer;
     transition: 0.4s;
     margin: 3px;
 }
 
 .genre-btn:hover {
-    background-color: yellow;
+    background-color: #49516F;
     opacity: 1;
     cursor: pointer;
 }

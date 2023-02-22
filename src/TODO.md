@@ -1,4 +1,6 @@
-[ ]Homepagina?? ? --> lijsten met trending?
+[] Authorisatie nalopen!!!
+
+[x]Homepagina?? ? --> lijsten met trending?
 [ ]  
 
 
@@ -22,16 +24,16 @@
 - [x] In app.js plaastend
 
 **CSS**
-- [] opmaak van watchlist meer als lijst
+- [x] opmaak van watchlist meer als lijst
 - [x]  Overlay van cards aanpassen werken nu niet goed +
 - [] icon voor zoekbalk
 
 **Formulier stemming**
 -[x] Stemming aan genre gekoppeld
 - [x] form page aanmaken
-- []  genres ding inbouwen 
+- [x]  genres ding inbouwen 
 - 
-- [] zorgen dat er 1 pagina met resultaten ontstaat 
+- [x] zorgen dat er 1 pagina met resultaten ontstaat 
 
 componenten
 - [x] footer 
