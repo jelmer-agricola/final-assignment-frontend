@@ -1,7 +1,13 @@
 [] Authorisatie nalopen!!!
+[] Styling Log in page
+[] Styling  Signup page
+[] Styling  text homepage 
+[] Styling moods page --> above buttons in genrebutton component 
+
+[] Error messages etc. 
 
 [x]Homepagina?? ? --> lijsten met trending?
-[ ]  
+
 
 
 **Watchlist maken**
