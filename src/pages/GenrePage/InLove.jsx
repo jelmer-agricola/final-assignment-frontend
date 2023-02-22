@@ -3,7 +3,7 @@ import GenreMoodButton from "../../components/GenreMoodComponents/GenreMoodButto
 import GenreForm from "../../components/GenreMoodComponents/GenreForm";
 import useFetch from "../../hooks/useFetch";
 import ResultCard from "../../components/Watchlist/ResultCard";
-import GenreButtons from "../../components/Button/GenreButtons";
+import GenreButtons from "../../components/GenreButton.jsx/GenreButtons";
 import ResultsSectionMood from "./ResultSectionMood";
 
 

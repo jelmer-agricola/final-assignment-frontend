@@ -1,8 +1,14 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import ResultCard from '../Watchlist/ResultCard';
+
+import GenreFormResults from "./GenreFormResults";
+
 import '../Watchlist/Watchlist.css';
 import './GenreForm.css'
+
+// useEffect toevoegen!!
+
 
 function GenreForm() {
     const [genre, setGenre] = useState('');
@@ -76,7 +82,6 @@ function GenreForm() {
                         <option value="37">Western</option>
                     </select>
                 </label>
-                {/*<button type="submit">Search</button>*/}
 
             </form>
             {isLoading ? <p>Loading...</p> : null}
@@ -93,11 +98,13 @@ function GenreForm() {
                     ))}
                 </ul>
             ) : null}
+
             </div>
+
         </section>
 
 
-    );
+);
 }
 
 export default GenreForm;

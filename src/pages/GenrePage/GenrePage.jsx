@@ -2,7 +2,7 @@ import React from 'react';
 import GenreMoodButtons from "../../components/GenreMoodComponents/GenreMoodButtons";
 import GenreForm from "../../components/GenreMoodComponents/GenreForm";
 import './GenrePage.css'
-import GenreButtons from "../../components/Button/GenreButtons";
+import GenreButtons from "../../components/GenreButton.jsx/GenreButtons";
 
 const GenrePage = () => {
 
