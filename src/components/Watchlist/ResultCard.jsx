@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import {GlobalContext} from "../../context/GlobalState";
 import './Watchlist.css';
 import Button from "../Button/Button";
+import {roundToOneDecimal} from "../../helpers/rountToOneDecimal";
 
 
 const ResultCard = ({mediaTitle}) => {
@@ -19,7 +20,7 @@ const ResultCard = ({mediaTitle}) => {
 
     const favoritesDisabled = storedMediaTitleFavorites ? true : false;
 
-    const voteAverage = mediaTitle.vote_average.toFixed(1);
+    const voteAverage = roundToOneDecimal(mediaTitle.vote_average);
 
 
     return (
