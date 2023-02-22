@@ -1,0 +1,24 @@
+@media screen and  (min-width: 744px) {
+    .trending-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .trending-movies {
+        width: 45%;
+    }
+
+    .trending-series {
+        width: 45%;
+    }
+}
+
+@media screen and  (max-width: 743px) {
+    .trending-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+

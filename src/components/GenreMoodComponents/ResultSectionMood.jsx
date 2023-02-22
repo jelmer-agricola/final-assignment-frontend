@@ -13,7 +13,7 @@ const ResultsSectionMood = ({data}) => {
                                     <p className="title">
                                         {mediaTitle.title || mediaTitle.name}
                                     </p>
-                                    <ResultCard mediaTitle={mediaTitle}></ResultCard>
+                                    <ResultCard mediaTitle={mediaTitle}/>
                                 </li>
                             ))}
                         </ul>

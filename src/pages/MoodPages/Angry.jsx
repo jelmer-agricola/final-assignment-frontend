@@ -19,7 +19,7 @@ const Angry = () => {
     return (
         <main>
             <GenreButtons/>
-            <h2> Angry page I hope thes movies make you less angry</h2>
+            <h2> Angry page I hope these movies make you less angry</h2>
             <ResultsSectionMood data={data}/>
         </main>
 
