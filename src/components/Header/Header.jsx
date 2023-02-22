@@ -36,7 +36,7 @@ function Header() {
                                 <li className="nav-links">
                                     <Button
                                         children="ADD +"
-                                        onClick={() => navigate('/')}
+                                        onClick={() => navigate('/add')}
                                         className="login-btn"
                                     />
 

@@ -32,7 +32,7 @@ function AuthContextProvider({children}) {
     function login(jwt) {
         console.log('gebruiker is ingelogd!')
         localStorage.setItem('token', jwt);
-        void fetchUserData(jwt, '/profile');
+        void fetchUserData(jwt, '/add');
     }
 
     function logout(jwt) {

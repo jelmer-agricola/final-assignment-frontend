@@ -1,36 +1,29 @@
-import React, {useState} from 'react';
-import GenreMoodButton from "../../components/GenreMoodComponents/GenreMoodButton";
-import GenreForm from "../../components/GenreMoodComponents/GenreForm";
+import React from 'react';
 import useFetch from "../../hooks/useFetch";
-import ResultCard from "../../components/Watchlist/ResultCard";
 import GenreButtons from "../../components/GenreButton.jsx/GenreButtons";
-import ResultsSectionMood from "./ResultSectionMood";
+import ResultsSectionMood from "../../components/GenreMoodComponents/ResultSectionMood";
 
-
-const InLove = () => {
+const Angry = () => {
 
     const {data, catchError, isLoading} = useFetch('https://api.themoviedb.org/3/discover/movie', 'GET', {
             api_key: process.env.REACT_APP_API_KEY,
-            with_genres: `35, 10751, 10402`,
+            with_genres: `28, 12, 10751`,
             sort_by: 'vote_average.desc',
             'vote_count.gte': 1000,
             page: 1,
         }, {}
     );
 
-    console.log(data.results);
     console.log(data, catchError, isLoading);
-
 
     return (
         <main>
             <GenreButtons/>
-            <h2>In love page</h2>
+            <h2> Angry page I hope thes movies make you less angry</h2>
             <ResultsSectionMood data={data}/>
-
         </main>
 
     );
 };
 
-export default InLove;
+export default Angry;

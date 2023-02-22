@@ -9,7 +9,7 @@ const Favorites = () => {
 
     return (
         <main>
-            <h2> Don't know what to watch and too lazy to use the searchbar <Link to="/genre">click here</Link></h2>
+            <h2> Don't know what to watch and too lazy to use the searchbar <Link to="/moods">click here</Link></h2>
 
             <section className="outer-content-container">
             <div className="inner-content-container">

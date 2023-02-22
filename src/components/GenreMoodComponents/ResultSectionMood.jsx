@@ -1,5 +1,5 @@
 import React from 'react';
-import ResultCard from "../../components/Watchlist/ResultCard";
+import ResultCard from "../Watchlist/ResultCard";
 
 const ResultsSectionMood = ({data}) => {
     return (

@@ -3,21 +3,20 @@ import {Route, Routes} from "react-router-dom";
 import './App.css';
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
-import Home from "./pages/Home/Home"
+import AddPage from "./pages/AddPage/AddPage"
 import Header from "./components/Header/Header";
-import useFetch from "./hooks/useFetch";
-
+import Home from "./pages/Home/Home"
 import Footer from "./components/Footer/Footer";
 import Watchlist from "./pages/Watchlist/Watchlist";
 import Favorites from "./pages/Favorites/Favorites";
-import GenrePage from "./pages/GenrePage/GenrePage";
-import Happy from "./pages/GenrePage/Happy"
-import InLove from "./pages/GenrePage/InLove";
-import Angry from "./pages/GenrePage/Angry";
-import Curious from "./pages/GenrePage/Curious";
-import GenreFormPage from "./pages/GenrePage/GenreFormPage";
+import MoodPage from "./pages/MoodPages/MoodPage";
+import Happy from "./pages/MoodPages/Happy"
+import InLove from "./pages/MoodPages/InLove";
+import Angry from "./pages/MoodPages/Angry";
+import Curious from "./pages/MoodPages/Curious";
+import GenreFormPage from "./pages/MoodPages/GenreFormPage";
 
-import Sad from "./pages/GenrePage/Sad";
+import Sad from "./pages/MoodPages/Sad";
 
 
 function App() {
@@ -37,7 +36,6 @@ function App() {
     return (
         <>
             <Header/>
-            {/*<SearchBar/>*/}
 
             {/*<button onClick={data}>api data</button>*/}
             {/*<button onClick={fetchData}>api data</button>*/}
@@ -47,8 +45,8 @@ function App() {
             <main>
                 <Routes>
 
+                    <Route path="/add" element={<AddPage/>}/>
                     <Route path="/" element={<Home/>}/>
-                    {/*dynamische routing voor verschillende dingen .5*/}
                     <Route path="/watchlist" element={<Watchlist/>}/>
                     <Route path="/favorites" element={<Favorites/>}/>
 
@@ -59,8 +57,7 @@ function App() {
                     <Route path="/sad" element={<Sad/>}/>
                     <Route path="genre-form" element={<GenreFormPage/>}/>
 
-                    <Route path="/movie/:id"/>
-                    <Route path="genre" element={<GenrePage/>}/>
+                    <Route path="moods" element={<MoodPage/>}/>
 
                     {/*<Route exact path="/login" element=<Login toggleAuthenticated={toggleAuth}/>}/>*/}
                     <Route path="/login" element={<Login/>}/>

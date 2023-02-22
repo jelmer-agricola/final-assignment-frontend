@@ -1,7 +1,7 @@
 import Button from "../Button/Button";
 import './GenreButton.css'
 import React from "react";
-
+import GenreResultsContext from "../../context/GenreResultsContext";
 import {useNavigate} from "react-router-dom";
 
 const GenreButtons = () => {
@@ -40,6 +40,7 @@ const GenreButtons = () => {
                     onClick={() => navigate('/genre-form')}
                     className="genre-btn"
                 />
+
             </div>
         </section>
     );
