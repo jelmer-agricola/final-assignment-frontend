@@ -10,7 +10,7 @@ const MediaTitleCard = ({mediaTitle, type}) => {
             <div className="overlay"></div>
             {/* Hieronder uitgecomment of je wel of niet een filler poster wil */}
             {/*{mediaTitle.poster_path ? (*/}
-                <img src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
+                <img className="media-title-img" src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
                      alt={`{title.title || title.name}`}
                 />
             {/*) : (*/}

@@ -1,0 +1,10 @@
+.genre-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+ul{
+    list-style: none;
+}

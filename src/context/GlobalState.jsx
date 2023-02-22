@@ -66,8 +66,8 @@ export const GlobalProvider = (props) => {
 
     const contextData = {
         ...state,
-        addMediaTitleToWatchlist: addMediaTitleToWatchlist,
-        removeMediaTitleFromWatchList: removeMediaTitleFromWatchList,
+        addMediaTitleToWatchlist,
+        removeMediaTitleFromWatchList,
         addMediaTitleToFavorites,
         moveToWatchList,
         removeFromFavorites,

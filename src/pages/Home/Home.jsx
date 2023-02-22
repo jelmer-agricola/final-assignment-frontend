@@ -1,60 +1,27 @@
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
-import axios from "axios";
-import ResultCard from "../../components/Watchlist/ResultCard";
+import React from 'react';
+import useFetch from "../../hooks/useFetch";
 
-function Home() {
-    const [query, setQuery] = useState('');
-    const [results, setResults] = useState([]);
+const Home = () => {
 
-    const onChange = async (e) => {
-        e.preventDefault();
 
-        setQuery(e.target.value);
+    const {data, catchError, isLoading} = useFetch('https://api.themoviedb.org/3/trending/all/day', 'GET', {
+            api_key: process.env.REACT_APP_API_KEY,
 
-        // evt deze herschrijven met use fetch. Misschien niet mogelijk, omdat de de gebruiker input invoerd.
-        try {
-            const res = await axios.get(
-                `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
-            );
-            setResults(res.data.results);
-            console.log(results);
-            setResults(res.data.results.slice(0, 10));
-
-        } catch (error) {
-
-            setResults([]);
-        }
-    };
+        }, {}
+    );
+    console.log(data.results)
 
     return (
-        <>
-        <h2>Don't know what to watch and too lazy to use the searchbar click here.. </h2>
-        <div className="add-page">
-            <div className="container">
-                <div className="add-content">
-                    <div className="input-wrapper">
-                        <input type="text "
-                               placeholder="Search for a Movie or Serie"
-                               value={query}
-                               onChange={onChange}
-                        />
-                    </div>
-                    {results.length > 0 && (
-                        <ul className="results">
-                            {results.map((mediaTitle) =>(
-                                <li key={mediaTitle.id}>{mediaTitle.title || mediaTitle.name}
-                                    <ResultCard mediaTitle={mediaTitle}></ResultCard>
-                                </li>
+        <section className="outer-content-container">
+            <div className="inner-content-container">
+            <h1>homepage</h1>
+<h2>Trending movies/series right now</h2>
 
-                            ))}
 
-                        </ul>
-                    )}
-                </div>
-            </div>
+
         </div>
-        </>
+
+    </section>
     );
 };
 

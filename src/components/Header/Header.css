@@ -1,0 +1,78 @@
+header {
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+
+    background-color: var(--primary);
+    min-height: 7vh;
+
+}
+
+nav {
+    color: var(--white);
+    display: flex;
+    /*margin: 0 32px;*/
+    flex-direction: row;
+    justify-content: flex-end;
+    border: black 1px solid;
+
+}
+
+nav a,
+nav a:visited,
+nav a:active {
+    color: white;
+
+
+}
+.navbar-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* username nu in het midden*/
+/* z index geeft aan op welke laag je zit. de buttons en links zitten op een hogere z index zodat deze altijd klikbaar zijn.*/
+.username {
+    /*padding-left: 13vw;*/
+    /*display: block;*/
+    position: absolute;
+
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+    /*display: flex;*/
+    /*justify-content: center;*/
+
+
+.nav-list {
+    /*background-color: yellowgreen;*/
+    list-style: none;
+    display: flex;
+    /*justify-content: flex-end;*/
+    flex-direction: row;
+    z-index: 2;
+
+
+    /*padding: 0 10px;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+
+
+    /*justify-content: flex-end;*/
+}
+
+
+header .nav-links {
+    padding: 0 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 2;
+
+}

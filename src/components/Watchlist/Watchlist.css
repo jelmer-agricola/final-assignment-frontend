@@ -1,8 +1,12 @@
 /* Add Page */
+.view-height{
+ min-height: 88vh;
+}
 .add-content {
     padding: 50px 0;
-    max-width: 600px;
+    max-width: 80%;
     margin: 0 auto;
+
 }
 
 .add-content .input-wrapper input {
@@ -13,6 +17,7 @@
     border: none;
     color: var(--white);
     font-size: 1.25rem;
+
 }
 
 .results {
@@ -32,9 +37,8 @@
 
 .result-card .poster-wrapper img,
 .filler-poster {
-    width: 75px;
-    height: 113px;
-    background-color: #dbdada;
+    width: 125px;
+    background-color: var(--light-grey);
     border-radius: 5px;
     margin-right: 15px;
     display: block;
@@ -47,15 +51,23 @@
     justify-content: space-between;
 }
 
-.result-card .info .title {
+.title{
     font-size: 1.25rem;
     color: var(--primary);
     font-weight: 600;
     margin: 0;
 }
 
+
+/*.result-card .info .title {*/
+/*    font-size: 1.25rem;*/
+/*    color: var(--primary);*/
+/*    font-weight: 600;*/
+/*    margin: 0;*/
+/*}*/
+
 .result-card .info .release-date {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 300;
     color: var(--primary);
     margin: 0;
@@ -66,9 +78,9 @@
 }
 
 /* media-title Page */
-.media-title-page {
-    padding: 30px 0;
-}
+/*.media-title-page {*/
+/*    padding: 30px 0;*/
+/*}*/
 
 .media-title-page .header {
     display: flex;
@@ -88,7 +100,7 @@
 /*}*/
 
 
-.media-title-page . heading{
+.media-title-page .heading{
     color: var(--primary-light);
     margin: 0;
 }
@@ -114,30 +126,36 @@
     display: block;
 }
 
-.media-title img {
+.media-title-img {
     width: 100%;
     display: block;
+    border-radius: 5px;
+
+
 }
 
-/*.media-title-card .overlay {*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    border: 2px solid transparent;*/
-/*    transition: all 0.3s ease;*/
-/*}*/
+.media-title-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    transition: all 0.1s ease;
 
-/*.media-title-card:hover .overlay {*/
-/*    border: 3px solid var(--secondary);*/
-/*}*/
+}
+
+.media-title-card:hover .overlay {
+    width: 100%;
+    border: 4px solid var(--secondary);
+
+}
 
 
 
 .media-title-card .inner-card-controls {
     display: inline;
-    background-color: red;
+    /*background-color: red;*/
     position: absolute;
     bottom: 20px;
     left: 50%;
