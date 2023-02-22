@@ -1,7 +1,8 @@
 import React from "react";
 
 const TrendingSerieResults = ({mediaTitle}) => {
-
+    //helperfunctie ??
+    const voteAverage = mediaTitle.vote_average.toFixed(1);
 
     return (
         <article className="result-card">
@@ -20,8 +21,8 @@ const TrendingSerieResults = ({mediaTitle}) => {
             <div className="info">
                 <div className="header">
                     <h4 className="release-date">First Aired:  {mediaTitle.first_air_date}</h4>
-
                     <div>{mediaTitle.overview}</div>
+                    <h4>Vote Average: {voteAverage}</h4>
                 </div>
 
             </div>

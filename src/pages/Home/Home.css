@@ -1,4 +1,4 @@
-@media screen and  (min-width: 744px) {
+@media screen and  (min-width: 745px) {
     .trending-container {
         display: flex;
         flex-direction: row;
@@ -13,8 +13,8 @@
         width: 45%;
     }
 }
-
-@media screen and  (max-width: 743px) {
+/*For ipad mini this is the width this was the smallest tablet I could find*/
+@media screen and  (max-width: 744px) {
     .trending-container {
         display: flex;
         flex-direction: column;

@@ -6,8 +6,8 @@ import TrendingMovieResults from "./TrendingMovieResults";
 function TrendingMovies() {
 
     const {data, catchError, isLoading} = useFetch('https://api.themoviedb.org/3/trending/movie/day', 'GET', {
-            api_key: process.env.REACT_APP_API_KEY
-        }, {}
+            api_key: process.env.REACT_APP_API_KEY,
+            }, {}
     );
     console.log(data, catchError, isLoading);
 

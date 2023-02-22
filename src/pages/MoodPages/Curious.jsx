@@ -1,7 +1,7 @@
 import React from 'react';
 import useFetch from "../../hooks/useFetch";
 import GenreButtons from "../../components/GenreButton.jsx/GenreButtons";
-import ResultsSectionMood from "../../components/GenreMoodComponents/ResultSectionMood";
+import ResultsSectionMood from "../../components/ResultSectionMoods/ResultSectionMoods";
 
 
 const Angry = () => {

@@ -2,6 +2,7 @@ import React from "react";
 
 const TrendingMovieResults = ({mediaTitle}) => {
 
+    const voteAverage = mediaTitle.vote_average.toFixed(1);
 
     return (
         <article className="result-card">
@@ -21,6 +22,8 @@ const TrendingMovieResults = ({mediaTitle}) => {
                 <div className="header">
                     <h4 className="release-date">Release date: {mediaTitle.release_date}</h4>
                     <div>{mediaTitle.overview}</div>
+                    <h4>Vote Average: {voteAverage}</h4>
+
                 </div>
 
             </div>

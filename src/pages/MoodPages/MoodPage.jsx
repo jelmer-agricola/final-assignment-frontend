@@ -1,5 +1,5 @@
 import React from 'react';
-import './GenrePages.css'
+import './MoodPages.css'
 import GenreButtons from "../../components/GenreButton.jsx/GenreButtons";
 
 const MoodPage = () => {

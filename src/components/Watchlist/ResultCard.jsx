@@ -19,6 +19,8 @@ const ResultCard = ({mediaTitle}) => {
 
     const favoritesDisabled = storedMediaTitleFavorites ? true : false;
 
+    const voteAverage = mediaTitle.vote_average.toFixed(1);
+
 
     return (
         <article className="result-card">
@@ -38,6 +40,8 @@ const ResultCard = ({mediaTitle}) => {
                 <div className="header">
                     <div>{mediaTitle.overview}</div>
                     <h4 className="release-date">  {mediaTitle.release_date || mediaTitle.first_air_date}</h4>
+                    <h4>Vote Average: {voteAverage}</h4>
+
                 </div>
                 <div className="controls">
 

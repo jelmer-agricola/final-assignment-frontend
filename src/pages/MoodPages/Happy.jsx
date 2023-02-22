@@ -2,7 +2,7 @@ import React from 'react';
 import GenreForm from "../../components/GenreForm/GenreForm";
 import useFetch from "../../hooks/useFetch";
 import GenreButtons from "../../components/GenreButton.jsx/GenreButtons";
-import ResultsSectionMood from "../../components/GenreMoodComponents/ResultSectionMood";
+import ResultsSectionMood from "../../components/ResultSectionMoods/ResultSectionMoods";
 
 
 const Happy = () => {

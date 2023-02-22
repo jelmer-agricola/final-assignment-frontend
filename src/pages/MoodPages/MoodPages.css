@@ -1,0 +1,11 @@
+ul {
+    list-style: none;
+}
+
+.mood-page-results{
+    align-items: center;
+}
+
+.mood-page-result {
+    max-width: 80%;
+}
