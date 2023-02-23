@@ -11,8 +11,8 @@ const initialState = {
 //Create context
 export const GlobalContext = createContext(initialState);
 
-// Provider component evt nog omschrijven zonder props
-export const GlobalProvider = (props) => {
+//export const GlobalProvider = (props) => {
+export const GlobalProvider = ({children}) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
     //console log hieronder kan weg
     console.log('STATE', state)
@@ -23,7 +23,6 @@ export const GlobalProvider = (props) => {
     // of key gelijk is aan username als dat zo is dan gebruik
     // met find (is wel exact match)
     // key favorites pakt en dat dan terug geeft als set item
-    //
 
 
 
@@ -75,7 +74,8 @@ export const GlobalProvider = (props) => {
 
     return (
         <GlobalContext.Provider value={contextData}>
-            {props.children}
+            {/* {props.children}*/}
+            {children}
         </GlobalContext.Provider>
     )
 };
