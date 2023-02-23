@@ -1,4 +1,5 @@
-[] Authorisatie nalopen!!!
+[] Authorisatie nalopen
+    [x] authorisatie van routing klopt 
 [] Styling Log in page
 [] Styling  Signup page
 [] Styling  text homepage 

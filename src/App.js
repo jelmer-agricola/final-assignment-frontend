@@ -1,6 +1,8 @@
 import React, {useContext} from "react";
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import './App.css';
+import {AuthContext} from "./context/AuthContext";
+
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import AddPage from "./pages/AddPage/AddPage"
@@ -21,6 +23,7 @@ import Sad from "./pages/MoodPages/Sad";
 
 function App() {
 
+    const {isAuth} = useContext(AuthContext);
 
 //     succesvol post request
 // const { data, catchError, isLoading} = useFetch("https://frontend-educational-backend.herokuapp.com/api/auth/signup", 'POST', {}, {
@@ -33,6 +36,7 @@ function App() {
     // console.log(data, isLoading, catchError);
 
 
+
     return (
         <>
             <Header/>
@@ -41,30 +45,25 @@ function App() {
             {/*<button onClick={fetchData}>api data</button>*/}
             {/*{isLoading && <p>Loading...</p>}*/}
             {/*{catchError && <p>{catchError}</p>}*/}
-
-            <main>
+            {/*main?? is dat nodig?*/}
+            {/*<main>*/}
                 <Routes>
-
-                    <Route path="/add" element={<AddPage/>}/>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/watchlist" element={<Watchlist/>}/>
-                    <Route path="/favorites" element={<Favorites/>}/>
-
-                    <Route path="/happy" element={<Happy/>}/>
-                    <Route path="/love" element={<InLove/>}/>
-                    <Route path="/angry" element={<Angry/>}/>
-                    <Route path="/curious" element={<Curious/>}/>
-                    <Route path="/sad" element={<Sad/>}/>
-                    <Route path="genre-form" element={<GenreFormPage/>}/>
-
-                    <Route path="moods" element={<MoodPage/>}/>
-
-                    {/*<Route exact path="/login" element=<Login toggleAuthenticated={toggleAuth}/>}/>*/}
+                    <Route exact path="/" element={<Home/>}/>
                     <Route path="/login" element={<Login/>}/>
                     <Route path="/signup" element={<SignUp/>}/>
-
+                    {/*If not authorized rerouted to the homepage*/}
+                    <Route path="/favorites" element={isAuth ? <Favorites/> : <Navigate to="/"/>}/>
+                    <Route path="/watchlist" element={isAuth ? <Watchlist/> : <Navigate to="/"/>}/>
+                    <Route path="/add" element={isAuth ? <AddPage/> : <Navigate to="/"/>}/>
+                    <Route path="/happy" element={isAuth ? <Happy/> : <Navigate to="/"/>}/>
+                    <Route path="/love" element={isAuth ? <InLove/> : <Navigate to="/"/>}/>
+                    <Route path="/angry" element={isAuth ? <Angry/> : <Navigate to="/"/>}/>
+                    <Route path="/curious" element={isAuth ? <Curious/> : <Navigate to="/"/>}/>
+                    <Route path="/sad" element={isAuth ? <Sad/> : <Navigate to="/"/>}/>
+                    <Route path="/genre-form" element={isAuth ? <GenreFormPage/> : <Navigate to="/"/>}/>
+                    <Route path="/moods" element={isAuth ? <MoodPage/> : <Navigate to="/"/>}/>
                 </Routes>
-            </main>
+            {/*</main>*/}
             <Footer/>
         </>
     );

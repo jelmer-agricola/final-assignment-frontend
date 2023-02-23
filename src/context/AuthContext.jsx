@@ -39,8 +39,12 @@ function AuthContextProvider({children}) {
         // setIsAuth(false);
         console.log('Gebruiker is uitgelogd');
         // navigate('/');
-        localStorage.removeItem('token');
-        // localStorage.clear(); Dit haalt local storage leeg na uitloggen
+
+        // Hieronder haalt token uit localstorage
+        // localStorage.removeItem('token');
+
+        localStorage.clear();
+        // Dit haalt local storage leeg na uitloggen is er dus geen watchlist e.d. meer over
         // localStorage.token(); token tot niks
         //
 
