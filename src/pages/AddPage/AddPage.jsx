@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import axios from "axios";
 import ResultCard from "../../components/Watchlist/ResultCard";
-import '../Home/Home.css'
 import '../../components/Watchlist/Watchlist.css';
-
+import './AddPage.css'
 // loading etc hier toevoegen
+//USE EFFECT TOEVOEGEN
+
 
 function AddPage() {
     const [query, setQuery] = useState('');
