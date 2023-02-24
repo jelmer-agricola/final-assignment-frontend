@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {AuthContext} from "../../context/AuthContext";
 import axios from 'axios';
 import Button from '../../components/Button/Button';
-import '../../App.css';
+import './Login.css'
 
 
 function Login() {
@@ -48,37 +48,42 @@ function Login() {
         <main>
 
             <section className="outer-content-container">
-            <div className="inner-content-container">
-            <h1>Inloggen</h1>
-            <p>Dit is Login Pagina</p>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="email-field">Username:</label><br/>
-                <input
-                    type="text"
-                    id="email-field"
-                    name="username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}/> <br/>
-                <label htmlFor="password-field">
-                    Wachtwoord: </label><br/>
-                <input
-                    type="password"
-                    id="password-field"
-                    name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                /><br/>
+                <div className="inner-content-container">
+                    <h1>Inloggen</h1>
+                    <p className="login-header">Dit is Login Pagina</p>
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="email-field">Username:</label>
+                        <br/>
+                        <input
+                            type="text"
+                            id="username-field"
+                            name="username"
+                            placeholder="Username"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}/>
+                        <br/>
+                        <label htmlFor="password-field">
+                            Wachtwoord: </label>
+                        <br/>
+                        <input
+                            type="password"
+                            id="password-field"
+                            name="password"
+                            placeholder="•••••••••••••••"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        /><br/>
 
-                <Button
-                    type="submit"
-                    className="registeren"
-                    children="Inloggen"
-                />
+                        <Button
+                            type="submit"
+                            className="registeren"
+                            children="Inloggen"
+                        />
 
-            </form>
-            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
-            </div>
-        </section>
+                    </form>
+                    <p className="login-header">Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
+                </div>
+            </section>
         </main>
     );
 

@@ -2,6 +2,8 @@ import React from 'react';
 import TrendingMovies from '../../components/Trending/TrendingMovies'
 import TrendingSeries from "../../components/Trending/TrendingSeries";
 import {Link} from "react-router-dom";
+import './Home.css'
+
 
 const Home = () => {
 

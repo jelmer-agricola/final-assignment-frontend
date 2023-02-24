@@ -92,7 +92,21 @@ button{
 
 }
 
+button[type="submit"] {
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: var(--white);
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+button[type="submit"]:hover {
+    background-color: var(--secondary-light);
+}
 
 
 

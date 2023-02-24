@@ -6,7 +6,6 @@ import '../Watchlist/Watchlist.css'
 
 
 function Button({text, children, type = 'button', onClick, className, disabled, icon}) {
-    //icon = null
     return (
         <button className={className}
                 id={text}

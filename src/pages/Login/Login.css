@@ -1,0 +1,33 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+input {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+    background-color: var(--light-grey);
+}
+
+
+
+.login-header {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+    color: var(--black);
+    text-align: center;
+    margin-top: 20px;
+}
+
+

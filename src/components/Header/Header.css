@@ -28,6 +28,7 @@ nav a:active {
 nav a:hover {
     color: var(--secondary);
 }
+
 .navbar-items {
     display: flex;
     flex-direction: row;
@@ -36,18 +37,9 @@ nav a:hover {
     position: relative;
 }
 
-/* username nu in het midden*/
-/* z index geeft aan op welke laag je zit. de buttons en links zitten op een hogere z index zodat deze altijd klikbaar zijn.*/
-.username {
-    /*padding-left: 13vw;*/
-    /*display: block;*/
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
-}
-    /*display: flex;*/
-    /*justify-content: center;*/
+
+/*display: flex;*/
+/*justify-content: center;*/
 
 
 .nav-list {
@@ -69,7 +61,7 @@ header .nav-links {
     flex-direction: row;
     align-items: center;
     z-index: 2;
-    filter: drop-shadow(0 0.25rem 0.25rem var(--black) );
+    filter: drop-shadow(0 0.25rem 0.25rem var(--black));
 
 }
 
@@ -88,5 +80,27 @@ header .nav-links {
 
     }
 
+}
 
+
+@media screen and  (max-width: 900px) {
+    .username {
+        color: var(--primary);
+
+    }
+}
+
+@media screen and (min-width: 901px) {
+    /* username nu in het midden*/
+    /* z index geeft aan op welke laag je zit. de buttons en links zitten op een hogere z index zodat deze altijd klikbaar zijn.*/
+    .username {
+        /*padding-left: 13vw;*/
+        /*display: block;*/
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+        filter: drop-shadow(0 0.25rem 0.25rem var(--tertiary));
+
+    }
 }

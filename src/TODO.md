@@ -4,7 +4,7 @@
 [] Styling  Signup page
 [] Styling  text homepage 
 [] Styling moods page --> above buttons in genrebutton component 
-[] shadow on boxes
+[x] shadow on boxes
 [] Error messages etc. 
 
 [x]Homepagina?? ? --> lijsten met trending?
