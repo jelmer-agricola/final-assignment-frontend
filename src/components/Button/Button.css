@@ -1,3 +1,6 @@
+button{
+    filter: drop-shadow(0 0.10rem 0.10rem var(--black) );
+}
 
 .add-btn {
     padding: 10px 15px;
@@ -17,6 +20,7 @@
     background-color: var(--primary-light);
     opacity: 1;
     cursor: pointer;
+    border: solid 0.06rem var(--tertiary);
 }
 
 .add-btn:disabled {

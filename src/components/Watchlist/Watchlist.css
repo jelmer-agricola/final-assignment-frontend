@@ -1,7 +1,8 @@
 /* Add Page */
-.view-height{
- min-height: 88vh;
+.view-height {
+    min-height: 88vh;
 }
+
 .add-content {
     padding: 50px 0;
     max-width: 80%;
@@ -17,6 +18,11 @@
     border: none;
     color: var(--white);
     font-size: 1.25rem;
+
+}
+
+.input-wrapper input:hover {
+    border: solid 1px var(--tertiary);
 
 }
 
@@ -51,7 +57,7 @@
     justify-content: space-between;
 }
 
-.title{
+.title {
     font-size: 1.25rem;
     color: var(--primary);
     font-weight: 600;
@@ -100,7 +106,7 @@
 /*}*/
 
 
-.media-title-page .heading{
+.media-title-page .heading {
     color: var(--primary-light);
     margin: 0;
 }
@@ -110,6 +116,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
 }
+
 @media (min-width: 992px) {
     .media-title-grid {
         grid-template-columns: repeat(5, 1fr);
@@ -150,7 +157,6 @@
     border: 4px solid var(--secondary);
 
 }
-
 
 
 .media-title-card .inner-card-controls {
