@@ -1,5 +1,5 @@
 import React from "react";
-import {roundToOneDecimal} from "../../helpers/rountToOneDecimal";
+import {roundToOneDecimal} from "../../helpers/roundToOneDecimal";
 
 const TrendingMovieResults = ({mediaTitle}) => {
 
@@ -24,11 +24,8 @@ const TrendingMovieResults = ({mediaTitle}) => {
                     <h4 className="release-date">Release date: {mediaTitle.release_date}</h4>
                     <div>{mediaTitle.overview}</div>
                     <h4>Vote Average: {voteAverage}</h4>
-
                 </div>
-
             </div>
-
         </article>
     );
 };

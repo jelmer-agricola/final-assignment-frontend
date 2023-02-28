@@ -1,11 +1,20 @@
 [] Authorisatie nalopen
-    [x] authorisatie van routing klopt 
-[] Styling Log in page
-[] Styling  Signup page
-[] Styling  text homepage 
-[] Styling moods page --> above buttons in genrebutton component 
+    [x] authorisatie van routing klopt
+
+
+[]Hookform
+[] Error messages in inlog
+[] Styling  text homepage
+[] styling navbar voro telefoon
+[] nalopen of overal juist use Effect is geburikt en errors e.d. 
+[] Vanaf regel 13 trending movies bij alle useFetcht toevoegen
+
+
+[x] Styling Log in page
+[x] Styling  Signup page
+[x] Styling moods page --> above buttons in genrebutton component 
 [x] shadow on boxes
-[] Error messages etc. 
+
 
 [x]Homepagina?? ? --> lijsten met trending?
 

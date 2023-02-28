@@ -1,5 +1,4 @@
 import React from 'react';
-import GenreForm from "../../components/GenreForm/GenreForm";
 import useFetch from "../../hooks/useFetch";
 import GenreMoodButtons from "../../components/GenreMoodButton.jsx/GenreMoodButtons";
 import ResultsSectionMood from "../../components/ResultSectionMoods/ResultSectionMoods";
@@ -13,12 +12,16 @@ const Happy = () => {
             sort_by: 'vote_average.desc',
             'vote_count.gte': 1000,
             page: 1,
-            // slice: (0,10),
         }, {}
     );
 
-    console.log(data.results);
-    console.log(data, catchError, isLoading);
+    if (isLoading) {
+        return <div>Loading Happy Movies, to either make you happy or to enhance your feeling of happiness...</div>;
+    }
+    if (catchError) {
+        return <div>Error: {catchError}</div>;
+    }
+
 
 
     return (

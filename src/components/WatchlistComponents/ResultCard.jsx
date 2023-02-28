@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import {GlobalContext} from "../../context/GlobalState";
 import './WatchlistComponents.css';
 import Button from "../Button/Button";
-import {roundToOneDecimal} from "../../helpers/rountToOneDecimal";
+import {roundToOneDecimal} from "../../helpers/roundToOneDecimal";
 
 
 const ResultCard = ({mediaTitle}) => {

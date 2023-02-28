@@ -14,9 +14,13 @@ const InLove = () => {
             page: 1,
         }, {}
     );
+    if (isLoading) {
+        return <div>Loading Lovely Movies...</div>;
+    }
+    if (catchError) {
+        return <div>Error: {catchError}</div>;
+    }
 
-    console.log(data.results);
-    console.log(data, catchError, isLoading);
 
 
     return (

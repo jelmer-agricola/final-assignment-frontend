@@ -14,6 +14,13 @@ const Sad = () => {
             page: 1,
         }, {}
     );
+    if (isLoading) {
+        return <div>Loading Movies to cure your sadness...</div>;
+    }
+    if (catchError) {
+        return <div>Error: {catchError}</div>;
+    }
+
 
     return (
         <>

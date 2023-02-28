@@ -4,14 +4,12 @@ import AppReducer from "./AppReducer";
 // initial state
 const initialState = {
     watchlist: localStorage.getItem('watchlist') ? JSON.parse(localStorage.getItem('watchlist')) : [],
-
     favorites: localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')) : [],
 };
 
 //Create context
 export const GlobalContext = createContext(initialState);
 
-//export const GlobalProvider = (props) => {
 export const GlobalProvider = ({children}) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
     //console log hieronder kan weg
@@ -74,7 +72,6 @@ export const GlobalProvider = ({children}) => {
 
     return (
         <GlobalContext.Provider value={contextData}>
-            {/* {props.children}*/}
             {children}
         </GlobalContext.Provider>
     )

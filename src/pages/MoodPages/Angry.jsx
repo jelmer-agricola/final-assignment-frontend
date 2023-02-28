@@ -2,7 +2,6 @@ import React from 'react';
 import useFetch from "../../hooks/useFetch";
 import GenreMoodButtons from "../../components/GenreMoodButton.jsx/GenreMoodButtons";
 import ResultsSectionMood from "../../components/ResultSectionMoods/ResultSectionMoods";
-import {Link} from "react-router-dom";
 
 const Angry = () => {
 
@@ -14,13 +13,15 @@ const Angry = () => {
             page: 1,
         }, {}
     );
-
-    console.log(data, catchError, isLoading);
+    if (isLoading) {
+        return <div>Loading Angry Movies...</div>;
+    }
+    if (catchError) {
+        return <div>Error: {catchError}</div>;
+    }
 
     return (
         <>
-
-
             <GenreMoodButtons/>
             <h2>Buckle up, because this page is about to take you on a wild, rage-filled ride</h2>
             <ResultsSectionMood data={data}/>

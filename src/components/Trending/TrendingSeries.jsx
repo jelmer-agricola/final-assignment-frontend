@@ -11,6 +11,12 @@ function TrendingSeries() {
         }, {}
     );
     console.log(data, catchError, isLoading);
+    if (isLoading) {
+        return <div>Loading Trending Series...</div>;
+    }
+    if (catchError) {
+        return <div>Error: {catchError}</div>;
+    }
 
     return (
    <>

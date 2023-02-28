@@ -4,6 +4,7 @@ import axios from "axios";
 import Button from '../../components/Button/Button';
 import '../../App.css'
 import '../Login/Login.css'
+import ValidateForm from "../../components/FormValidation/ValidateForm";
 
 function SignUp() {
     const [username, setUsername] = useState('');
@@ -40,13 +41,24 @@ function SignUp() {
         toggleLoading(false);
     }
 
+    //finally???
+
     return(
         <section className="outer-content-container">
             <div className="inner-content-container">
             <h1>Register</h1>
             <p className="login-header">Enter your details below to register. </p>
 
-            <form className="login-form" onSubmit={handleSubmit}>
+            {/*<form className="login-form" onSubmit={handleSubmit}>*/}
+                <ValidateForm
+                    rules={{
+                        username: { min: 6, message: "Username must be at least 6 characters long." },
+                        password: { min: 6, message: "Password must be at least 6 characters long." },
+                        email: { contains: "@", message: "Email must contain '@' symbol." },
+                    }}
+                >
+
+
                 <label className="login-form-label" htmlFor="email-field">
                     Email:</label><br/>
                 <input
@@ -81,7 +93,10 @@ function SignUp() {
                     children="Register"
                     type="submit"
                 />
-            </form>
+
+                </ValidateForm>
+
+            {/*</form>*/}
                 <p className="login-header">Do you already have an account? You can <Link to="/login">Click here </Link>to sign in</p>
 
             </div>

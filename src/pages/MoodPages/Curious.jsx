@@ -14,8 +14,12 @@ const Angry = () => {
             page: 1,
         }, {}
     );
-
-    console.log(data, catchError, isLoading);
+    if (isLoading) {
+        return <div>Loading Movies to satisfy your curiosity...</div>;
+    }
+    if (catchError) {
+        return <div>Error: {catchError}</div>;
+    }
 
 
     return (

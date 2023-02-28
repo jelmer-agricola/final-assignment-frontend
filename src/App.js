@@ -40,12 +40,8 @@ function App() {
         <>
             <Header/>
             <main>
-                {/*<button onClick={data}>api data</button>*/}
-                {/*<button onClick={fetchData}>api data</button>*/}
                 {/*{isLoading && <p>Loading...</p>}*/}
                 {/*{catchError && <p>{catchError}</p>}*/}
-                {/*main?? is dat nodig?*/}
-                {/*<main>*/}
                 <Routes>
                     <Route exact path="/" element={<Home/>}/>
                     <Route path="/login" element={<Login/>}/>

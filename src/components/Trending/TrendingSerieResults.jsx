@@ -1,8 +1,7 @@
 import React from "react";
-import {roundToOneDecimal} from "../../helpers/rountToOneDecimal";
+import {roundToOneDecimal} from "../../helpers/roundToOneDecimal";
 
 const TrendingSerieResults = ({mediaTitle}) => {
-    //helperfunctie ??
     const voteAverage = roundToOneDecimal(mediaTitle.vote_average);
 
     return (

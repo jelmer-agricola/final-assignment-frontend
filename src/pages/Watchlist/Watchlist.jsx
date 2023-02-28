@@ -4,7 +4,9 @@ import MediaTitleCard from "../../components/WatchlistComponents/MediaTitleCard"
 import '../../components/WatchlistComponents/WatchlistComponents.css' ;
 import {Link} from "react-router-dom";
 
+
 const Watchlist = () => {
+
     const {watchlist} = useContext(GlobalContext);
     return (
 

@@ -36,13 +36,9 @@ function AuthContextProvider({children}) {
     }
 
     function logout(jwt) {
-        // setIsAuth(false);
         console.log('Gebruiker is uitgelogd');
-        // navigate('/');
-
         // Hieronder haalt token uit localstorage
         // localStorage.removeItem('token');
-
         localStorage.clear();
         // Dit haalt local storage leeg na uitloggen is er dus geen watchlist e.d. meer over
         // localStorage.token(); token tot niks
@@ -96,8 +92,8 @@ function AuthContextProvider({children}) {
     const contextData = {
         isAuth: isAuth.isAuth,
         user: isAuth.user,
-        login: login,
-        logout: logout,
+        login,
+        logout,
     };
     return (
         <AuthContext.Provider value={contextData}>

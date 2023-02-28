@@ -1,9 +1,10 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
-// HERSCRIJVEN ZODAT DE PARAMS MEEGEGEVEN WORDEN EN EVT. MEER
-// MET IF STATMENT DUS ALS Het params object niet wordt meegegeven niet omschrijven.
-// ev.t zelfs post request toevoegen
+//VOOR KOPPELEN USER EN WATCHLIST E.D.
+    // HERSCRIJVEN ZODAT DE PARAMS MEEGEGEVEN WORDEN EN EVT. MEER
+    // MET IF STATMENT DUS ALS Het params object niet wordt meegegeven niet omschrijven.
+    // ev.t zelfs post request toevoegen
 
 const useFetch = (dataUrl, method = 'GET', params = {}, dataObject = {}) => {
 // Set initial state variables
@@ -12,7 +13,7 @@ const useFetch = (dataUrl, method = 'GET', params = {}, dataObject = {}) => {
     const [catchError, setCatchError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
-    const controllerRef = useRef(false);
+    // const controllerRef = useRef(false); bovenaan useRef indien wel gebruiken
 
     // Run the effect on mount
     useEffect(() => {
