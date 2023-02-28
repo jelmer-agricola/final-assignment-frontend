@@ -7,7 +7,7 @@ import './Login.css';
 import { useForm } from 'react-hook-form';
 
 function Login() {
-    const { register, handleSubmit } = useForm();
+    const {handleSubmit, formState: {errors}, register} = useForm();
     const { login } = useContext(AuthContext);
 
     const onSubmit = async (data) => {
@@ -52,10 +52,20 @@ return(
                     id="username-field"
                     name="username"
                     placeholder="Username"
-                    {...register('username')}
+                    {...register('username', {
+                        minLength: {
+                            value: 8,
+                            message: 'Username should be at least 8 characters long',
+                        },
+                        required: {
+                            value: true,
+                            message: 'Username is required'
+                        }
+                    })}
                 />
+                {errors.username && <p>{errors.username.message}</p>}
                 <br />
-      -
+
                 <label htmlFor="password-field">Password: </label>
 
                 <br />
@@ -65,8 +75,18 @@ return(
                     id="password-field"
                     name="password"
                     placeholder="•••••••••••••••"
-                    {...register('password')}
+                    {...register('password', {
+                        minLength: {
+                            value: 8,
+                            message: 'password should be at least 8 characters long',
+                        },
+                        required: {
+                            value: true,
+                            message: 'password is required'
+                        }
+                    })}
                 />
+                {errors.password && <p>{errors.password.message}</p>}
                 <br />
 
                 <Button type="submit" className="submit-btns">

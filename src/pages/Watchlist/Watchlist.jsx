@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import {GlobalContext} from "../../context/GlobalState";
 import MediaTitleCard from "../../components/WatchlistComponents/MediaTitleCard";
 import '../../components/WatchlistComponents/WatchlistComponents.css' ;
+import './Watchlist.css'
 import {Link} from "react-router-dom";
 
 
@@ -22,9 +23,12 @@ const Watchlist = () => {
             </section>
             <section className="outer-content-container">
                 <div className="inner-content-container">
+                    {watchlist.length > 0 &&(
                     <div className="header">
-                        <h2 className="heading"> My Watchlist</h2>
+                        <h2 className="heading-list"> My Watchlist</h2>
                     </div>
+                        )}
+
 
                     {watchlist.length > 0 ? (
                         <div className="media-title-grid">
@@ -33,7 +37,7 @@ const Watchlist = () => {
                             ))}
                         </div>
                     ) : (
-                        <h2 className="no-media-titles">No movies or series in your watchlist add some!</h2>
+                        <h2 className="no-media-titles">No movies or series in your watchlist <Link to="/add">Add some!</Link></h2>
                     )
                     }
                 </div>

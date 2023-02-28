@@ -54,8 +54,9 @@ function SignUp() {
                     <input
                         className="login-form-input"
                         type="text"
-                        id="email-field"
+                        // id="email-field"
                         name="email"
+                        placeholder="Email"
                         {...register("email", {
                             required: {
                                 value: true,
@@ -65,28 +66,7 @@ function SignUp() {
                         })}
                     />
                     {errors.email && <p>{errors.email.message}</p>}
-
-                    {/*<label htmlFor="message-field">*/}
-                    {/*    Bericht:*/}
-                    {/*    <textarea*/}
-                    {/*        {...register("message-content", {*/}
-                    {/*            required: {*/}
-                    {/*                value: true,*/}
-                    {/*                message: 'Dit veld is verplicht',*/}
-                    {/*            },*/}
-                    {/*            minLenght: {*/}
-                    {/*                value: 10,*/}
-                    {/*                message: 'Input moet minstends 10 karakters bevatten',*/}
-                    {/*            },*/}
-                    {/*            maxLenght: {*/}
-                    {/*                value: 50,*/}
-                    {/*                message: 'Input mag maximaal 50 karakters bevatten',*/}
-                    {/*            },*/}
-                    {/*        })}*/}
-                    {/*    ></textarea>*/}
-                    {/*</label>*/}
-
-                    <br/>
+                          <br/>
 
                     <label htmlFor="username-field"> Username:</label><br/>
                     <input
