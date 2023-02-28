@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import ResultCard from '../Watchlist/ResultCard';
+import ResultCard from '../WatchlistComponents/ResultCard';
 import GenreSelect from './GenreSelect'
-import '../Watchlist/Watchlist.css';
+import '../WatchlistComponents/WatchlistComponents.css';
 import './GenreForm.css'
 
 // useEffect toevoegen!!

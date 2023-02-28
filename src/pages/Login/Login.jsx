@@ -45,16 +45,15 @@ function Login() {
 
 
     return (
-        <main>
-
             <section className="outer-content-container">
                 <div className="inner-content-container">
-                    <h1>Inloggen</h1>
-                    <p className="login-header">Dit is Login Pagina</p>
-                    <form onSubmit={handleSubmit}>
-                        <label htmlFor="email-field">Username:</label>
+                    <h1>Sign in</h1>
+                    <p className="login-header">Fill in your username and password below to sign in.</p>
+                    <form className="login-form" onSubmit={handleSubmit}>
+                        <label className="login-form-label" htmlFor="email-field">Username:</label>
                         <br/>
                         <input
+                            className="login-form-input"
                             type="text"
                             id="username-field"
                             name="username"
@@ -63,9 +62,10 @@ function Login() {
                             onChange={(e) => setUsername(e.target.value)}/>
                         <br/>
                         <label htmlFor="password-field">
-                            Wachtwoord: </label>
+                            Password: </label>
                         <br/>
                         <input
+                            className="login-form-input"
                             type="password"
                             id="password-field"
                             name="password"
@@ -76,15 +76,14 @@ function Login() {
 
                         <Button
                             type="submit"
-                            className="registeren"
-                            children="Inloggen"
+                            className="submit-btns"
+                            children="Sign in"
                         />
 
                     </form>
-                    <p className="login-header">Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
+                    <p className="login-header">Don't have an account yet? <Link to="/signup">Click here</Link> to create an account.</p>
                 </div>
             </section>
-        </main>
     );
 
 }

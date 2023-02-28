@@ -1,0 +1,55 @@
+.genre-btns-text{
+    width: 85%;
+    align-self: center;
+    text-align: center;
+}
+.genre-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.5rem 0;
+
+}
+
+.genre-btn {
+    height: 55px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--secondary);
+    cursor: pointer;
+    transition: 0.4s;
+    margin: 3px;
+}
+
+
+.genre-btn:hover {
+    background-color: var(--secondary-light);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.genre-btn.happy:hover {
+    background-color: yellow;
+}
+
+.genre-btn.in-love:hover {
+    background-color: deeppink;
+}
+
+.genre-btn.angry:hover {
+    background-color: crimson;
+}
+
+.genre-btn.sad:hover {
+    background-color: dodgerblue;
+}
+
+/*.genre-btn:hover {*/
+/*    background-color: yellow;*/
+/*    opacity: 1;*/
+/*    cursor: pointer;*/
+/*}*/

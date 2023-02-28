@@ -8,22 +8,24 @@ import './Home.css'
 const Home = () => {
 
     return (
-        <main>
-            <section className="outer-content-container">
-                <div className="inner-content-container">
-                    <p>Welcome to your favorite website for movies and series login to see your watchlist and
-                        favoriteslist
-                        or Register to start creating one. </p>
-                    <h2> Don't know what to watch by giving us your mood we can select the best movies for each mood for
-                        You! <Link to="/moods">click here</Link></h2>
-                    <div className="trending-container">
-                        <TrendingMovies/>
-                        <TrendingSeries/>
-                    </div>
-                </div>
+        <section className="outer-content-container">
+            <div className="inner-content-container">
+                <h1 className="homepage-header">Welcome to Your Favorite Movie and TV Series Website!</h1>
+                <p className="homepage-intro-text">Looking for your next binge-worthy show? <Link to="/login">Sign
+                    in</Link> to see your watchlist and favorites list, or <Link to="/signup">create an
+                    account</Link> to start keeping track of all the movies and TV shows you love. Plus, with our search
+                    feature, you can easily find movies and shows to match your mood. Whether you're in the mood for a
+                    comedy, drama, action, or something in between, we've got you covered. So what are you waiting for?
+                    Sign in or create an account now and start exploring!</p>
 
-            </section>
-        </main>
+
+                <div className="trending-container">
+                    <TrendingMovies/>
+                    <TrendingSeries/>
+                </div>
+            </div>
+
+        </section>
     );
 };
 

@@ -36,17 +36,16 @@ function App() {
     // console.log(data, isLoading, catchError);
 
 
-
     return (
         <>
             <Header/>
-
-            {/*<button onClick={data}>api data</button>*/}
-            {/*<button onClick={fetchData}>api data</button>*/}
-            {/*{isLoading && <p>Loading...</p>}*/}
-            {/*{catchError && <p>{catchError}</p>}*/}
-            {/*main?? is dat nodig?*/}
-            {/*<main>*/}
+            <main>
+                {/*<button onClick={data}>api data</button>*/}
+                {/*<button onClick={fetchData}>api data</button>*/}
+                {/*{isLoading && <p>Loading...</p>}*/}
+                {/*{catchError && <p>{catchError}</p>}*/}
+                {/*main?? is dat nodig?*/}
+                {/*<main>*/}
                 <Routes>
                     <Route exact path="/" element={<Home/>}/>
                     <Route path="/login" element={<Login/>}/>
@@ -63,7 +62,8 @@ function App() {
                     <Route path="/genre-form" element={isAuth ? <GenreFormPage/> : <Navigate to="/"/>}/>
                     <Route path="/moods" element={isAuth ? <MoodPage/> : <Navigate to="/"/>}/>
                 </Routes>
-            {/*</main>*/}
+
+            </main>
             <Footer/>
         </>
     );

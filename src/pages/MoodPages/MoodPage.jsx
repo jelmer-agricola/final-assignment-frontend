@@ -1,13 +1,14 @@
 import React from 'react';
 import './MoodPages.css'
-import GenreButtons from "../../components/GenreButton.jsx/GenreButtons";
+import GenreMoodButtons from "../../components/GenreMoodButton.jsx/GenreMoodButtons";
 
 const MoodPage = () => {
 
     return (
-        <main>
-            <GenreButtons/>
-        </main>
+        <>
+            <GenreMoodButtons/>
+            <h2>Select one of these moods and start your journey to solving your emotions through movies.</h2>
+        </>
     );
 };
 

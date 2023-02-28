@@ -1,6 +1,6 @@
 import React from 'react';
 import MediaTitleControls from "./MediaTitleControls";
-import './Watchlist.css';
+import './WatchlistComponents.css';
 
 // type evt wel/ niet voor watched list
 const MediaTitleCard = ({mediaTitle, type}) => {

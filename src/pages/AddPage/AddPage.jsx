@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import axios from "axios";
-import ResultCard from "../../components/Watchlist/ResultCard";
+import ResultCard from "../../components/WatchlistComponents/ResultCard";
 import './AddPage.css'
 
 
@@ -50,14 +50,10 @@ function AddPage() {
 
 
     return (
-        <main>
-
-
             <section className="outer-content-container">
                 <div className="inner-content-container">
-                    <h2> Don't know what to watch and too lazy to use the searchbar <Link to="/moods">click here</Link>
+                    <h2> Don't know what to watch and too lazy to use the searchbar <Link to="/moods">click here</Link> and we will give you suggestions based on your mood.
                     </h2>
-
 
                     <div>
                         <div className="add-content">
@@ -84,7 +80,6 @@ function AddPage() {
                     </div>
                 </div>
             </section>
-        </main>
     );
 }
 

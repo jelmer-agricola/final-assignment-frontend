@@ -1,9 +1,10 @@
 import React from 'react';
 import useFetch from "../../hooks/useFetch";
-import '../../pages/Home/Home'
 import TrendingMovieResults from "./TrendingMovieResults";
+import './Trending.css'
 
 function TrendingMovies() {
+
 
     const {data, catchError, isLoading} = useFetch('https://api.themoviedb.org/3/trending/movie/day', 'GET', {
             api_key: process.env.REACT_APP_API_KEY,
@@ -14,7 +15,7 @@ function TrendingMovies() {
     return (
 <>
     <div className= "trending-movies">
-    <h2>Trending movies</h2>
+    <h2 className="trending-header">Top 5 Trending movies</h2>
             {data.results && (
                 <ul >
                 {data.results.slice(0,5).filter(movie => movie.title)

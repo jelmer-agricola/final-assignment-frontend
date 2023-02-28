@@ -1,7 +1,7 @@
 import React from 'react';
 import GenreForm from "../../components/GenreForm/GenreForm";
 import useFetch from "../../hooks/useFetch";
-import GenreButtons from "../../components/GenreButton.jsx/GenreButtons";
+import GenreMoodButtons from "../../components/GenreMoodButton.jsx/GenreMoodButtons";
 import ResultsSectionMood from "../../components/ResultSectionMoods/ResultSectionMoods";
 
 
@@ -22,11 +22,11 @@ const Happy = () => {
 
 
     return (
-        <main>
-            <GenreButtons/>
-            <h2>happy page</h2>
+        <>
+            <GenreMoodButtons/>
+            <h2>Get ready for some sunshine on your screen - this page is like a virtual ray of sunshine!</h2>
             <ResultsSectionMood data={data}/>
-        </main>
+        </>
     );
 };
 

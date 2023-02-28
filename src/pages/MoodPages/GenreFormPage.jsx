@@ -1,16 +1,16 @@
 import React from 'react';
-import GenreButtons from "../../components/GenreButton.jsx/GenreButtons";
+import GenreMoodButtons from "../../components/GenreMoodButton.jsx/GenreMoodButtons";
 import GenreForm from "../../components/GenreForm/GenreForm";
 // import GenreFormResults from "../../components/GenreForm/GenreFormResults";
 
 const GenreFormPage = () => {
     return (
-        <main>
-            <GenreButtons/>
+        <>
+            <GenreMoodButtons/>
             <GenreForm/>
             {/*<GenreFormResults/>*/}
 
-        </main>
+        </>
 
     );
 };

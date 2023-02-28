@@ -1,6 +1,6 @@
 import React from 'react';
 import useFetch from "../../hooks/useFetch";
-import GenreButtons from "../../components/GenreButton.jsx/GenreButtons";
+import GenreMoodButtons from "../../components/GenreMoodButton.jsx/GenreMoodButtons";
 import ResultsSectionMood from "../../components/ResultSectionMoods/ResultSectionMoods";
 
 
@@ -20,12 +20,12 @@ const InLove = () => {
 
 
     return (
-        <main>
-            <GenreButtons/>
-            <h2>In love page</h2>
+        <>
+            <GenreMoodButtons/>
+            <h2>This page is the romantic equivalent of a box of chocolates - you never know what you're going to get.</h2>
             <ResultsSectionMood data={data}/>
 
-        </main>
+        </>
 
     );
 };

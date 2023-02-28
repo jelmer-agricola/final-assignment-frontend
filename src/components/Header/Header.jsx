@@ -15,9 +15,9 @@ function Header() {
             <nav className="inner-content-container">
                 <div className="navbar-items">
                     <Link to="/" className="nav-links">
-                        <h3 >
+                        <h5 >
                             Home
-                        </h3>
+                        </h5>
                     </Link>
 
                     {isAuth ?
@@ -28,10 +28,10 @@ function Header() {
                             <ul className="nav-list">
 
                                 <li className="nav-links">
-                                    <Link to="/watchlist"><h3> Watchlist</h3></Link></li>
+                                    <Link to="/watchlist"><h5> Watchlist</h5></Link></li>
 
                                 <li className="nav-links">
-                                    <Link to="/favorites"><h3>Favorites</h3></Link>
+                                    <Link to="/favorites"><h5>Favorites</h5></Link>
                                 </li>
                                 <li className="nav-links">
                                     <Button
@@ -43,7 +43,7 @@ function Header() {
                                 </li>
                                 <li className="nav-links">
                                     <Button
-                                        children="uitloggen"
+                                        children="Sign out"
                                         onClick={logout}
                                         className="login-btn"
                                     />
@@ -56,14 +56,14 @@ function Header() {
                         :
                         <div className="login-btns">
                             <Button
-                                children="Log in"
+                                children="Sign in"
                                 onClick={() => navigate('/login')}
                                 className="login-btn"
 
                             />
 
                             <Button
-                                children="Registreren"
+                                children="Register"
                                 onClick={() => navigate('/signup')}
                                 className="login-btn"
                             />

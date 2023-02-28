@@ -2,7 +2,7 @@ import React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart as Heart, faTimes as Times, faArrowLeft as EyeSlash} from "@fortawesome/free-solid-svg-icons";
 import './Button.css'
-import '../Watchlist/Watchlist.css'
+import '../WatchlistComponents/WatchlistComponents.css'
 
 
 function Button({text, children, type = 'button', onClick, className, disabled, icon}) {
@@ -12,7 +12,6 @@ function Button({text, children, type = 'button', onClick, className, disabled, 
                 type={type}
                 onClick={onClick}
                 disabled={disabled}
-
         >
             {icon && <FontAwesomeIcon icon={icon} />}
 

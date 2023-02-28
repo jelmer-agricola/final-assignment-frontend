@@ -3,6 +3,7 @@ import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import Button from '../../components/Button/Button';
 import '../../App.css'
+import '../Login/Login.css'
 
 function SignUp() {
     const [username, setUsername] = useState('');
@@ -40,16 +41,16 @@ function SignUp() {
     }
 
     return(
-        <main>
         <section className="outer-content-container">
             <div className="inner-content-container">
-            <h1>Registreren</h1>
-            <p>Vul hieronder je gegevens in om je te registeren. Heb je al een account? Je kunt je <Link to="/login">hier</Link> inloggen.</p>
+            <h1>Register</h1>
+            <p className="login-header">Enter your details below to register. </p>
 
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="email-field">
-                    Email adres:</label><br/>
+            <form className="login-form" onSubmit={handleSubmit}>
+                <label className="login-form-label" htmlFor="email-field">
+                    Email:</label><br/>
                 <input
+                    className="login-form-input"
                     type="text"
                     id="email-field"
                     name="email"
@@ -57,16 +58,18 @@ function SignUp() {
                     onChange={(e) => setEmail(e.target.value)}
                 /><br/>
 
-                <label htmlFor="username-field"> Gebruikersnaam:</label><br/>
+                <label htmlFor="username-field"> Username:</label><br/>
                 <input
+                    className="login-form-input"
                     type="text"
                     id="username-field"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                 /><br/>
 
-                <label htmlFor="password-field"> Wachtwoord:</label><br/>
+                <label htmlFor="password-field"> Password:</label><br/>
                 <input
+                    className="login-form-input"
                     type="password"
                     id="password-field"
                     name="password"
@@ -74,13 +77,15 @@ function SignUp() {
                     onChange={(e) => setPassword(e.target.value)}
                 /><br/>
                 <Button
-                    children="Registreren"
+                    className="submit-btns"
+                    children="Register"
                     type="submit"
                 />
             </form>
+                <p className="login-header">Do you already have an account? You can <Link to="/login">Click here </Link>to sign in</p>
+
             </div>
         </section>
-        </main>
     );
 
 }

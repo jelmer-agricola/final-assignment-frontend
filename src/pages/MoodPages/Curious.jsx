@@ -1,6 +1,6 @@
 import React from 'react';
 import useFetch from "../../hooks/useFetch";
-import GenreButtons from "../../components/GenreButton.jsx/GenreButtons";
+import GenreMoodButtons from "../../components/GenreMoodButton.jsx/GenreMoodButtons";
 import ResultsSectionMood from "../../components/ResultSectionMoods/ResultSectionMoods";
 
 
@@ -19,11 +19,11 @@ const Angry = () => {
 
 
     return (
-        <main>
-            <GenreButtons/>
-            <h2>CuriousPage</h2>
+        <>
+            <GenreMoodButtons/>
+            <h2>This page is like a treasure trove of hidden gems - you never know what you might discover.</h2>
             <ResultsSectionMood data={data}/>
-        </main>
+        </>
 
     );
 };

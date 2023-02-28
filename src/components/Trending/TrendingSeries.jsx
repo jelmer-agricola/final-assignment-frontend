@@ -1,7 +1,8 @@
 import React from 'react';
 import useFetch from "../../hooks/useFetch";
-import '../../pages/Home/Home'
 import TrendingSerieResults from "./TrendingSerieResults";
+import './Trending.css'
+
 
 function TrendingSeries() {
 
@@ -14,7 +15,7 @@ function TrendingSeries() {
     return (
    <>
        <div className= "trending-series">
-       <h2>Trending Series</h2>
+           <h2 className="trending-header">Top 5 Trending Series</h2>
 
                 {data.results && (
                     <ul >

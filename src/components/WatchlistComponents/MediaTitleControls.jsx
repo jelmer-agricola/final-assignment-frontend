@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {GlobalContext} from "../../context/GlobalState";
-import './Watchlist.css';
+import './WatchlistComponents.css';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart, faTimes, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 

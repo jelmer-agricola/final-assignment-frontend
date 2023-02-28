@@ -1,24 +1,7 @@
-@media screen and  (min-width: 745px) {
-    .trending-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .trending-movies {
-        width: 45%;
-    }
-
-    .trending-series {
-        width: 45%;
-    }
+.homepage-intro-text{
+    text-align: center;
+    padding: 0.25rem 0;
 }
-/*For ipad mini this is the width this was the smallest tablet I could find*/
-@media screen and  (max-width: 744px) {
-    .trending-container {
-        display: flex;
-        flex-direction: column;
-    }
-
+.homepage-header{
+    color: var(--tertiary);
 }
-

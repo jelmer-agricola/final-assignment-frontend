@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {GlobalContext} from "../../context/GlobalState";
-import './Watchlist.css';
+import './WatchlistComponents.css';
 import Button from "../Button/Button";
 import {roundToOneDecimal} from "../../helpers/rountToOneDecimal";
 

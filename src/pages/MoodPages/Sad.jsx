@@ -1,6 +1,6 @@
 import React from 'react';
 import useFetch from "../../hooks/useFetch";
-import GenreButtons from "../../components/GenreButton.jsx/GenreButtons";
+import GenreMoodButtons from "../../components/GenreMoodButton.jsx/GenreMoodButtons";
 import ResultsSectionMood from "../../components/ResultSectionMoods/ResultSectionMoods";
 
 
@@ -16,11 +16,11 @@ const Sad = () => {
     );
 
     return (
-        <main>
-            <GenreButtons/>
-            <h2>Sad page</h2>
+        <>
+            <GenreMoodButtons/>
+            <h2>If you're feeling down, this page is like a virtual shoulder to cry on - it's okay to let it all out.</h2>
             <ResultsSectionMood data={data}/>
-        </main>
+        </>
     );
 };
 

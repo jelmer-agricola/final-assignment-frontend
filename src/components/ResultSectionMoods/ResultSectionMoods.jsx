@@ -1,5 +1,5 @@
 import React from 'react';
-import ResultCard from "../Watchlist/ResultCard";
+import ResultCard from "../WatchlistComponents/ResultCard";
 import '../../pages/MoodPages/MoodPages.css'
 
 
