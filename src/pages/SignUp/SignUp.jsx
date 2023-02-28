@@ -4,100 +4,142 @@ import axios from "axios";
 import Button from '../../components/Button/Button';
 import '../../App.css'
 import '../Login/Login.css'
-import ValidateForm from "../../components/FormValidation/ValidateForm";
+import {useForm} from 'react-hook-form';
 
 function SignUp() {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const [email, setEmail] = useState('');
+    const {handleSubmit, formState: {errors}, register} = useForm();
     const navigate = useNavigate();
 
-//     voor functionaliteit state toevoegen
+    // add state for functionality
     const [error, toggleError] = useState(false);
     const [loading, toggleLoading] = useState(false);
 
-    async function handleSubmit(e){
-        e.preventDefault();
+    const onSubmit = async (data) => {
         toggleError(false);
         toggleLoading(true);
 
-        console.log(email, password, username)
+        console.log(data.email, data.password, data.username);
+
 
         try {
-            const result = await axios.post("https://frontend-educational-backend.herokuapp.com/api/auth/signup",
+            const result = await axios.post(
+                "https://frontend-educational-backend.herokuapp.com/api/auth/signup",
                 {
-                    email: email,
-                    password: password,
-                    username: username,
+                    email: data.email,
+                    password: data.password,
+                    username: data.username,
                     role: ["user"],
-                });
+                }
+            );
             console.log(result);
-            navigate(`/login`)
+            navigate(`/login`);
 
-        }catch (e) {
+        } catch (e) {
             console.error(e);
             toggleError(true);
         }
         toggleLoading(false);
     }
 
-    //finally???
-
-    return(
+    // FINALLY TOEVOEGEN
+    return (
         <section className="outer-content-container">
             <div className="inner-content-container">
-            <h1>Register</h1>
-            <p className="login-header">Enter your details below to register. </p>
+                <h1>Register</h1>
+                <p className="login-header">Enter your details below to register. </p>
 
-            <form className="login-form" onSubmit={handleSubmit}>
-                {/*<ValidateForm*/}
-                {/*    onSubmit={handleSubmit}*/}
-                {/*    rules={{*/}
-                {/*        username: { min: 6, message: "Username must be at least 6 characters long." },*/}
-                {/*        password: { min: 6, message: "Password must be at least 6 characters long." },*/}
-                {/*        email: { contains: "@", message: "Email must contain '@' symbol." },*/}
-                {/*    }}*/}
-                {/*>*/}
+                <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+                    <label className="login-form-label" htmlFor="email-field">
+                        Email:</label><br/>
+                    <input
+                        className="login-form-input"
+                        type="text"
+                        id="email-field"
+                        name="email"
+                        {...register("email", {
+                            required: {
+                                value: true,
+                                message: "Email is required",
+                            },
+                            validate: (value) => value.includes('@') || 'Email should contain @',
+                        })}
+                    />
+                    {errors.email && <p>{errors.email.message}</p>}
+
+                    {/*<label htmlFor="message-field">*/}
+                    {/*    Bericht:*/}
+                    {/*    <textarea*/}
+                    {/*        {...register("message-content", {*/}
+                    {/*            required: {*/}
+                    {/*                value: true,*/}
+                    {/*                message: 'Dit veld is verplicht',*/}
+                    {/*            },*/}
+                    {/*            minLenght: {*/}
+                    {/*                value: 10,*/}
+                    {/*                message: 'Input moet minstends 10 karakters bevatten',*/}
+                    {/*            },*/}
+                    {/*            maxLenght: {*/}
+                    {/*                value: 50,*/}
+                    {/*                message: 'Input mag maximaal 50 karakters bevatten',*/}
+                    {/*            },*/}
+                    {/*        })}*/}
+                    {/*    ></textarea>*/}
+                    {/*</label>*/}
+
+                    <br/>
+
+                    <label htmlFor="username-field"> Username:</label><br/>
+                    <input
+                        className="login-form-input"
+                        type="text"
+                        id="username-field"
+                        placeholder="Username"
+                        {...register('username', {
+                            minLength: {
+                                value: 8,
+                                message: 'Username should be at least 8 characters long',
+                            },
+                            required: {
+                                value: true,
+                                message: 'Username is required'
+                            }
+                        })}
+                    />
+                    {errors.username && <p>{errors.username.message}</p>}
+                    <br/>
+
+                    <label htmlFor="password-field"> Password:</label><br/>
+                    <input
+                        className="login-form-input"
+                        type="password"
+                        id="password-field"
+                        name="password"
+                        placeholder="•••••••••••••••"
+                        {...register('password', {
+                            minLength: {
+                                value: 8,
+                                message: 'password should be at least 8 characters long',
+                            },
+                            required: {
+                                value: true,
+                                message: 'password is required'
+                            }
+                        })}
+                    />
+                    {errors.password && <p>{errors.password.message}</p>}
+                    <br/>
 
 
-                <label className="login-form-label" htmlFor="email-field">
-                    Email:</label><br/>
-                <input
-                    className="login-form-input"
-                    type="text"
-                    id="email-field"
-                    name="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                /><br/>
-
-                <label htmlFor="username-field"> Username:</label><br/>
-                <input
-                    className="login-form-input"
-                    type="text"
-                    id="username-field"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                /><br/>
-
-                <label htmlFor="password-field"> Password:</label><br/>
-                <input
-                    className="login-form-input"
-                    type="password"
-                    id="password-field"
-                    name="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                /><br/>
-                <Button
-                    className="submit-btns"
-                    children="Register"
-                    type="submit"
-                />
+                    <Button
+                        className="submit-btns"
+                        children="Register"
+                        type="submit"
+                    />
 
 
-            </form>
-                <p className="login-header">Do you already have an account? You can <Link to="/login">Click here </Link>to sign in</p>
+                </form>
+                <p className="login-header">Do you already have an account? You can <Link to="/login">Click here </Link>to
+                    sign in</p>
 
             </div>
         </section>

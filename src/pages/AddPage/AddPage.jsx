@@ -8,7 +8,7 @@ import './AddPage.css'
 // loading etc hier toevoegen
 //USE EFFECT TOEVOEGEN
 
-
+//add:1 Uncaught (in promise) Error: A listener indicated an asynchronous response by returning true, but the message channel closed before a response was received
 function AddPage() {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);

@@ -55,7 +55,9 @@ return(
                     {...register('username')}
                 />
                 <br />
+      -
                 <label htmlFor="password-field">Password: </label>
+
                 <br />
                 <input
                     className="login-form-input"
