@@ -49,14 +49,15 @@ function SignUp() {
             <h1>Register</h1>
             <p className="login-header">Enter your details below to register. </p>
 
-            {/*<form className="login-form" onSubmit={handleSubmit}>*/}
-                <ValidateForm
-                    rules={{
-                        username: { min: 6, message: "Username must be at least 6 characters long." },
-                        password: { min: 6, message: "Password must be at least 6 characters long." },
-                        email: { contains: "@", message: "Email must contain '@' symbol." },
-                    }}
-                >
+            <form className="login-form" onSubmit={handleSubmit}>
+                {/*<ValidateForm*/}
+                {/*    onSubmit={handleSubmit}*/}
+                {/*    rules={{*/}
+                {/*        username: { min: 6, message: "Username must be at least 6 characters long." },*/}
+                {/*        password: { min: 6, message: "Password must be at least 6 characters long." },*/}
+                {/*        email: { contains: "@", message: "Email must contain '@' symbol." },*/}
+                {/*    }}*/}
+                {/*>*/}
 
 
                 <label className="login-form-label" htmlFor="email-field">
@@ -94,9 +95,8 @@ function SignUp() {
                     type="submit"
                 />
 
-                </ValidateForm>
 
-            {/*</form>*/}
+            </form>
                 <p className="login-header">Do you already have an account? You can <Link to="/login">Click here </Link>to sign in</p>
 
             </div>
