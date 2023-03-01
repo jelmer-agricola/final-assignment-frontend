@@ -30,5 +30,6 @@
     text-align: center;
     margin-top: 1.5rem;
 }
-
-
+.login-error-message{
+    color: red;
+}

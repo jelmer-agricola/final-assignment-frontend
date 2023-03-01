@@ -62,10 +62,10 @@ function SignUp() {
                                 value: true,
                                 message: "Email is required",
                             },
-                            validate: (value) => value.includes('@') || 'Email should contain @',
+                            validate: (value) => value.includes('@') || 'Email should contain an @',
                         })}
                     />
-                    {errors.email && <p>{errors.email.message}</p>}
+                    {errors.email && <p className= "login-error-message">{errors.email.message}</p>}
                           <br/>
 
                     <label htmlFor="username-field"> Username:</label><br/>
@@ -77,7 +77,7 @@ function SignUp() {
                         {...register('username', {
                             minLength: {
                                 value: 8,
-                                message: 'Username should be at least 8 characters long',
+                                message: 'Your username should be at least 8 characters long',
                             },
                             required: {
                                 value: true,
@@ -85,7 +85,7 @@ function SignUp() {
                             }
                         })}
                     />
-                    {errors.username && <p>{errors.username.message}</p>}
+                    {errors.username && <p className="login-error-message">{errors.username.message}</p>}
                     <br/>
 
                     <label htmlFor="password-field"> Password:</label><br/>
@@ -98,15 +98,15 @@ function SignUp() {
                         {...register('password', {
                             minLength: {
                                 value: 8,
-                                message: 'password should be at least 8 characters long',
+                                message: 'Your password should be at least 8 characters long',
                             },
                             required: {
                                 value: true,
-                                message: 'password is required'
+                                message: 'Password is required'
                             }
                         })}
                     />
-                    {errors.password && <p>{errors.password.message}</p>}
+                    {errors.password && <p className="login-error-message">{errors.password.message}</p>}
                     <br/>
 
 

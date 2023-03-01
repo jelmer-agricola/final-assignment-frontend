@@ -1,6 +1,6 @@
 import React, {createContext, useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-// import jwtDecode from "jwt-decode";
+import jwtDecode from "jwt-decode";
 import axios from "axios";
 
 export const AuthContext = createContext({});
@@ -18,7 +18,15 @@ function AuthContextProvider({children}) {
         const token = localStorage.getItem('token');
 
         if (token) {
-            void fetchUserData(token);
+            const decodedToken = jwtDecode(token);
+            const currentTime = Date.now() / 1000;
+            if (decodedToken.exp < currentTime) {
+                // Token has expired
+                logout();
+        } else {
+                //token is valid
+                void fetchUserData(token);
+            }
         } else {
             toggleIsAuth({
                 isAuth: false,
@@ -38,12 +46,11 @@ function AuthContextProvider({children}) {
     function logout(jwt) {
         console.log('Gebruiker is uitgelogd');
         // Hieronder haalt token uit localstorage
-        // localStorage.removeItem('token');
-        localStorage.clear();
+        localStorage.removeItem('token');
+        // localStorage.clear();
         // Dit haalt local storage leeg na uitloggen is er dus geen watchlist e.d. meer over
         // localStorage.token(); token tot niks
         //
-
 
         toggleIsAuth({
             isAuth: false,

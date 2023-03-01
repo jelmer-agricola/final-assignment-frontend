@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import axios from 'axios';
@@ -9,6 +9,8 @@ import { useForm } from 'react-hook-form';
 function Login() {
     const {handleSubmit, formState: {errors}, register} = useForm();
     const { login } = useContext(AuthContext);
+    const [errorMessageCredentials, setErrorMessageCredentials] = useState("");
+
 
     const onSubmit = async (data) => {
         try {
@@ -24,11 +26,12 @@ function Login() {
             login(result.data.accessToken);
         } catch (e) {
             console.error(e);
+            setErrorMessageCredentials(e.response?.data?.message || "Either your password or username is incorrect.");
         }
     };
 
 // FINALLY TOEVOEGEN
-
+// USE EFFECT?
 
 //     console.log({
 //     email: email,
@@ -55,7 +58,7 @@ return(
                     {...register('username', {
                         minLength: {
                             value: 8,
-                            message: 'Username should be at least 8 characters long',
+                            message: 'Your username should be at least 8 characters long',
                         },
                         required: {
                             value: true,
@@ -63,7 +66,8 @@ return(
                         }
                     })}
                 />
-                {errors.username && <p>{errors.username.message}</p>}
+                {errors.username && <p className="login-error-message">{errors.username.message}</p>}
+                {errorMessageCredentials && <p className="login-error-message">{errorMessageCredentials}</p>}
                 <br />
 
                 <label htmlFor="password-field">Password: </label>
@@ -78,15 +82,17 @@ return(
                     {...register('password', {
                         minLength: {
                             value: 8,
-                            message: 'password should be at least 8 characters long',
+                            message: 'Your password should be at least 8 characters long',
                         },
                         required: {
                             value: true,
-                            message: 'password is required'
+                            message: 'Password is required'
                         }
                     })}
                 />
-                {errors.password && <p>{errors.password.message}</p>}
+                {errors.password && <p className="login-error-message">{errors.password.message}</p>}
+                {errorMessageCredentials && <p className="login-error-message">{errorMessageCredentials}</p>}
+
                 <br />
 
                 <Button type="submit" className="submit-btns">

@@ -2,8 +2,9 @@
     [x] authorisatie van routing klopt
 
 
-[]Hookform
-[] Error messages in inlog
+[x]Hookform inlog en registereren
+[] hookform voor genreform
+[x] Error messages in inlog
 [] Styling  text homepage
 [] styling navbar voro telefoon
 [] nalopen of overal juist use Effect is geburikt en errors e.d. 

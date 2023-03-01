@@ -1,3 +1,8 @@
-.heading-list{
+.watchlist__heading-list{
     text-align: start;
 }
+.watchlist__control-description{
+    text-align: center;
+}
+
+
