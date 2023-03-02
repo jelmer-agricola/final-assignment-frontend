@@ -1,5 +1,4 @@
-
-header {
+.header {
     background-color: var(--primary);
     min-height: 8.5vh;
 }

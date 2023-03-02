@@ -20,9 +20,9 @@ const TrendingMovieResults = ({mediaTitle}) => {
             </div>
 
             <div className="info">
-                <div className="header">
+                <div>
                     <h4 className="release-date">Release date: {mediaTitle.release_date}</h4>
-                    <div>{mediaTitle.overview}</div>
+                    <div className="trending-info">{mediaTitle.overview}</div>
                     <h4>Vote Average: {voteAverage}</h4>
                 </div>
             </div>

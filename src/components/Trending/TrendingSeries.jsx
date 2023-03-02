@@ -19,23 +19,27 @@ function TrendingSeries() {
     }
 
     return (
-   <>
-       <div className= "trending-series">
-           <h2 className="trending-header">Top 5 Trending Series</h2>
+        <>
+            <div className="trending-series">
+                <h2 className="trending-header">Top 5 Trending Series</h2>
 
                 {data.results && (
-                    <ul >
-                        {data.results.slice(0,5).filter(serie => serie.name)
+                    <ul>
+                        {data.results.slice(0, 5).filter(serie => serie.name)
                             .map(serie => (
-                                <li key={serie.id}>{serie.name}
+                                <li
+                                    className="media-title"
+                                    key={serie.id}
+                                >
+                                    {serie.name}
                                     <TrendingSerieResults mediaTitle={serie}/>
                                 </li>
 
                             ))}
                     </ul>
                 )}
-       </div>
-   </>
+            </div>
+        </>
 
     );
 }

@@ -10,8 +10,8 @@ const Home = () => {
     return (
         <section className="outer-content-container">
             <div className="inner-content-container">
-                <h1 className="homepage-header">Welcome to Your Favorite Movie and TV Series Website!</h1>
-                <p className="homepage-intro-text">Looking for your next binge-worthy show? <Link to="/login">Sign
+                <h1 className="homepage__header">Welcome to Your Favorite Movie and TV Series Website!</h1>
+                <p className="homepage__intro-text">Looking for your next binge-worthy show? <Link to="/login">Sign
                     in</Link> to see your watchlist and favorites list, or <Link to="/signup">create an
                     account</Link> to start keeping track of all the movies and TV shows you love. Plus, with our search
                     feature, you can easily find movies and shows to match your mood. Whether you're in the mood for a

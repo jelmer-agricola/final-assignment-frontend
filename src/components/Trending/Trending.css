@@ -1,6 +1,12 @@
-.trending-header{
+.trending-header {
     text-align: left;
-    color: var(--tertiary);
+    color: var(--primary);
+}
+
+.trending-info {
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: normal;
 }
 
 @media screen and  (min-width: 745px) {
@@ -18,6 +24,7 @@
         width: 45%;
     }
 }
+
 /*For ipad mini this is the width this was the smallest tablet I could find*/
 @media screen and  (max-width: 744px) {
     .trending-container {

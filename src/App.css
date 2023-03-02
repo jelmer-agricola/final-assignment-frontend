@@ -176,12 +176,17 @@ Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer
     /*border: red solid 1px;*/
 }
 
-
+.media-title {
+    font-size: 1.25rem;
+    color: var(--tertiary);
+    font-weight: 600;
+    margin: 0;
+}
 
 .filler-poster {
     width: 75px;
     height: 113px;
-    background-color: var(--white);
+    background-color: var(--light-grey);
     border-radius: 5px;
     margin-right: 15px;
     display: block;

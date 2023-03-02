@@ -11,7 +11,7 @@ function Header() {
 
 
     return (
-        <header className="outer-content-container">
+        <header className="outer-content-container header">
             <nav className="inner-content-container">
                 <div className="navbar-items">
                     <Link to="/" className="nav-links">

@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import axios from 'axios';
 import Button from '../../components/Button/Button';
 import './Login.css';
-import { useForm } from 'react-hook-form';
 
 function Login() {
     const {handleSubmit, formState: {errors}, register} = useForm();
@@ -33,11 +33,6 @@ function Login() {
 // FINALLY TOEVOEGEN
 // USE EFFECT?
 
-//     console.log({
-//     email: email,
-//     wachtwoord: password,
-// });
-// login();
 
 return(
     <section className="outer-content-container">

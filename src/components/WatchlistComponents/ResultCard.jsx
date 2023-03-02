@@ -38,7 +38,7 @@ const ResultCard = ({mediaTitle}) => {
             </div>
 
             <div className="info">
-                <div className="header">
+                <div>
                     <div>{mediaTitle.overview}</div>
                     <h4 className="release-date">  {mediaTitle.release_date || mediaTitle.first_air_date}</h4>
                     <h4>Vote Average: {voteAverage}</h4>

@@ -4,6 +4,7 @@ import axios from 'axios';
 import ResultCard from '../../components/WatchlistComponents/ResultCard';
 import './AddPage.css';
 
+// loading
 function AddPage() {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
@@ -54,7 +55,7 @@ function AddPage() {
                             <ul className="results">
                                 {results.map((mediaTitle) => (
                                     <li key={mediaTitle.id}>
-                                        <p className="title">
+                                        <p className="media-title">
                                             {mediaTitle.title || mediaTitle.name}
                                         </p>
                                         <ResultCard mediaTitle={mediaTitle}></ResultCard>

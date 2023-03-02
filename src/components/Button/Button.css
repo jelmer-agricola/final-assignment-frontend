@@ -1,7 +1,7 @@
 button{
     filter: drop-shadow(0 0.10rem 0.10rem var(--black) );
 }
-
+/*ADD BUTTONS*/
 .add-btn {
     padding: 10px 15px;
     background-color: var(--secondary-light);
@@ -28,6 +28,7 @@ button{
     background-color: var(--tertiary);
     cursor: pointer;
 }
+/*Title Card control BUTTONS*/
 
 .ctrl-btn {
     color: var(--white);
@@ -43,7 +44,7 @@ button{
     color: var(--secondary);
     cursor: pointer;
 }
-
+/*Login  BUTTONS signup buttons have the same styling*/
 
 .login-btns {
     display: flex;
@@ -52,8 +53,8 @@ button{
 
 .login-btn {
     width: 100%;
-    height: 55px;
-    padding: 5px;
+    height: 40px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
@@ -63,28 +64,14 @@ button{
     cursor: pointer;
     transition: 0.4s;
     margin: 3px;
-
-    /*padding: 5px 5px;*/
-    /*background-color: var(--secondary-light);*/
-    /*color: var(--black);*/
-    /*border-radius: 2px;*/
-    /*font-weight: 700;*/
-    /*display: inline-block;*/
-    /*border: none;*/
-    /*font-size: 1rem;*/
-    /*transition: all 0.3s ease;*/
-    /*line-height: 1.1;*/
 }
-
 
 .login-btn:hover {
     background-color: var(--primary-light);
     opacity: 1;
     cursor: pointer;
 }
-
-
-
+/*Sumbit buttons */
 .submit-btns {
     background-color: var(--secondary);
     border: none;

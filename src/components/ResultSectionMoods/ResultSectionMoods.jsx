@@ -15,7 +15,7 @@ const ResultsSectionMood = ({data}) => {
                         <ul>
                             {data.results.slice(0, 10).map((mediaTitle) => (
                                 <li key={mediaTitle.id}>
-                                    <p className="title">
+                                    <p className="media-title">
                                         {mediaTitle.title || mediaTitle.name}
                                     </p>
                                     <ResultCard mediaTitle={mediaTitle}/>
