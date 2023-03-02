@@ -5,11 +5,14 @@
 [x]Hookform inlog en registereren
 [] hookform voor genreform
 [x] Error messages in inlog
+[] error voor zoekbalk toevoegen als er niks als resultaat uitkokmt. 
 [] Styling  text homepage
 [] styling navbar voro telefoon
 [] nalopen of overal juist use Effect is geburikt en errors e.d. 
 [] Vanaf regel 13 trending movies bij alle useFetcht toevoegen
-
+[] Home--> conditioneel wel en geen buttons dus wel en niet kunnen toevoegen van trending
+[] volgende pagina 
+[] checken of genres kloppen met de genremoodbuttons
 
 [x] Styling Log in page
 [x] Styling  Signup page

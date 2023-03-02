@@ -2,8 +2,10 @@ import React from 'react';
 
 function GenreSelect({ value, onGenreChange }) {
         return (
-            <select value={value} onChange={onGenreChange}>
-                    <option value="">All</option>
+            <select
+                className= "genre-form__select"
+                value={value} onChange={onGenreChange}>
+                    <option value="">Genres</option>
                     <option value="28">Action</option>
                     <option value="12">Adventure</option>
                     <option value="16">Animation</option>

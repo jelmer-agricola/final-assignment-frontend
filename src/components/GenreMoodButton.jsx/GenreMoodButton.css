@@ -31,6 +31,14 @@
     opacity: 1;
     cursor: pointer;
 }
+.genre-btn.genres{
+    text-align: start;
+    padding: 10px;
+    width: 180px;
+    font-size: 1.25rem;
+    font-weight: normal;
+
+}
 
 .genre-btn.happy:hover {
     background-color: yellow;

@@ -10,9 +10,13 @@ const GenreMoodButtons = () => {
     return (
         <>
             <GenreMoodHeader/>
-
             <section className="outer-content-container ">
                 <div className="inner-content-container genre-btns">
+                    <Button
+                        children="Genres"
+                        onClick={() => navigate('/genre-form')}
+                        className="genre-btn genres"
+                    />
                     <Button
                         children="😊 Happy 😊"
                         onClick={() => navigate('/happy')}
@@ -38,11 +42,7 @@ const GenreMoodButtons = () => {
                         onClick={() => navigate('/sad')}
                         className="genre-btn sad"
                     />
-                    {/*<Button*/}
-                    {/*    children="Genres"*/}
-                    {/*    onClick={() => navigate('/genre-form')}*/}
-                    {/*    className="genre-btn"*/}
-                    {/*/>*/}
+
 
                 </div>
             </section>

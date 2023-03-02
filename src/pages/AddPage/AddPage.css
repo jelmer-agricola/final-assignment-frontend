@@ -30,3 +30,6 @@
 .results li {
     list-style: none;
 }
+.error-message{
+    font-size: 1.5rem;
+}

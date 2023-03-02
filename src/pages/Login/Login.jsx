@@ -58,7 +58,7 @@ return(
                     {...register('username', {
                         minLength: {
                             value: 8,
-                            message: 'Your username should be at least 8 characters long',
+                            message: 'Your username should contain at least 8 characeters',
                         },
                         required: {
                             value: true,
@@ -82,7 +82,7 @@ return(
                     {...register('password', {
                         minLength: {
                             value: 8,
-                            message: 'Your password should be at least 8 characters long',
+                            message: 'Your password should contain at least 8 characters',
                         },
                         required: {
                             value: true,

@@ -15,7 +15,7 @@ const Watchlist = () => {
         <>
             <section className="outer-content-container">
                 <div className="inner-content-container">
-                    <h3> Don't know what to watch and too lazy to use the searchbar <Link to="/moods">click here</Link> and we will give you suggestions based on your mood.
+                    <h3> Don't know what to watch and to tired to use the searchbar <Link to="/moods">click here</Link> and we will give you suggestions based on your mood.
                     </h3>
                     <p className="watchlist__control-description">You can click the heart to send a movie to your favorites. And use the cross to delete it from your favorites. The symbols appear when you hover over the poster with your mouse.</p>
 
