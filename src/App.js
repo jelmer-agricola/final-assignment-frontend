@@ -3,8 +3,8 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import './App.css';
 import {AuthContext} from "./context/AuthContext";
 
-import Login from "./pages/Login/Login";
-import SignUp from "./pages/SignUp/SignUp";
+import Login from "./pages/AuthPages/Login";
+import SignUp from "./pages/AuthPages/SignUp";
 import AddPage from "./pages/AddPage/AddPage"
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home"

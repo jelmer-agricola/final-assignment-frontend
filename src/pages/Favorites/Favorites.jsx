@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
-import {GlobalContext} from "../../context/GlobalState";
-import MediaTitleCard from "../../components/WatchlistComponents/MediaTitleCard";
-import '../../components/WatchlistComponents/WatchlistComponents.css'
+import {GlobalContext} from '../../context/GlobalState';
+import MediaTitleCard from '../../components/WatchlistComponents/MediaTitleCard';
 import '../Watchlist/Watchlist.css'
+import './Favorites.css'
 import {Link} from "react-router-dom";
 
 const Favorites = () => {
@@ -14,7 +14,7 @@ const Favorites = () => {
                 <div className="inner-content-container">
                     <h3> Don't know what to watch and too tired to use the searchbar <Link to="/moods">click here</Link> and we will give you suggestions based on your mood.
                     </h3>
-                    <p className="favorites__control-description">You can click the left arrow to send a movie or serie back to your watchlist. And use the cross to delete it from your watchlist. The symbols appear when you hover over the poster with your mouse.</p>
+                    <p className="favorites__control-description">You can click the left arrow icon to send a movie or serie back to your watchlist. And use the cross to delete it from your watchlist. The symbols appear when you hover over the poster with your mouse.</p>
                 </div>
             </section>
 

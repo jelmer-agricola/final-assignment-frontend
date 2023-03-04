@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import axios from 'axios';
 import Button from '../../components/Button/Button';
-import './Login.css';
+import './AuthPages.css';
 
 function Login() {
     const {handleSubmit, formState: {errors}, register} = useForm();

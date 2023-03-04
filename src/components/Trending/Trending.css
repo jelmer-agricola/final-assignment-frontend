@@ -8,6 +8,10 @@
     color: var(--black);
     font-weight: normal;
 }
+.vote-average{
+    font-size: 1rem;
+
+}
 
 @media screen and  (min-width: 745px) {
     .trending-container {

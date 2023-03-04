@@ -26,6 +26,11 @@
     margin: 0;
 }
 
+.vote-average{
+    font-size: 1rem;
+
+}
+
 .result-card .controls button {
     margin-right: 10px;
 }

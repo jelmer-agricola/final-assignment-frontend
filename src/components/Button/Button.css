@@ -44,7 +44,7 @@ button{
     color: var(--secondary);
     cursor: pointer;
 }
-/*Login  BUTTONS signup buttons have the same styling*/
+/*AuthPages  BUTTONS signup buttons have the same styling*/
 
 .login-btns {
     display: flex;

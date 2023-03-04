@@ -3,7 +3,7 @@
 
 
 [x]Hookform inlog en registereren
-[] hookform voor genreform
+[] hookform voor genreform 
 [x] Error messages in inlog
 [] error voor zoekbalk toevoegen als er niks als resultaat uitkokmt. 
 [] Styling  text homepage
@@ -13,6 +13,11 @@
 [] Home--> conditioneel wel en geen buttons dus wel en niet kunnen toevoegen van trending
 [] volgende pagina 
 [] checken of genres kloppen met de genremoodbuttons
+
+NICE To haves
+[] nice to haves 
+    - met hover instructie voor controls
+[] outlet voor routing 
 
 [x] Styling Log in page
 [x] Styling  Signup page

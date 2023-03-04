@@ -1,9 +1,17 @@
 import React from "react";
 import {roundToOneDecimal} from "../../helpers/roundToOneDecimal";
+import {limitCharacters} from "../../helpers/limitCharacters";
 
 const TrendingMovieResults = ({mediaTitle}) => {
 
     const voteAverage = roundToOneDecimal(mediaTitle.vote_average);
+
+    const limitCharacters = (str, limit) => {
+        if (str.length > limit) {
+            return str.substring(0, limit) + "...";
+        }
+        return str;
+    };
 
     return (
         <article className="result-card">
@@ -22,8 +30,10 @@ const TrendingMovieResults = ({mediaTitle}) => {
             <div className="info">
                 <div>
                     <h4 className="release-date">Release date: {mediaTitle.release_date}</h4>
-                    <div className="trending-info">{mediaTitle.overview}</div>
-                    <h4>Vote Average: {voteAverage}</h4>
+                    <div className="trending-info">
+                    {limitCharacters(mediaTitle.overview, 320)}
+                    </div>
+                    <h4 className="vote-average">Vote Average: {voteAverage}</h4>
                 </div>
             </div>
         </article>

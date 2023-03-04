@@ -13,15 +13,13 @@ const Angry = () => {
             page: 1,
         }, {}
     );
-    if (isLoading) {
-        return <div>Loading Angry Movies...</div>;
-    }
-    if (catchError) {
-        return <div>Error: {catchError}</div>;
-    }
+
+
 
     return (
         <>
+            { isLoading && <p>Loading the Angry page...</p>}
+            { catchError && <p>Something went wrong...</p>}
             <GenreMoodButtons/>
             <h2>Buckle up, because this page is about to take you on a wild, rage-filled ride</h2>
             <ResultsSectionMood data={data}/>

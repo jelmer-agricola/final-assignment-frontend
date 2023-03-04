@@ -19,7 +19,6 @@ const ResultCard = ({mediaTitle}) => {
             : false;
 
     const favoritesDisabled = storedMediaTitleFavorites ? true : false;
-
     const voteAverage = roundToOneDecimal(mediaTitle.vote_average);
 
 
@@ -39,9 +38,12 @@ const ResultCard = ({mediaTitle}) => {
 
             <div className="info">
                 <div>
+                    <h4 className="release-date">
+                        {mediaTitle.first_air_date && `First aired: ${mediaTitle.first_air_date}`}
+                        {mediaTitle.release_date && `Release date: ${mediaTitle.release_date}`}
+                    </h4>
                     <div>{mediaTitle.overview}</div>
-                    <h4 className="release-date">  {mediaTitle.release_date || mediaTitle.first_air_date}</h4>
-                    <h4>Vote Average: {voteAverage}</h4>
+                    <h4 className="vote-average">Vote Average: {voteAverage}</h4>
 
                 </div>
                 <div className="controls">
