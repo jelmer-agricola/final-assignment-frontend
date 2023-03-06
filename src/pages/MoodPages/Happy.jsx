@@ -15,17 +15,10 @@ const Happy = () => {
         }, {}
     );
 
-    if (isLoading) {
-        return <div>Loading Happy Movies, to either make you happy or to enhance your feeling of happiness...</div>;
-    }
-    if (catchError) {
-        return <div>Error: {catchError}</div>;
-    }
-
-
-
     return (
         <>
+            { isLoading && <p>Loading Happy Movies, to either make you happy or to enhance your feeling of happiness....</p>}
+            { catchError && <p>Something went wrong...</p>}
             <GenreMoodButtons/>
             <h2>Get ready for some sunshine on your screen - this page is like a virtual ray of sunshine!</h2>
             <ResultsSectionMood data={data}/>

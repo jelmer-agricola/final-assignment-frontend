@@ -1,6 +1,7 @@
 export const roundToOneDecimal = (number) => {
-    if (number === undefined){
+    if (number === undefined) {
         return null;
+    } else {
+        return number.toFixed(1);
     }
-    return number.toFixed(1);
 };

@@ -24,12 +24,12 @@ function Header() {
                         <>
                             <span className="username">{user.username}</span>
                             <ul className="nav-list">
-                                <li className="nav-links">
+                                <li className="nav-links nav-links-mobile">
                                     <Link to="/watchlist">
                                         <h5> Watchlist</h5>
                                     </Link>
                                 </li>
-                                <li className="nav-links">
+                                <li className="nav-links ">
                                     <Link to="/favorites">
                                         <h5>Favorites</h5>
                                     </Link>

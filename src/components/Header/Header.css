@@ -51,18 +51,22 @@ header .nav-links {
 @media screen and  (max-width: 743px) {
     .navbar-items {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .nav-list {
         list-style: none;
         display: flex;
-        flex-direction: column;
-
+        flex-direction: row;
+    }
+    .login-btn {
+        font-size: .75rem;
     }
 }
 
 
+
+/*Showing the username only when it is not in the way*/
 @media screen and  (max-width: 900px) {
     /*the username is hidden with less than 901 px by giving it the same color as the */
     .username {
@@ -72,7 +76,6 @@ header .nav-links {
 
 @media screen and (min-width: 901px) {
     /* username is in the middle at a minimum width of 901px*/
-
     /* z index indicates what layer you are on. since the username is on z1 the buttons and links can still be pushed since they are on z-2*/
     .username {
         position: absolute;

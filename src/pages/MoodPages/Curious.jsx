@@ -14,16 +14,13 @@ const Angry = () => {
             page: 1,
         }, {}
     );
-    if (isLoading) {
-        return <div>Loading Movies to satisfy your curiosity...</div>;
-    }
-    if (catchError) {
-        return <div>Error: {catchError}</div>;
-    }
+
 
 
     return (
         <>
+            { isLoading && <p>Loading Movies to satisfy your curiosity....</p>}
+            { catchError && <p>Something went wrong...</p>}
             <GenreMoodButtons/>
             <h2>This page is like a treasure trove of hidden gems - you never know what you might discover.</h2>
             <ResultsSectionMood data={data}/>

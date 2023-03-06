@@ -1,13 +1,16 @@
 [] Authorisatie nalopen
     [x] authorisatie van routing klopt
 
+[]README file 
 
 [x]Hookform inlog en registereren
 [] hookform voor genreform 
+[] use effect over gebruikt?
+
 [x] Error messages in inlog
-[] error voor zoekbalk toevoegen als er niks als resultaat uitkokmt. 
-[] Styling  text homepage
-[] styling navbar voro telefoon
+[x] error voor zoekbalk toevoegen als er niks als resultaat uitkokmt. 
+[x] Styling  text homepage
+[] Styling navbar voor telefoon
 [] nalopen of overal juist use Effect is geburikt en errors e.d. 
 [] Vanaf regel 13 trending movies bij alle useFetcht toevoegen
 [] Home--> conditioneel wel en geen buttons dus wel en niet kunnen toevoegen van trending

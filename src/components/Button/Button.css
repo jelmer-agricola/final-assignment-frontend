@@ -65,7 +65,13 @@ button{
     transition: 0.4s;
     margin: 3px;
 }
-
+/*@media screen and  (max-width: 743px) {*/
+/*    .login-btn {*/
+/*        font-size: 5px;*/
+/*        color: crimson;*/
+/*        background-color: red;*/
+/*    }*/
+/*}*/
 .login-btn:hover {
     background-color: var(--primary-light);
     opacity: 1;

@@ -3,6 +3,7 @@ import {roundToOneDecimal} from "../../helpers/roundToOneDecimal";
 import {limitCharacters} from "../../helpers/limitCharacters";
 
 const TrendingSerieResults = ({mediaTitle}) => {
+
     const voteAverage = roundToOneDecimal(mediaTitle.vote_average);
 
     return (

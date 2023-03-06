@@ -88,13 +88,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*border: lawngreen solid 1px;*/
 }
 
 
 main {
-    /*background-color: lightblue;*/
-
     min-height: 86vh;
 }
 
@@ -109,8 +106,6 @@ main {
 
 body {
     font-family: var(--body-fonts);
-    /*-webkit-font-smoothing: antialiased;*/
-    /*-moz-osx-font-smoothing: grayscale;*/
 }
 
 h1, h2, h3, h4, h5 {
@@ -158,8 +153,6 @@ a:hover{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /*border: blue solid 1px;*/
-
 }
 
 /*De binnenste container is maximaal 1400px breed, zodat het er ook goed uitziet op brede schermen.
@@ -173,7 +166,6 @@ Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*border: red solid 1px;*/
 }
 
 .media-title {
