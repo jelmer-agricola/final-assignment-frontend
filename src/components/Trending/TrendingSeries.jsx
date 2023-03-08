@@ -10,16 +10,11 @@ function TrendingSeries() {
             api_key: process.env.REACT_APP_API_KEY
         }, {}
     );
-    console.log(data, catchError, isLoading);
-    if (isLoading) {
-        return <div>Loading Trending Series...</div>;
-    }
-    if (catchError) {
-        return <div>Error: {catchError}</div>;
-    }
 
     return (
         <>
+            { isLoading && <p>Loading the Trending results...</p>}
+            { catchError && <p>Something went wrong...</p>}
             <div className="trending-series">
                 <h2 className="trending-header">Top 5 Trending Series</h2>
 

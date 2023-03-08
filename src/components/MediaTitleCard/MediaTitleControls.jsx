@@ -1,7 +1,6 @@
 import React, {useContext} from 'react';
 import {GlobalContext} from "../../context/GlobalState";
 import './MediaTitleCard.css';
-
 import Button from "../Button/Button";
 
 

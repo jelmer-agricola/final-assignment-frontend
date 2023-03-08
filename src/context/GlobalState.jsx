@@ -12,25 +12,15 @@ export const GlobalContext = createContext(initialState);
 
 export const GlobalProvider = ({children}) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
-    //console log hieronder kan weg
-    console.log('STATE', state)
 
     //triggered when state changes and anything is added to the watchlist
 
-    // In useEffect check gaan inbouwen of de (watchlist/favorites) array een object heeft met een key value pair die overeen komt met de username
-    // of key gelijk is aan username als dat zo is dan gebruik
-    // met find (is wel exact match)
-    // key favorites pakt en dat dan terug geeft als set item
-
-
 
     useEffect(() => {
-        // console.log(state.watchlist)
         localStorage.setItem('watchlist', JSON.stringify(state.watchlist))
     }, [state])
 
     useEffect(() => {
-        // console.log(state.watchlist)
         localStorage.setItem('favorites', JSON.stringify(state.favorites))
     }, [state])
 

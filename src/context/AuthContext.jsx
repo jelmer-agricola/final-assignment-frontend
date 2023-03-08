@@ -14,7 +14,7 @@ function AuthContextProvider({children}) {
     const navigate = useNavigate();
     // Mounting
     useEffect(() => {
-//     Token ophalen uit LocalStorage
+//     Retrieve token from LocalStorage
         const token = localStorage.getItem('token');
 
         if (token) {
@@ -34,7 +34,6 @@ function AuthContextProvider({children}) {
                 status: 'done',
             });
         }
-        // dependecies lege array meegeven
     }, []);
 
     function login(jwt) {
@@ -45,12 +44,8 @@ function AuthContextProvider({children}) {
 
     function logout(jwt) {
         console.log('Gebruiker is uitgelogd');
-        // Hieronder haalt token uit localstorage
         localStorage.removeItem('token');
-        // localStorage.clear();
-        // Dit haalt local storage leeg na uitloggen is er dus geen watchlist e.d. meer over
-        // localStorage.token(); token tot niks
-        //
+
 
         toggleIsAuth({
             isAuth: false,
@@ -61,8 +56,9 @@ function AuthContextProvider({children}) {
         navigate('/');
     }
 
-//  Omdat deze fetchdata functie zowel in de login wordt gebruikt als voor de mounting cyclus wordt gebruikt is die hieronder pas gedeclareerd
+    // Because this fetchdata function is used both in the login and for the mounting cycle, it is only declared below.    async function fetchUserData(token, redirectUrl) {
     async function fetchUserData(token, redirectUrl) {
+
         try {
             const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`, {
                 headers: {

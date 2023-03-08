@@ -62,6 +62,7 @@ function GenreForm() {
 
                         <form onSubmit={(event) => event.preventDefault()}>
                             <label className="genre-form__form">
+                                {/*For styling reassons both the genreselect and other buttons are displayed here so they can be styled using flexbox in an easy way*/}
                                 <GenreSelect value={genre} onGenreChange={handleGenreChange} />
                                 <Button
                                     children="😊 Happy 😊"

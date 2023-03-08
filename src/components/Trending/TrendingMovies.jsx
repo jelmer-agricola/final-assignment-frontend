@@ -10,15 +10,11 @@ function TrendingMovies() {
             api_key: process.env.REACT_APP_API_KEY,
         }, {}
     );
-    if (isLoading) {
-        return <div>Loading Trending Movies...</div>;
-    }
-    if (catchError) {
-        return <div>Error: {catchError}</div>;
-    }
 
     return (
         <>
+            {isLoading && <p>Loading the Trending results...</p>}
+            {catchError && <p>Something went wrong...</p>}
             <div className="trending-movies">
                 <h2 className="trending-header">Top 5 Trending movies</h2>
                 {data.results && (
@@ -38,7 +34,8 @@ function TrendingMovies() {
             </div>
         </>
 
-    );
+    )
+        ;
 }
 
 export default TrendingMovies;
