@@ -1,8 +1,6 @@
 import React from 'react';
-import ResultCard from "../WatchlistComponents/ResultCard";
+import SearchResultCard from "../SearchResultCard/SearchResultCard";
 import '../../pages/MoodPages/MoodPages.css'
-
-
 
 const ResultsSectionMood = ({data}) => {
 
@@ -18,7 +16,7 @@ const ResultsSectionMood = ({data}) => {
                                     <p className="media-title">
                                         {mediaTitle.title || mediaTitle.name}
                                     </p>
-                                    <ResultCard mediaTitle={mediaTitle}/>
+                                    <SearchResultCard mediaTitle={mediaTitle}/>
                                 </li>
                             ))}
                         </ul>

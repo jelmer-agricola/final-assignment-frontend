@@ -1,47 +1,15 @@
-.result-card {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.result-card .poster-wrapper img,
-.filler-poster {
-    width: 125px;
-    background-color: var(--light-grey);
-    border-radius: 5px;
-    margin-right: 15px;
-    display: block;
-    color: transparent;
-}
-
-.result-card .info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.result-card .info .release-date {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--primary);
-    margin: 0;
-}
-
-.vote-average{
-    font-size: 1rem;
-
-}
-
-.result-card .controls button {
-    margin-right: 10px;
-}
-
 .media-title-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
 }
-
-@media (min-width: 992px) {
+/*on the smallest tabets displayd with three rows*/
+@media screen and (min-width: 744px) {
+    .media-title-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 992px) {
     .media-title-grid {
         grid-template-columns: repeat(5, 1fr);
     }
@@ -49,6 +17,7 @@
 
 .media-title-card {
     width: 100%;
+    height: 100%;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -97,4 +66,3 @@
 .media-title-card:hover .inner-card-controls {
     opacity: 1;
 }
-

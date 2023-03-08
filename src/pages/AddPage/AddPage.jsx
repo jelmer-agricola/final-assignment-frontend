@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
-import ResultCard from '../../components/WatchlistComponents/ResultCard';
+import SearchResultCard from '../../components/SearchResultCard/SearchResultCard';
 import './AddPage.css';
 
 // loading
@@ -14,9 +14,16 @@ function AddPage() {
     useEffect(() => {
         const searchTimeout = setTimeout(async () => {
             try {
-                const result = await axios.get(
-                    `https://api.themoviedb.org/3/search/multi?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1&include_adult=false&query=${query}`
-                );
+                const result = await axios.get('https://api.themoviedb.org/3/search/multi', {
+                    params: {
+                        api_key: process.env.REACT_APP_API_KEY,
+                        language: 'en-US',
+                        page: 1,
+                        include_adult: false,
+                        query: query,
+                    },
+                });
+
                 setResults(result.data.results.slice(0, 10));
                 setErrorMessage('');
             } catch (error) {
@@ -58,7 +65,7 @@ function AddPage() {
                                         <p className="media-title">
                                             {mediaTitle.title || mediaTitle.name}
                                         </p>
-                                        <ResultCard mediaTitle={mediaTitle}></ResultCard>
+                                        <SearchResultCard mediaTitle={mediaTitle}></SearchResultCard>
                                     </li>
                                 ))}
                             </ul>

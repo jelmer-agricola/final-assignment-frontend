@@ -1,11 +1,11 @@
 import React, {useContext} from "react";
 import {GlobalContext} from "../../context/GlobalState";
-import './WatchlistComponents.css';
+import './SearchResultCard.css'
 import Button from "../Button/Button";
 import {roundToOneDecimal} from "../../helpers/roundToOneDecimal";
 
 
-const ResultCard = ({mediaTitle}) => {
+const SearchResultCard = ({mediaTitle}) => {
     const {addMediaTitleToWatchlist, watchlist, favorites, addMediaTitleToFavorites} = useContext(GlobalContext);
 
     let storedMediaTitle = watchlist.find(o => o.id === mediaTitle.id);
@@ -18,13 +18,13 @@ const ResultCard = ({mediaTitle}) => {
             ? true
             : false;
 
-    const favoritesDisabled = storedMediaTitleFavorites ? true : false;
+    const favoritesDisabled = !!storedMediaTitleFavorites;
     const voteAverage = roundToOneDecimal(mediaTitle.vote_average);
 
 
     return (
         <article className="result-card">
-            <div className="poster-wrapper">
+            <div>
                 {mediaTitle.poster_path ? (
                         <img src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
                              alt={`{title.title || title.name}`}
@@ -70,4 +70,4 @@ const ResultCard = ({mediaTitle}) => {
 };
 
 
-export default ResultCard;
+export default SearchResultCard;

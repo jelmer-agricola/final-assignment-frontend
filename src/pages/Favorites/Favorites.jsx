@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {GlobalContext} from '../../context/GlobalState';
-import MediaTitleCard from '../../components/WatchlistComponents/MediaTitleCard';
+import MediaTitleCard from '../../components/MediaTitleCard/MediaTitleCard';
 import '../Watchlist/Watchlist.css'
 import './Favorites.css'
 import {Link} from "react-router-dom";

@@ -67,21 +67,6 @@
     opacity: 0.5;
 }
 
-/* hier nog aan toe voegen  . container */
-
-
-/*@media (min-width: 992px) {*/
-/*    .inner-content-container {*/
-/*        width: 970px;*/
-/*    }*/
-/*}*/
-
-/*@media (min-width: 1200px) {*/
-/*    .inner-content-container {*/
-/*        width: 1170px;*/
-/*    }*/
-/*}*/
-
 *,
 *:before,
 *:after {
@@ -94,15 +79,6 @@
 main {
     min-height: 86vh;
 }
-
-/*body {*/
-/*    font-family: var(--body-fonts);*/
-/*    font-weight: 300;*/
-/*    color: var(--black);*/
-/*}*/
-
-/*mag weer de filler poster */
-
 
 body {
     font-family: var(--body-fonts);

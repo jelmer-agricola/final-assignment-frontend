@@ -18,6 +18,7 @@ function SignUp() {
         toggleError(false);
         toggleLoading(true);
 
+        // console log uitcommmenten
         console.log(data.email, data.password, data.username);
 
 
@@ -120,7 +121,6 @@ function SignUp() {
                 </form>
                 <p className="login-header">Do you already have an account? You can <Link to="/login">Click here </Link>to
                     sign in</p>
-
             </div>
         </section>
     );

@@ -1,16 +1,24 @@
-.genre-btns-text{
+.genre-btns-text {
     width: 85%;
     align-self: center;
     text-align: center;
 }
+
+
 .genre-btns {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
+    align-items: center;
     padding: 0.5rem 0;
 
 }
+@media screen and (max-width: 744px) {
+    .genre-btn {
+        max-width: 300px;
+    }
 
+}
 .genre-btn {
     height: 55px;
     padding: 5px;
@@ -25,13 +33,21 @@
     margin: 3px;
 }
 
+@media screen and (min-width: 744px) {
+    .genre-btns {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
 
 .genre-btn:hover {
     background-color: var(--secondary-light);
     opacity: 1;
     cursor: pointer;
 }
-.genre-btn.genres{
+
+.genre-btn.genres {
     text-align: start;
     padding: 10px;
     width: 180px;

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import ResultCard from '../WatchlistComponents/ResultCard';
-import '../WatchlistComponents/WatchlistComponents.css';
+import SearchResultCard from '../SearchResultCard/SearchResultCard';
+import '../MediaTitleCard/MediaTitleCard.css';
 import './GenreForm.css'
 import {useNavigate} from "react-router-dom";
 import GenreSelect from "./GenreSelect";
@@ -105,7 +105,7 @@ function GenreForm() {
                                         <p className="media-title">
                                             {mediaTitle.title || mediaTitle.name}
                                         </p>
-                                        <ResultCard mediaTitle={mediaTitle}></ResultCard>
+                                        <SearchResultCard mediaTitle={mediaTitle}></SearchResultCard>
                                     </li>
                                 ))}
                             </ul>

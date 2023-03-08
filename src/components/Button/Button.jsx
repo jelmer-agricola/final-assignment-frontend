@@ -2,7 +2,7 @@ import React from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHeart as Heart, faTimes as Times, faArrowLeft as EyeSlash} from "@fortawesome/free-solid-svg-icons";
 import './Button.css'
-import '../WatchlistComponents/WatchlistComponents.css'
+import '../MediaTitleCard/MediaTitleCard.css'
 
 
 function Button({text, children, type = 'button', onClick, className, disabled, icon}) {

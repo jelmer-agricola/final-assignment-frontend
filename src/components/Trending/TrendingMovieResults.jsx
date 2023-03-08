@@ -6,12 +6,7 @@ const TrendingMovieResults = ({mediaTitle}) => {
 
     const voteAverage = roundToOneDecimal(mediaTitle.vote_average);
 
-    const limitCharacters = (str, limit) => {
-        if (str.length > limit) {
-            return str.substring(0, limit) + "...";
-        }
-        return str;
-    };
+
 
     return (
         <article className="result-card">
