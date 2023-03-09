@@ -1,4 +1,4 @@
-.inner-content-container.genre-form{
+.inner-content-container.genre-form {
     padding: 0px;
 }
 
@@ -8,11 +8,16 @@
     text-align: center;
     margin-bottom: 1rem;
 }
+
 .genre-form__form {
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-.genre-form__select{
+
+
+.genre-form__select {
     list-style: none;
     height: 55px;
     background-color: var(--secondary);
@@ -22,7 +27,7 @@
     color: var(--white);
     font-size: 1.25rem;
     margin: 3px;
-    filter: drop-shadow(0 0.10rem 0.10rem var(--black) );
+    filter: drop-shadow(0 0.10rem 0.10rem var(--black));
 }
 
 .genre-form__select:hover {
