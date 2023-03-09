@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, {useContext, useState} from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
@@ -10,7 +10,7 @@ function Login() {
     const {handleSubmit, formState: {errors}, register} = useForm();
     const { login } = useContext(AuthContext);
     const [errorMessageCredentials, setErrorMessageCredentials] = useState("");
-
+    const [isLoading, setIsLoading] = useState(false);
 
     const onSubmit = async (data) => {
         try {
@@ -18,20 +18,14 @@ function Login() {
                 username: data.username,
                 password: data.password,
             });
-            // log het  resultaat  in de console
-
-            console.log(result.data);
-            // pass the JWT token in de login function van de context zonder accessToken werkt
-
             login(result.data.accessToken);
         } catch (e) {
             console.error(e);
             setErrorMessageCredentials(e.response?.data?.message || "Either your password or username is incorrect.");
         }
+        setIsLoading(false);
     };
 
-// FINALLY TOEVOEGEN
-// USE EFFECT?
 
 
 return(

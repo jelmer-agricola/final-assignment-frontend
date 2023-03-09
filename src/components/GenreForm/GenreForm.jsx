@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import SearchResultCard from '../SearchResultCard/SearchResultCard';
-import '../MediaTitleCard/MediaTitleCard.css';
-import './GenreForm.css'
 import {useNavigate} from "react-router-dom";
 import GenreSelect from "./GenreSelect";
 import Button from "../Button/Button";
+import SearchResultCard from '../SearchResultCard/SearchResultCard';
+import '../MediaTitleCard/MediaTitleCard.css';
+import './GenreForm.css'
+
 
 
 
@@ -62,7 +63,7 @@ function GenreForm() {
 
                         <form onSubmit={(event) => event.preventDefault()}>
                             <label className="genre-form__form">
-                                {/*For styling reassons both the genreselect and other buttons are displayed here so they can be styled using flexbox in an easy way*/}
+                                {/*For styling reasons both the genreselect and other buttons are displayed here so they can be styled using flexbox in an easy way*/}
                                 <GenreSelect value={genre} onGenreChange={handleGenreChange} />
                                 <Button
                                     children="😊 Happy 😊"

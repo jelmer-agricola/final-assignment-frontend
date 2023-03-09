@@ -26,7 +26,8 @@ const SearchResultCard = ({mediaTitle}) => {
         <article className="result-card">
             <div>
                 {mediaTitle.poster_path ? (
-                        <img src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
+                        <img className="poster"
+                            src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
                              alt={`{title.title || title.name}`}
                         />
                     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import useFetch from "../../hooks/useFetch";
 import GenreMoodButtons from "../../components/GenreMoodButton.jsx/GenreMoodButtons";
-import ResultsSectionMood from "../../components/ResultSectionMoods/ResultSectionMoods";
+import ResultsSectionMood from "../../components/GenreMoodButton.jsx/ResultSectionMoods";
 
 
 const InLove = () => {

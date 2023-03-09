@@ -1,8 +1,8 @@
 import React from "react";
 import {roundToOneDecimal} from "../../helpers/roundToOneDecimal";
 import {limitCharacters} from "../../helpers/limitCharacters";
-
 const TrendingSerieResults = ({mediaTitle}) => {
+// import SearchResultCard from "../SearchResultCard/SearchResultCard";
 
     const voteAverage = roundToOneDecimal(mediaTitle.vote_average);
 

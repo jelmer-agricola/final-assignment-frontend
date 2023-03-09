@@ -9,10 +9,12 @@ function AddPage() {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
     const [errorMessage, setErrorMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
 
     useEffect(() => {
         const searchTimeout = setTimeout(async () => {
+            setIsLoading(true);
             try {
                 const result = await axios.get('https://api.themoviedb.org/3/search/multi', {
                     params: {
@@ -28,6 +30,9 @@ function AddPage() {
                 setErrorMessage('');
             } catch (error) {
                 setResults([]);
+                setErrorMessage('No results found, try typing in a Movie Title or the name of one of your favorite series.');
+            } finally {
+                setIsLoading(false);
             }
         }, 500);
         return () => clearTimeout(searchTimeout);
@@ -37,12 +42,13 @@ function AddPage() {
         setQuery(e.target.value);
     };
 
+
     return (
         <section className="outer-content-container">
             <div className="inner-content-container">
                 <h2>
-                    Don't know what to watch and too tired to use the searchbar{' '}
-                    <Link to="/moods">click here</Link> and we will give you suggestions
+                    Don't know what to watch and too tired to use the searchbar
+                    <Link to="/moods"> click here</Link> and we will give you suggestions
                     based on your mood.
                 </h2>
 
@@ -59,16 +65,16 @@ function AddPage() {
                         {results.length === 0 && query !== '' && (
                             <p className="error-message">{errorMessage || 'No results found, try typing in a Movie Title or the name of one of your favorite series.'}</p>
                         )}
-                            <ul className="results">
-                                {results.map((mediaTitle) => (
-                                    <li key={mediaTitle.id}>
-                                        <p className="media-title">
-                                            {mediaTitle.title || mediaTitle.name}
-                                        </p>
-                                        <SearchResultCard mediaTitle={mediaTitle}></SearchResultCard>
-                                    </li>
-                                ))}
-                            </ul>
+                        <ul className="results">
+                            {results.map((mediaTitle) => (
+                                <li key={mediaTitle.id}>
+                                    <p className="media-title">
+                                        {mediaTitle.title || mediaTitle.name}
+                                    </p>
+                                    <SearchResultCard mediaTitle={mediaTitle}></SearchResultCard>
+                                </li>
+                            ))}
+                        </ul>
 
                     </div>
                 </div>
@@ -76,4 +82,5 @@ function AddPage() {
         </section>
     );
 }
+
 export default AddPage;

@@ -3,7 +3,7 @@
     margin-bottom: 20px;
 }
 
-img{
+.poster{
     width: 125px;
     background-color: var(--light-grey);
     border-radius: 5px;

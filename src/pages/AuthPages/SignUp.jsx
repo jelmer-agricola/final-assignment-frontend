@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, } from "react";
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import Button from '../../components/Button/Button';
@@ -10,17 +10,12 @@ function SignUp() {
     const {handleSubmit, formState: {errors}, register} = useForm();
     const navigate = useNavigate();
 
-    // add state for functionality
     const [error, toggleError] = useState(false);
-    const [loading, toggleLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const onSubmit = async (data) => {
         toggleError(false);
-        toggleLoading(true);
-
-        // console log uitcommmenten
-        console.log(data.email, data.password, data.username);
-
+        setIsLoading(true);
 
         try {
             const result = await axios.post(
@@ -39,10 +34,10 @@ function SignUp() {
             console.error(e);
             toggleError(true);
         }
-        toggleLoading(false);
-    }
+        setIsLoading(false);
+    };
 
-    // FINALLY TOEVOEGEN
+
     return (
         <section className="outer-content-container">
             <div className="inner-content-container">

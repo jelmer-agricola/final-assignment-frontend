@@ -66,7 +66,7 @@ componenten
 - [x] SearchResultCard
 
 **nice to haves**
-- [ ] outlet voor routing
+-[ ] outlet voor routing
 -[ ] volgende pagina vorige pagina optie
 -[ ] filteren op release date
 
