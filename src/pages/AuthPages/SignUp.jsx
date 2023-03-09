@@ -27,7 +27,7 @@ function SignUp() {
                     role: ["user"],
                 }
             );
-            console.log(result);
+            // console.log(result);
             navigate(`/login`);
 
         } catch (e) {

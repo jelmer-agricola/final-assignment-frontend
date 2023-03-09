@@ -9,8 +9,8 @@ import AddPage from "./pages/AddPage/AddPage"
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home"
 import Footer from "./components/Footer/Footer";
-import Watchlist from "./pages/Watchlist/Watchlist";
-import Favorites from "./pages/Favorites/Favorites";
+import Watchlist from "./pages/Lists/Watchlist";
+import Favorites from "./pages/Lists/Favorites";
 import MoodPage from "./pages/MoodPages/MoodPage";
 import Happy from "./pages/MoodPages/Happy"
 import InLove from "./pages/MoodPages/InLove";
@@ -22,26 +22,12 @@ import Sad from "./pages/MoodPages/Sad";
 
 
 function App() {
-
     const {isAuth} = useContext(AuthContext);
-
-//     succesvol post request
-// const { data, catchError, isLoading} = useFetch("https://frontend-educational-backend.herokuapp.com/api/auth/signup", 'POST', {}, {
-//     username: "testtedsafst2",
-//     email: "henkiepenasdfkie2fdf@novi.nl",
-//     password: "123asdf456",
-//     role: ["user"],
-// });
-
-    // console.log(data, isLoading, catchError);
-
 
     return (
         <>
             <Header/>
             <main>
-                {/*{isLoading && <p>Loading...</p>}*/}
-                {/*{catchError && <p>{catchError}</p>}*/}
                 <Routes>
                     <Route exact path="/" element={<Home/>}/>
                     <Route path="/login" element={<Login/>}/>

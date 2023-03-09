@@ -1,9 +1,8 @@
 import React, {useContext} from 'react';
 import {GlobalContext} from '../../context/GlobalState';
-import MediaTitleCard from '../../components/MediaTitleCard/MediaTitleCard';
-import '../Watchlist/Watchlist.css'
-import './Favorites.css'
 import {Link} from "react-router-dom";
+import MediaTitleCard from '../../components/MediaTitleCard/MediaTitleCard';
+import './Lists.css'
 
 const Favorites = () => {
     const {favorites} = useContext(GlobalContext);
@@ -12,21 +11,22 @@ const Favorites = () => {
         <>
             <section className="outer-content-container">
                 <div className="inner-content-container">
-                    <h3> Don't know what to watch and too tired to use the searchbar <Link to="/moods">click here</Link> and we will give you suggestions based on your mood.
+                    <h3> Don't know what to watch and too tired to use the searchbar <Link to="/moods">click
+                        here</Link> and we will give you suggestions based on your mood.
                     </h3>
-                    <p className="favorites__control-description">You can click the left arrow icon to send a movie or serie back to your watchlist. And use the cross to delete it from your watchlist. The symbols appear when you hover over the poster with your mouse.</p>
+                    <p className="list__control-description">You can click the left arrow icon to send a movie or serie
+                        back to your watchlist. And use the cross to delete it from your watchlist. The symbols appear
+                        when you hover over the poster with your mouse.</p>
                 </div>
             </section>
 
-
             <section className="outer-content-container">
                 <div className="inner-content-container">
-                    {favorites.length > 0 &&(
+                    {favorites.length > 0 && (
                         <div>
-                            <h2 className="favorites__heading-list">Your most favorite movies & series</h2>
+                            <h2 className="list__heading-list">Your most favorite movies & series</h2>
                         </div>
                     )}
-
                     {favorites.length > 0 ? (
                         <div className="media-title-grid">
                             {favorites.map((mediaTitle) => (
@@ -34,7 +34,7 @@ const Favorites = () => {
                             ))}
                         </div>
                     ) : (
-                        <h2 >No movies or series in your Favorites! <Link to="/add">Add some!</Link></h2>
+                        <h2>No movies or series in your Favorites! <Link to="/add">Add some!</Link></h2>
                     )}
                 </div>
             </section>

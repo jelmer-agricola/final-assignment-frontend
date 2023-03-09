@@ -35,7 +35,7 @@ export const GlobalProvider = ({children}) => {
         dispatch({type: "REMOVE_TITLE_FROM_WATCHLIST", payload: id});
     };
 
-    //add media to Favorites
+    //add media to Lists
     const addMediaTitleToFavorites = mediaTitle => {
         dispatch({type: "ADD_TITLE_TO_FAVORITES", payload: mediaTitle});
     };

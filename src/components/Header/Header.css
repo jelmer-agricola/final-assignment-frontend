@@ -30,7 +30,6 @@ nav a:hover {
 }
 
 .nav-list {
-    list-style: none;
     display: flex;
     flex-direction: row;
     z-index: 2;

@@ -18,7 +18,6 @@
 
 
 .genre-form__select {
-    list-style: none;
     height: 55px;
     background-color: var(--secondary);
     padding: 10px;

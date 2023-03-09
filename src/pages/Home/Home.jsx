@@ -18,7 +18,6 @@ const Home = () => {
                     comedy, drama, action, or something in between, we've got you covered. So what are you waiting for?
                     Sign in or create an account now and start exploring!</p>
 
-
                 <div className="trending-container">
                     <TrendingMovies/>
                     <TrendingSeries/>

@@ -1,17 +1,7 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap');*/
-
 .App {
     text-align: center;
 }
-
-
 :root {
-    /*colors*/
-    /*--primary: #0B5351;*/
-    /*--primary-light: #00A9A5 ;*/
-    /*--secondary:#4E8098;*/
-    /*--secondary-light: #90C2E7;*/
-    /*--tertiary: #092327;*/
 
     --primary: hsla(174, 61%, 33%, 1);
     --primary-light: hsla(173, 48%, 45%, 1);
@@ -23,38 +13,6 @@
     --white: #FFFFFF;
     --light-grey: HSL(210, 33%, 96%);
 
-    /*--primary: hsla(165, 15%, 58%, 1);*/
-    /*--primary-light: hsla(31, 57%, 93%, 1);*/
-    /*--secondary: hsla(8, 71%, 86%, 1);*/
-    /*--secondary-light:hsla(37, 89%, 67%, 1);*/
-    /*--tertiary: hsla(1, 81%, 73%, 1);*/
-
-    /*--primary: hsla(46, 100%, 50%, 1);*/
-    /*--primary-light: hsl(32, 92%, 50%);*/
-    /*--secondary: hsla(211, 100%, 12%, 1);*/
-    /*--secondary-light: hsla(209, 100%, 20%, 1);*/
-    /*--tertiary: hsla(211, 100%, 12%, 1);*/
-
-    /*--tertiary: hsla(13, 90%, 58%, 1);*/
-    /*--primary: hsla(248, 31%, 23%, 1);*/
-    /*--primary-light: hsla(173, 70%, 35%, 1);*/
-    /*--secondary: hsla(353, 81%, 51%, 1);*/
-    /*--secondary-light: hsla(71, 58%, 64%, 1);*/
-
-
-    /*--primary: hsla(145, 97%, 46%, 1);*/
-    /*--primary-light: hsla(87, 100%, 49%, 1);*/
-    /*--secondary: hsla(329, 100%, 43%, 1);*/
-    /*--tertiary:  hsla(45, 100%, 48%, 1);*/
-    /*--secondary-light: hsla(206, 100%, 49%, 1);*/
-
-
-    /*--tertiary: hsla(0, 0%, 0%, 1);*/
-    /*--primary: hsla(200, 15%, 43%, 1);*/
-    /*--primary-light: hsla(53, 100%, 74%, 1);*/
-    /*--secondary: hsla(107, 36%, 95%, 1);*/
-    /*--secondary-light: hsla(151, 28%, 63%, 1);*/
-
     /*fonts*/
     --header-fonts: 'Arial', 'Helvetica Neue', sans-serif;
     --body-fonts: 'Segoe UI', 'Roboto', 'Oxygen',
@@ -62,10 +20,6 @@
     sans-serif;
 }
 
-::placeholder {
-    color: var(--black);
-    opacity: 0.5;
-}
 
 *,
 *:before,
@@ -73,6 +27,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
 }
 
 
@@ -89,9 +47,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-    font-family: 'Quicksand', sans-serif;
     font-size: 2.5rem;
-    /*margin-bottom: 20px;*/
     color: var(--primary);
     text-align: center;
     padding: 1rem 0;
@@ -100,15 +56,16 @@ h1 {
 h2 {
     font-size: 1.5rem;
     text-align: center;
-    padding: 0.75rem 0;
+    padding: 1rem 0;
 
 }
 h3{
     padding: 1rem 0 0 0;
     text-align: center;
 }
-h5 {
-    font-size: 1rem;
+
+h4, h5{
+    font-size: 1.25rem;
 }
 
 
@@ -123,7 +80,9 @@ a:hover{
     color: var(--secondary);
 }
 
-/* The outermost container is always the full screen width. It is a flexbox container that always neatly centers its contents horizontally */.outer-content-container {
+/* The outermost container is always the full screen width. It is a flexbox container that always neatly centers its contents horizontally */
+
+.outer-content-container {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -140,6 +99,11 @@ It may shrink if the screen becomes less wide, but not grow if there is more spa
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+::placeholder {
+    color: var(--black);
+    opacity: 0.5;
 }
 
 .media-title {
