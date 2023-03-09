@@ -1,8 +1,8 @@
 import React from "react";
 import {roundToOneDecimal} from "../../helpers/roundToOneDecimal";
 import {limitCharacters} from "../../helpers/limitCharacters";
+
 const TrendingSerieResults = ({mediaTitle}) => {
-// import SearchResultCard from "../SearchResultCard/SearchResultCard";
 
     const voteAverage = roundToOneDecimal(mediaTitle.vote_average);
 
@@ -10,8 +10,10 @@ const TrendingSerieResults = ({mediaTitle}) => {
         <article className="result-card">
             <div className="poster-wrapper">
                 {mediaTitle.poster_path ? (
-                        <img src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
-                             alt={`{title.title || title.name}`}
+                        <img
+                            className="poster"
+                            src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
+                            alt={`{title.title || title.name}`}
                         />
                     )
                     : (
@@ -22,7 +24,7 @@ const TrendingSerieResults = ({mediaTitle}) => {
 
             <div className="info">
                 <div>
-                    <h4 className="release-date">First Aired:  {mediaTitle.first_air_date}</h4>
+                    <h4 className="release-date">First Aired: {mediaTitle.first_air_date}</h4>
                     <div className="trending-info">
                         {limitCharacters(mediaTitle.overview, 320)}
                     </div>
