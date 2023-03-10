@@ -6,19 +6,23 @@ import ResultsSectionMood from "../../components/GenreMoodButton.jsx/ResultSecti
 
 const Happy = () => {
 
-    const {data, catchError, isLoading} = useFetch('https://api.themoviedb.org/3/discover/movie', 'GET', {
+    const {data, catchError, isLoading} = useFetch(
+        'https://api.themoviedb.org/3/discover/movie',
+        {
             api_key: process.env.REACT_APP_API_KEY,
             with_genres: `12, 10749`,
+            include_adult: false,
             sort_by: 'vote_average.desc',
             'vote_count.gte': 1000,
             page: 1,
-        }, {}
+        },
     );
 
     return (
         <>
-            { isLoading && <p>Loading Happy Movies, to either make you happy or to enhance your feeling of happiness....</p>}
-            { catchError && <p>Something went wrong...</p>}
+            {isLoading &&
+                <p>Loading Happy Movies, to either make you happy or to enhance your feeling of happiness....</p>}
+            {catchError && <p>Something went wrong...</p>}
             <GenreMoodButtons/>
             <h2>Get ready for some sunshine on your screen - this page is like a virtual ray of sunshine!</h2>
             <ResultsSectionMood data={data}/>

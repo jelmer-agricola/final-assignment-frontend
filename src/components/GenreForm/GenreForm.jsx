@@ -28,6 +28,7 @@ function GenreForm() {
                         with_genres: selectedGenre,
                         sort_by: 'vote_average.desc',
                         'vote_count.gte': 1000,
+                        include_adult: false,
                         page: 1,
                     },
                 }
