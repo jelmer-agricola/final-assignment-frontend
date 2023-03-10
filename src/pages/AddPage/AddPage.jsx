@@ -4,7 +4,6 @@ import axios from 'axios';
 import SearchResultCard from '../../components/SearchResultCard/SearchResultCard';
 import './AddPage.css';
 
-// loading
 function AddPage() {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);

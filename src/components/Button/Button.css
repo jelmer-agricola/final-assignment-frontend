@@ -71,7 +71,7 @@ button{
     opacity: 1;
     cursor: pointer;
 }
-/*Sumbit buttons */
+/*Submit buttons */
 .submit-btns {
     background-color: var(--secondary);
     border: none;

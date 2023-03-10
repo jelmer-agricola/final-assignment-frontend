@@ -9,7 +9,6 @@ import {useForm} from 'react-hook-form';
 function SignUp() {
     const {handleSubmit, formState: {errors}, register} = useForm();
     const navigate = useNavigate();
-
     const [error, toggleError] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 

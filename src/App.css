@@ -1,16 +1,11 @@
-.App {
-    text-align: center;
-}
 :root {
-
     --primary: hsla(174, 61%, 33%, 1);
     --primary-light: hsla(173, 48%, 45%, 1);
     --secondary: hsla(173, 53%, 62%, 1);
     --secondary-light: hsla(204, 68%, 70%, 1);
     --tertiary: hsl(247, 94%, 14%);
-
-    --black: #292929;
-    --white: #FFFFFF;
+    --black: hsl(0, 0%, 16%);
+    --white: hsl(0, 0%, 100%);
     --light-grey: HSL(210, 33%, 96%);
 
     /*fonts*/

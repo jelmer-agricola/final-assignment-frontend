@@ -5,13 +5,14 @@ import ResultsSectionMood from "../../components/GenreMoodButton.jsx/ResultSecti
 
 const Angry = () => {
 
-    const {data, catchError, isLoading} = useFetch('https://api.themoviedb.org/3/discover/movie', 'GET', {
+    const {data, catchError, isLoading} = useFetch('https://api.themoviedb.org/3/discover/movie',
+        {
             api_key: process.env.REACT_APP_API_KEY,
             with_genres: `28, 12, 10751`,
             sort_by: 'vote_average.desc',
             'vote_count.gte': 1000,
             page: 1,
-        }, {}
+        },
     );
 
 

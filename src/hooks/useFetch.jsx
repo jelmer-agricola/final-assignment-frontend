@@ -1,8 +1,8 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 
-const useFetch = (dataUrl, method = 'GET', params = {}, dataObject = {}) => {
-// Set initial state variables
+const useFetch = (dataUrl, params = {})  => {
+    // Set initial state variables-
 
     const [data, setData] = useState([]);
     const [catchError, setCatchError] = useState(null);
@@ -12,61 +12,47 @@ const useFetch = (dataUrl, method = 'GET', params = {}, dataObject = {}) => {
 
     // Run the effect on mount
     useEffect(() => {
-        let isMounted = true;
+            let isMounted = true;
+            //    Define cancellation signal
+            const controller = new AbortController();
+            const {signal} = controller;
 
-        //    Define cancellation signal
-        const controller = new AbortController();
-        const {signal} = controller;
+            // let response;
 
-        let response;
-
-        // Fetch data function declaration
-        const fetchData = async () => {
-            setIsLoading(true);
-            try {
-                //    Fetch the respons
-                if (method === 'GET') {
-                    response = await axios.get(dataUrl, {
+            // Fetch data function declaration
+            const fetchData = async () => {
+                setIsLoading(true);
+                try {
+                    //    Fetch the respons
+                    const response = await axios.get(dataUrl, {
                         signal,
                         params: params,
                     });
-                } else if (method === 'POST') {
-                    response = await axios.post(dataUrl, dataObject, {
-                        signal,
-                        params: params,
-                    });
+                    if (response.code === "ERR_canceled") {
+                        console.log("Fetch request is unfortunately cancelled");
+                    }
+                    if(isMounted) {
+                        setData(response.data);
+                        setCatchError(null);
+                    }
+                } catch (err) {
+                    if (isMounted) {
+                        setCatchError(err.response.data.message);
+                        setData([]);
+                    }
+                } finally {
+                    isMounted && setIsLoading(false);
                 }
-                if (response.code === "ERR_canceled") {
-                    console.log("Fetch request is unfortunately cancelled")
-                }
+            };
+            void fetchData()
 
-                // Set the Data
-                if (isMounted) {
-                    setData(response.data);
-                    setCatchError(null);
-                }
-            } catch (err) {
-                // Catch the error
-                if (isMounted) {
-                    setCatchError(err.response.data.message);
-
-                    setData([]);
-                }
-            } finally {
-                //    Set Loading to initial state
-                isMounted && setIsLoading(false);
-            }
-        }
-        //    Call the Fetch data function
-        void fetchData()
-
-        // cleanup the cancellation
-        return function cleanUp() {
-            console.log('Clean up function');
-            isMounted = false;
-            controller.abort();
-        };
-    }, []);
+            // cleanup the cancellation
+            return function cleanUp() {
+                console.log('Clean up function');
+                isMounted = false;
+                controller.abort();
+            };
+        }, []);
 
     return {data, catchError, isLoading};
 }

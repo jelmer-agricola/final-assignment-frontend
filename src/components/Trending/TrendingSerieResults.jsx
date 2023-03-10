@@ -26,7 +26,7 @@ const TrendingSerieResults = ({mediaTitle}) => {
                 <div>
                     <h4 className="release-date">First Aired: {mediaTitle.first_air_date}</h4>
                     <div className="trending-info">
-                        {limitCharacters(mediaTitle.overview, 320)}
+                        {limitCharacters(mediaTitle.overview, 400)}
                     </div>
                     <h4 className="vote-average">Vote Average: {voteAverage}</h4>
                 </div>

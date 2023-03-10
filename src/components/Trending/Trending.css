@@ -4,12 +4,12 @@
 }
 
 .trending-info {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--black);
     font-weight: normal;
 }
 .vote-average{
-    font-size: 1rem;
+    font-size: 1.2rem;
 
 }
 

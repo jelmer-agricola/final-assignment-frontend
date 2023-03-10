@@ -6,9 +6,9 @@ import './Trending.css'
 function TrendingMovies() {
 
 
-    const {data, catchError, isLoading} = useFetch('https://api.themoviedb.org/3/trending/movie/day', 'GET', {
-            api_key: process.env.REACT_APP_API_KEY,
-        }, {}
+    const {data, catchError, isLoading} = useFetch(
+        'https://api.themoviedb.org/3/trending/movie/day',
+        {api_key: process.env.REACT_APP_API_KEY}
     );
 
     return (
