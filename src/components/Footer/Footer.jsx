@@ -2,9 +2,10 @@ import React from 'react';
 import './Footer.css';
 
 function Footer() {
-    return(
-      <div className="footer">Copyright © 2023 Movies eindopdracht Jelmer Agricola</div>
+    return (
+        <footer className="footer">Copyright © 2023 Movies & Series eindopdracht Jelmer Agricola</footer>
     );
 
 }
+
 export default Footer;

@@ -1,10 +1,11 @@
 import React, {useContext} from "react";
 import {GlobalContext} from "../../context/GlobalState";
-import './Watchlist.css';
+import './SearchResultCard.css'
 import Button from "../Button/Button";
+import {roundToOneDecimal} from "../../helpers/roundToOneDecimal";
 
 
-const ResultCard = ({mediaTitle}) => {
+const SearchResultCard = ({mediaTitle}) => {
     const {addMediaTitleToWatchlist, watchlist, favorites, addMediaTitleToFavorites} = useContext(GlobalContext);
 
     let storedMediaTitle = watchlist.find(o => o.id === mediaTitle.id);
@@ -17,14 +18,16 @@ const ResultCard = ({mediaTitle}) => {
             ? true
             : false;
 
-    const favoritesDisabled = storedMediaTitleFavorites ? true : false;
+    const favoritesDisabled = !!storedMediaTitleFavorites;
+    const voteAverage = roundToOneDecimal(mediaTitle.vote_average);
 
 
     return (
         <article className="result-card">
-            <div className="poster-wrapper">
+            <div>
                 {mediaTitle.poster_path ? (
-                        <img src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
+                        <img className="poster"
+                            src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
                              alt={`{title.title || title.name}`}
                         />
                     )
@@ -35,9 +38,14 @@ const ResultCard = ({mediaTitle}) => {
             </div>
 
             <div className="info">
-                <div className="header">
+                <div>
+                    <h4 className="release-date">
+                        {mediaTitle.first_air_date && `First aired: ${mediaTitle.first_air_date}`}
+                        {mediaTitle.release_date && `Release date: ${mediaTitle.release_date}`}
+                    </h4>
                     <div>{mediaTitle.overview}</div>
-                    <h4 className="release-date">  {mediaTitle.release_date || mediaTitle.first_air_date}</h4>
+                    <h4 className="vote-average">Vote Average: {voteAverage}</h4>
+
                 </div>
                 <div className="controls">
 
@@ -63,4 +71,4 @@ const ResultCard = ({mediaTitle}) => {
 };
 
 
-export default ResultCard;
+export default SearchResultCard;

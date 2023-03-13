@@ -4,36 +4,23 @@ import AppReducer from "./AppReducer";
 // initial state
 const initialState = {
     watchlist: localStorage.getItem('watchlist') ? JSON.parse(localStorage.getItem('watchlist')) : [],
-
     favorites: localStorage.getItem('favorites') ? JSON.parse(localStorage.getItem('favorites')) : [],
 };
 
 //Create context
 export const GlobalContext = createContext(initialState);
 
-// Provider component evt nog omschrijven zonder props
-export const GlobalProvider = (props) => {
+export const GlobalProvider = ({children}) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
-    //console log hieronder kan weg
-    console.log('STATE', state)
 
     //triggered when state changes and anything is added to the watchlist
 
-    // In useEffect check gaan inbouwen of de (watchlist/favorites) array een object heeft met een key value pair die overeen komt met de username
-    // of key gelijk is aan username als dat zo is dan gebruik
-    // met find (is wel exact match)
-    // key favorites pakt en dat dan terug geeft als set item
-    //
-
-
 
     useEffect(() => {
-        // console.log(state.watchlist)
         localStorage.setItem('watchlist', JSON.stringify(state.watchlist))
     }, [state])
 
     useEffect(() => {
-        // console.log(state.watchlist)
         localStorage.setItem('favorites', JSON.stringify(state.favorites))
     }, [state])
 
@@ -48,7 +35,7 @@ export const GlobalProvider = (props) => {
         dispatch({type: "REMOVE_TITLE_FROM_WATCHLIST", payload: id});
     };
 
-    //add media to Favorites
+    //add media to Lists
     const addMediaTitleToFavorites = mediaTitle => {
         dispatch({type: "ADD_TITLE_TO_FAVORITES", payload: mediaTitle});
     };
@@ -75,7 +62,7 @@ export const GlobalProvider = (props) => {
 
     return (
         <GlobalContext.Provider value={contextData}>
-            {props.children}
+            {children}
         </GlobalContext.Provider>
     )
 };

@@ -1,0 +1,35 @@
+.login-form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-self: center;
+
+}
+
+.login-form-label {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+    color: var(--black);
+    margin-bottom: 10px;
+}
+
+.login-form-input {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+    background-color: var(--light-grey);
+}
+
+.login-header {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.5rem;
+    color: var(--tertiary);
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.login-error-message{
+    color: red;
+}

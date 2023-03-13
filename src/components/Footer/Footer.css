@@ -1,11 +1,9 @@
-.footer{
+.footer {
     background-color: var(--primary);
     color: var(--white);
     padding: 2em;
-    padding-bottom: 2em;
     text-align: center;
     font-size: 0.8rem;
     min-height: 5vh;
-
-
+    margin-top: 1.5vh;
 }

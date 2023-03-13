@@ -1,30 +1,26 @@
-header {
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*left: 0;*/
-
+.header {
     background-color: var(--primary);
-    min-height: 7vh;
-
+    min-height: 8.5vh;
 }
 
 nav {
     color: var(--white);
     display: flex;
-    /*margin: 0 32px;*/
     flex-direction: row;
     justify-content: flex-end;
-    border: black 1px solid;
-
 }
 
 nav a,
 nav a:visited,
 nav a:active {
     color: white;
-
-
+    text-decoration: none;
 }
+
+nav a:hover {
+    color: var(--secondary);
+}
+
 .navbar-items {
     display: flex;
     flex-direction: row;
@@ -33,29 +29,10 @@ nav a:active {
     position: relative;
 }
 
-/* username nu in het midden*/
-/* z index geeft aan op welke laag je zit. de buttons en links zitten op een hogere z index zodat deze altijd klikbaar zijn.*/
-.username {
-    /*padding-left: 13vw;*/
-    /*display: block;*/
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    z-index: 1;
-}
-    /*display: flex;*/
-    /*justify-content: center;*/
-
-
 .nav-list {
-    /*background-color: yellowgreen;*/
-    list-style: none;
     display: flex;
-    /*justify-content: flex-end;*/
     flex-direction: row;
     z-index: 2;
-
-
 }
 
 
@@ -66,23 +43,40 @@ header .nav-links {
     flex-direction: row;
     align-items: center;
     z-index: 2;
-
+    filter: drop-shadow(0 0.25rem 0.25rem var(--black));
 }
 
 
 @media screen and  (max-width: 743px) {
     .navbar-items {
         display: flex;
-        flex-direction: row;
-
-    }
-
-    .nav-list {
-        list-style: none;
-        display: flex;
         flex-direction: column;
-
     }
 
+    .login-btn {
+        font-size: .75rem;
+    }
+}
 
+
+
+/*Showing the username only when it is not in the way*/
+@media screen and  (max-width: 900px) {
+    /*the username is hidden with less than 901 px by giving it the same color as the */
+    .username {
+        color: var(--primary);
+    }
+}
+
+@media screen and (min-width: 901px) {
+    /* username is in the middle at a minimum width of 901px*/
+    /* z index indicates what layer you are on. since the username is on z1 the buttons and links can still be pushed since they are on z-2*/
+    .username {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+        filter: drop-shadow(0 0.25rem 0.25rem var(--tertiary));
+
+    }
 }

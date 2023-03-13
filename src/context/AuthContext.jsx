@@ -1,6 +1,6 @@
 import React, {createContext, useEffect, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
-// import jwtDecode from "jwt-decode";
+import jwtDecode from "jwt-decode";
 import axios from "axios";
 
 export const AuthContext = createContext({});
@@ -14,11 +14,19 @@ function AuthContextProvider({children}) {
     const navigate = useNavigate();
     // Mounting
     useEffect(() => {
-//     Token ophalen uit LocalStorage
+//     Retrieve token from LocalStorage
         const token = localStorage.getItem('token');
 
         if (token) {
-            void fetchUserData(token);
+            const decodedToken = jwtDecode(token);
+            const currentTime = Date.now() / 1000;
+            if (decodedToken.exp < currentTime) {
+                // Token has expired
+                logout();
+        } else {
+                //token is valid
+                void fetchUserData(token);
+            }
         } else {
             toggleIsAuth({
                 isAuth: false,
@@ -26,23 +34,15 @@ function AuthContextProvider({children}) {
                 status: 'done',
             });
         }
-        // dependecies lege array meegeven
     }, []);
 
     function login(jwt) {
-        console.log('gebruiker is ingelogd!')
         localStorage.setItem('token', jwt);
         void fetchUserData(jwt, '/add');
     }
 
     function logout(jwt) {
-        // setIsAuth(false);
-        console.log('Gebruiker is uitgelogd');
-        // navigate('/');
         localStorage.removeItem('token');
-        // localStorage.clear(); Dit haalt local storage leeg na uitloggen
-        // localStorage.token(); token tot niks
-        //
 
 
         toggleIsAuth({
@@ -50,12 +50,12 @@ function AuthContextProvider({children}) {
             user: null,
             status: 'done',
         });
-        console.log('Gebruiker is uitgelogd!');
         navigate('/');
     }
 
-//  Omdat deze fetchdata functie zowel in de login wordt gebruikt als voor de mounting cyclus wordt gebruikt is die hieronder pas gedeclareerd
+    // Because this fetchdata function is used both in the login and for the mounting cycle, it is only declared below.    async function fetchUserData(token, redirectUrl) {
     async function fetchUserData(token, redirectUrl) {
+
         try {
             const result = await axios.get(`https://frontend-educational-backend.herokuapp.com/api/user`, {
                 headers: {
@@ -63,7 +63,7 @@ function AuthContextProvider({children}) {
                     Authorization: `Bearer ${token}`,
                 },
             });
-            console.log(result);
+            // console.log(result);
             toggleIsAuth({
                 ...isAuth,
                 isAuth: true,
@@ -92,8 +92,8 @@ function AuthContextProvider({children}) {
     const contextData = {
         isAuth: isAuth.isAuth,
         user: isAuth.user,
-        login: login,
-        logout: logout,
+        login,
+        logout,
     };
     return (
         <AuthContext.Provider value={contextData}>

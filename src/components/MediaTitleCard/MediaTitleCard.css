@@ -1,0 +1,68 @@
+.media-title-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+/*on the smallest tabets displayd with three rows*/
+@media screen and (min-width: 744px) {
+    .media-title-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (min-width: 992px) {
+    .media-title-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.media-title-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    border: 0;
+    display: block;
+}
+
+.media-title-img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+
+
+}
+
+.media-title-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    transition: all 0.1s ease;
+
+}
+
+.media-title-card:hover .overlay {
+    width: 100%;
+    border: 4px solid var(--secondary);
+
+}
+
+.media-title-card .inner-card-controls {
+    display: inline;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--black);
+    border-radius: 5px;
+    padding: 3px;
+    opacity: 0;
+    transition: all 0.1s ease;
+}
+
+.media-title-card:hover .inner-card-controls {
+    opacity: 1;
+}

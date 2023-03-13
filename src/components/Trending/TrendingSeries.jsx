@@ -1,35 +1,35 @@
-import React from 'react';
+import React from "react";
 import useFetch from "../../hooks/useFetch";
-import '../../pages/Home/Home'
 import TrendingSerieResults from "./TrendingSerieResults";
+import "./Trending.css";
 
 function TrendingSeries() {
-
-    const {data, catchError, isLoading} = useFetch('https://api.themoviedb.org/3/trending/tv/day', 'GET', {
-            api_key: process.env.REACT_APP_API_KEY
-        }, {}
-    );
-    console.log(data, catchError, isLoading);
+    const { data, catchError, isLoading } = useFetch(
+        "https://api.themoviedb.org/3/trending/tv/day",
+        {api_key: process.env.REACT_APP_API_KEY}
+);
 
     return (
-   <>
-       <div className= "trending-series">
-       <h2>Trending Series</h2>
-
+        <>
+            {isLoading && <p>Loading the Trending results...</p>}
+            {catchError && <p>Something went wrong...</p>}
+            <div className="trending-series">
+                <h2 className="trending-header">Top 5 Trending Series</h2>
                 {data.results && (
-                    <ul >
-                        {data.results.slice(0,5).filter(serie => serie.name)
-                            .map(serie => (
-                                <li key={serie.id}>{serie.name}
-                                    <TrendingSerieResults mediaTitle={serie}/>
+                    <ul>
+                        {data.results
+                            .slice(0, 5)
+                            .filter((serie) => serie.name)
+                            .map((serie) => (
+                                <li className="media-title" key={serie.id}>
+                                    {serie.name}
+                                    <TrendingSerieResults mediaTitle={serie} />
                                 </li>
-
                             ))}
                     </ul>
                 )}
-       </div>
-   </>
-
+            </div>
+        </>
     );
 }
 

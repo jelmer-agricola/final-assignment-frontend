@@ -1,61 +1,12 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap');*/
-
-.App {
-    text-align: center;
-}
-
-
-
-
 :root {
-    /*colors*/
-    /*--primary: #0B5351;*/
-    /*--primary-light: #00A9A5 ;*/
-    /*--secondary:#4E8098;*/
-    /*--secondary-light: #90C2E7;*/
-    /*--tertiary: #092327;*/
-
     --primary: hsla(174, 61%, 33%, 1);
     --primary-light: hsla(173, 48%, 45%, 1);
     --secondary: hsla(173, 53%, 62%, 1);
     --secondary-light: hsla(204, 68%, 70%, 1);
     --tertiary: hsl(247, 94%, 14%);
-
-    --black: #292929;
-    --white: #FFFFFF;
+    --black: hsl(0, 0%, 16%);
+    --white: hsl(0, 0%, 100%);
     --light-grey: HSL(210, 33%, 96%);
-
-    /*--primary: hsla(165, 15%, 58%, 1);*/
-    /*--primary-light: hsla(31, 57%, 93%, 1);*/
-    /*--secondary: hsla(8, 71%, 86%, 1);*/
-    /*--secondary-light:hsla(37, 89%, 67%, 1);*/
-    /*--tertiary: hsla(1, 81%, 73%, 1);*/
-
-    /*--primary: hsla(46, 100%, 50%, 1);*/
-    /*--primary-light: hsl(32, 92%, 50%);*/
-    /*--secondary: hsla(211, 100%, 12%, 1);*/
-    /*--secondary-light: hsla(209, 100%, 20%, 1);*/
-    /*--tertiary: hsla(211, 100%, 12%, 1);*/
-
-    /*--tertiary: hsla(13, 90%, 58%, 1);*/
-    /*--primary: hsla(248, 31%, 23%, 1);*/
-    /*--primary-light: hsla(173, 70%, 35%, 1);*/
-    /*--secondary: hsla(353, 81%, 51%, 1);*/
-    /*--secondary-light: hsla(71, 58%, 64%, 1);*/
-
-
-    /*--primary: hsla(145, 97%, 46%, 1);*/
-    /*--primary-light: hsla(87, 100%, 49%, 1);*/
-    /*--secondary: hsla(329, 100%, 43%, 1);*/
-    /*--tertiary:  hsla(45, 100%, 48%, 1);*/
-    /*--secondary-light: hsla(206, 100%, 49%, 1);*/
-
-
-    /*--tertiary: hsla(0, 0%, 0%, 1);*/
-    /*--primary: hsla(200, 15%, 43%, 1);*/
-    /*--primary-light: hsla(53, 100%, 74%, 1);*/
-    /*--secondary: hsla(107, 36%, 95%, 1);*/
-    /*--secondary-light: hsla(151, 28%, 63%, 1);*/
 
     /*fonts*/
     --header-fonts: 'Arial', 'Helvetica Neue', sans-serif;
@@ -64,25 +15,6 @@
     sans-serif;
 }
 
-::placeholder {
-    color: var(--white);
-    opacity: 0.5;
-}
-
-/* hier nog aan toe voegen  . container */
-
-
-/*@media (min-width: 992px) {*/
-/*    .inner-content-container {*/
-/*        width: 970px;*/
-/*    }*/
-/*}*/
-
-/*@media (min-width: 1200px) {*/
-/*    .inner-content-container {*/
-/*        width: 1170px;*/
-/*    }*/
-/*}*/
 
 *,
 *:before,
@@ -90,60 +22,70 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*border: lawngreen solid 1px;*/
+}
+
+ul {
+    list-style: none;
 }
 
 
 main {
-    /*background-color: #f1faee;*/
-    min-height: 88vh;
+    min-height: 85vh;
 }
-
-/*body {*/
-/*    font-family: var(--body-fonts);*/
-/*    font-weight: 300;*/
-/*    color: var(--black);*/
-/*}*/
-
-/*mag weer de filler poster */
-
-
 
 body {
     font-family: var(--body-fonts);
-    /*-webkit-font-smoothing: antialiased;*/
-    /*-moz-osx-font-smoothing: grayscale;*/
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-family: var(--header-fonts);
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    text-align: center;
+    padding: 1rem 0;
 }
 
 h2 {
     font-size: 1.5rem;
     text-align: center;
+    padding: 1rem 0;
+
 }
+h3{
+    padding: 1rem 0 0 0;
+    text-align: center;
+}
+
+h4, h5{
+    font-size: 1.25rem;
+}
+
 
 a,
 a:link,
 a:visited {
     color: var(--primary);
     font-weight: 600;
+    text-decoration: none;
+}
+a:hover{
+    color: var(--secondary);
 }
 
-/* De buitenste container is altijd de volledige schermbreedte. Het is een flexbox container die zijn inhoud altijd netjes horizontaal centreert */
+/* The outermost container is always the full screen width. It is a flexbox container that always neatly centers its contents horizontally */
+
 .outer-content-container {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /*border: blue solid 1px;*/
-
 }
 
-/*De binnenste container is maximaal 1400px breed, zodat het er ook goed uitziet op brede schermen.
-Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer ruimte is.*/
-/*shrink en grow nog uitzoeken*/
+/*The inner container is up to 1400px wide, so it will look good on wide screens.
+It may shrink if the screen becomes less wide, but not grow if there is more space.*/
 .inner-content-container {
     flex-basis: 1200px;
     flex-shrink: 1;
@@ -152,14 +94,24 @@ Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer
     display: flex;
     flex-direction: column;
     justify-content: center;
-/*border: red solid 1px;*/
 }
 
+::placeholder {
+    color: var(--black);
+    opacity: 0.5;
+}
+
+.media-title {
+    font-size: 1.25rem;
+    color: var(--tertiary);
+    font-weight: 600;
+    margin: 0;
+}
 
 .filler-poster {
     width: 75px;
     height: 113px;
-    background-color: var(--white);
+    background-color: var(--light-grey);
     border-radius: 5px;
     margin-right: 15px;
     display: block;
@@ -167,71 +119,10 @@ Hij mag krimpen als het scherm minder breed wordt, maar niet groeien als er meer
 
 }
 
-@media screen and (max-device-width: 360px) {
-.username{
-    /*color: var(--primary);*/
-
-}
-}
-
-@media screen and  (max-width: 900px) {
-    .username{
-        color: var(--primary);
-
-    }
-}
 
 
 
-/*@media screen and  (min-height: 1400px) {*/
-
-/*!* SCROLLBAR*!*/
-/*!* width *!*/
-/*::-webkit-scrollbar {*/
-/*    width: 10px;*/
-/*}*/
-
-/*!* Track *!*/
-/*::-webkit-scrollbar-track {*/
-/*    background: #f1f1f1;*/
-/*}*/
-
-/*!* Handle *!*/
-/*::-webkit-scrollbar-thumb {*/
-/*    background: #888;*/
-/*}*/
-
-/*!* Handle on hover *!*/
-/*::-webkit-scrollbar-thumb:hover {*/
-/*    background: #555;*/
-/*}*/
 
 
 
-/*}*/
 
-/*.App {*/
-/*  text-align: center;*/
-/*}*/
-
-/*.App-logo {*/
-/*  height: 40vmin;*/
-/*  pointer-events: none;*/
-/*}*/
-
-/*@media (prefers-reduced-motion: no-preference) {*/
-/*  .App-logo {*/
-/*    animation: App-logo-spin infinite 20s linear;*/
-/*  }*/
-/*}*/
-
-
-
-/*@keyframes App-logo-spin {*/
-/*  from {*/
-/*    transform: rotate(0deg);*/
-/*  }*/
-/*  to {*/
-/*    transform: rotate(360deg);*/
-/*  }*/
-/*}*/

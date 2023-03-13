@@ -1,0 +1,40 @@
+.trending-header {
+    text-align: left;
+    color: var(--primary);
+}
+
+.trending-info {
+    font-size: 1.2rem;
+    color: var(--black);
+    font-weight: normal;
+}
+.vote-average{
+    font-size: 1.2rem;
+
+}
+
+@media screen and  (min-width: 744px) {
+    .trending-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .trending-movies {
+        width: 45%;
+    }
+
+    .trending-series {
+        width: 45%;
+    }
+}
+
+/*For ipad mini this is the width this was the smallest tablet I could find*/
+@media screen and  (max-width: 743px) {
+    .trending-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
