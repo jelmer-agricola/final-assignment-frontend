@@ -24,7 +24,7 @@ const SearchResultCard = ({mediaTitle}) => {
 
     return (
         <article className="result-card">
-            <div>
+            <figure>
                 {mediaTitle.poster_path ? (
                         <img className="poster"
                             src={`https://image.tmdb.org/t/p/w200${mediaTitle.poster_path}`}
@@ -32,13 +32,13 @@ const SearchResultCard = ({mediaTitle}) => {
                         />
                     )
                     : (
-                        <div className="filler-poster">Filler Poster</div>
+                        <img className="filler-poster">Filler Poster</img>
                     )
                 }
-            </div>
+            </figure>
 
-            <div className="info">
-                <div>
+            <p className="info">
+                <header>
                     <h4 className="release-date">
                         {mediaTitle.first_air_date && `First aired: ${mediaTitle.first_air_date}`}
                         {mediaTitle.release_date && `Release date: ${mediaTitle.release_date}`}
@@ -46,8 +46,8 @@ const SearchResultCard = ({mediaTitle}) => {
                     <div>{mediaTitle.overview}</div>
                     <h4 className="vote-average">Vote Average: {voteAverage}</h4>
 
-                </div>
-                <div className="controls">
+                </header>
+                <section className="controls">
 
                     <Button
                         children="Add to Watchlist"
@@ -63,8 +63,8 @@ const SearchResultCard = ({mediaTitle}) => {
                         className="add-btn"
                     />
 
-                </div>
-            </div>
+                </section>
+            </p>
 
         </article>
     );

@@ -45,7 +45,7 @@ function SignUp() {
 
                 <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
                     <label className="login-form-label" htmlFor="email-field">
-                        Email:</label><br/>
+                        Email:</label>
                     <input
                         className="login-form-input"
                         type="text"
@@ -61,9 +61,9 @@ function SignUp() {
                         })}
                     />
                     {errors.email && <p className= "login-error-message">{errors.email.message}</p>}
-                          <br/>
 
-                    <label htmlFor="username-field"> Username:</label><br/>
+
+                    <label htmlFor="username-field"> Username:</label>
                     <input
                         className="login-form-input"
                         type="text"
@@ -81,9 +81,9 @@ function SignUp() {
                         })}
                     />
                     {errors.username && <p className="login-error-message">{errors.username.message}</p>}
-                    <br/>
 
-                    <label htmlFor="password-field"> Password:</label><br/>
+
+                    <label htmlFor="password-field"> Password:</label>
                     <input
                         className="login-form-input"
                         type="password"
@@ -102,7 +102,6 @@ function SignUp() {
                         })}
                     />
                     {errors.password && <p className="login-error-message">{errors.password.message}</p>}
-                    <br/>
 
 
                     <Button

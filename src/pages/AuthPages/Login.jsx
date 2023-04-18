@@ -37,7 +37,6 @@ function Login() {
                         <label className="login-form-label" htmlFor="username-field">
                             Username:
                         </label>
-                        <br/>
                         <input
                             className="login-form-input"
                             type="text"
@@ -57,11 +56,10 @@ function Login() {
                         />
                         {errors.username && <p className="login-error-message">{errors.username.message}</p>}
                         {errorMessageCredentials && <p className="login-error-message">{errorMessageCredentials}</p>}
-                        <br/>
+
 
                         <label htmlFor="password-field">Password: </label>
 
-                        <br/>
                         <input
                             className="login-form-input"
                             type="password"
@@ -82,7 +80,7 @@ function Login() {
                         {errors.password && <p className="login-error-message">{errors.password.message}</p>}
                         {errorMessageCredentials && <p className="login-error-message">{errorMessageCredentials}</p>}
 
-                        <br/>
+
 
                         <Button type="submit" className="submit-btns">
                             Sign in

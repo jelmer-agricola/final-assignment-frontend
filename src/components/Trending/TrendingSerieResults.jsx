@@ -8,7 +8,7 @@ const TrendingSerieResults = ({mediaTitle}) => {
 
     return (
         <article className="result-card">
-            <div className="poster-wrapper">
+            <figure className="poster-wrapper">
                 {mediaTitle.poster_path ? (
                         <img
                             className="poster"
@@ -17,21 +17,21 @@ const TrendingSerieResults = ({mediaTitle}) => {
                         />
                     )
                     : (
-                        <div className="filler-poster">Filler Poster</div>
+                        <img className="filler-poster">Filler Poster</img>
                     )
                 }
-            </div>
+            </figure>
 
-            <div className="info">
-                <div>
+            <section className="info">
+                <section>
                     <h4 className="release-date">First Aired: {mediaTitle.first_air_date}</h4>
-                    <div className="trending-info">
+                    <p className="trending-info">
                         {limitCharacters(mediaTitle.overview, 250)}
-                    </div>
+                    </p>
                     <h4 className="vote-average">Vote Average: {voteAverage}</h4>
-                </div>
+                </section>
 
-            </div>
+            </section>
 
         </article>
     );

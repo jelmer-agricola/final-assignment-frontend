@@ -64,7 +64,7 @@ Install webstorm
 5. Fire up WebStorm and you're ready to go!
 
 * Install node.js
-1. Visithttps://nodejs.org/en/download/ and choose the appropriate file to download. On this website you then choose the 64 bit version of the windows installer, macOS installer or Linus Binaries. 
+1. Visit https://nodejs.org/en/download/ and choose the appropriate file to download. On this website you then choose the 64 bit version of the windows installer, macOS installer or Linus Binaries. 
 2. With the command node -v you can check in the terminal whether the installation was successful if node is present you will see a version number. The terminal can be found at the bottom of your webstorm ide.
 
 Open the zipfile you downloaded or clone form the repository
