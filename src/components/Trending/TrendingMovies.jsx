@@ -15,7 +15,7 @@ function TrendingMovies() {
         <>
             {isLoading && <p>Loading the Trending results...</p>}
             {catchError && <p>Something went wrong...</p>}
-            <div className="trending-movies">
+            <section className="trending-movies">
                 <h2 className="trending-header">Top 5 Trending movies</h2>
                 {data.results && (
                     <ul>
@@ -31,7 +31,7 @@ function TrendingMovies() {
                             ))}
                     </ul>
                 )}
-            </div>
+            </section>
         </>
 
     )
