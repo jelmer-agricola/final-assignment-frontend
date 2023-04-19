@@ -10,18 +10,18 @@ const Favorites = () => {
     return (
         <>
             <section className="outer-content-container">
-                <div className="inner-content-container">
+                <section className="inner-content-container">
                     <h3> Don't know what to watch and too tired to use the searchbar <Link to="/moods">click
                         here</Link> and we will give you suggestions based on your mood.
                     </h3>
                     <p className="list__control-description">You can click the left arrow icon to send a movie or serie
                         back to your watchlist. And use the cross to delete it from your watchlist. The symbols appear
                         when you hover over the poster with your mouse.</p>
-                </div>
+                </section>
             </section>
 
             <section className="outer-content-container">
-                <div className="inner-content-container">
+                <section className="inner-content-container">
                     {favorites.length > 0 && (
                         <div>
                             <h2 className="list__heading-list">Your most favorite movies & series</h2>
@@ -36,7 +36,7 @@ const Favorites = () => {
                     ) : (
                         <h2>No movies or series in your Favorites! <Link to="/add">Add some!</Link></h2>
                     )}
-                </div>
+                </section>
             </section>
         </>
     );

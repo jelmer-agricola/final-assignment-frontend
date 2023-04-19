@@ -44,14 +44,14 @@ function AddPage() {
 
     return (
         <section className="outer-content-container">
-            <div className="inner-content-container">
+            <section className="inner-content-container">
                 <h2>
                     Don't know what to watch and too tired to use the searchbar
                     <Link to="/moods"> click here</Link> and we will give you suggestions
                     based on your mood.
                 </h2>
 
-                <div>
+                <section>
                     <div className="add-content">
                         <div className="input-wrapper">
                             <input
@@ -76,8 +76,8 @@ function AddPage() {
                         </ul>
 
                     </div>
-                </div>
-            </div>
+                </section>
+            </section>
         </section>
     );
 }

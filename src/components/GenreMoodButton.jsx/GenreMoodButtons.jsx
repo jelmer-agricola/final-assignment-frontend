@@ -11,7 +11,7 @@ const GenreMoodButtons = () => {
         <>
             <GenreMoodHeader/>
             <section className="outer-content-container ">
-                <div className="inner-content-container genre-btns">
+                <section className="inner-content-container genre-btns">
                     <Button
                         children="Genres"
                         onClick={() => navigate('/genre-form')}
@@ -44,7 +44,7 @@ const GenreMoodButtons = () => {
                     />
 
 
-                </div>
+                </section>
             </section>
 
         </>

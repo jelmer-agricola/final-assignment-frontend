@@ -60,7 +60,7 @@ function GenreForm() {
 
     return (
             <section className="outer-content-container">
-                <div className="inner-content-container genre-form">
+                <section className="inner-content-container genre-form">
 
                         <form onSubmit={(event) => event.preventDefault()}>
                             <label className="genre-form__form">
@@ -97,7 +97,7 @@ function GenreForm() {
 
 
 
-                    <div className="genre-form__results-container">
+                    <section className="genre-form__results-container">
 
                         {isLoading ? <p>Loading...</p> : null}
                         {error ? <p>{error}</p> : null}
@@ -113,9 +113,9 @@ function GenreForm() {
                                 ))}
                             </ul>
                         ) : null}
-                    </div>
+                    </section>
 
-                </div>
+                </section>
             </section>
     );
 }

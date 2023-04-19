@@ -30,7 +30,7 @@ function Login() {
 
         return (
             <section className="outer-content-container">
-                <div className="inner-content-container">
+                <section className="inner-content-container">
                     <h1>Sign in</h1>
                     <p className="login-header">Fill in your username and password below to sign in.</p>
                     <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
@@ -89,7 +89,7 @@ function Login() {
                     <p className="login-header">
                         Don't have an account yet? <Link to="/signup">Click here</Link> to create an account.
                     </p>
-                </div>
+                </section>
             </section>
         );
     }

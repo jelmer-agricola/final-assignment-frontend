@@ -9,7 +9,7 @@ const Home = () => {
 
     return (
         <section className="outer-content-container">
-            <div className="inner-content-container">
+            <section className="inner-content-container">
                 <h1 className="homepage__header">Welcome to Your Favorite Movie and TV Series Website!</h1>
                 <p className="homepage__intro-text">Looking for your next binge-worthy show? <Link to="/login">Sign
                     in</Link> to see your watchlist and favorites list, or <Link to="/signup">create an
@@ -18,11 +18,11 @@ const Home = () => {
                     comedy, drama, action, or something in between, we've got you covered. So what are you waiting for?
                     Sign in or create an account now and start exploring!</p>
 
-                <div className="trending-container">
+                <section className="trending-container">
                     <TrendingMovies/>
                     <TrendingSeries/>
-                </div>
-            </div>
+                </section>
+            </section>
 
         </section>
     );

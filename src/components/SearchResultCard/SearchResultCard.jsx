@@ -32,13 +32,15 @@ const SearchResultCard = ({mediaTitle}) => {
                         />
                     )
                     : (
-                        <img className="filler-poster">Filler Poster</img>
+                        <figure className="filler-poster" alt="No poster available">Filler Poster</figure>
+
+
                     )
                 }
             </figure>
 
-            <p className="info">
-                <header>
+            <section className="info">
+                <div>
                     <h4 className="release-date">
                         {mediaTitle.first_air_date && `First aired: ${mediaTitle.first_air_date}`}
                         {mediaTitle.release_date && `Release date: ${mediaTitle.release_date}`}
@@ -46,7 +48,7 @@ const SearchResultCard = ({mediaTitle}) => {
                     <div>{mediaTitle.overview}</div>
                     <h4 className="vote-average">Vote Average: {voteAverage}</h4>
 
-                </header>
+                </div>
                 <section className="controls">
 
                     <Button
@@ -64,7 +66,7 @@ const SearchResultCard = ({mediaTitle}) => {
                     />
 
                 </section>
-            </p>
+            </section>
 
         </article>
     );

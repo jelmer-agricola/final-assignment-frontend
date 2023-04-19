@@ -17,7 +17,7 @@ const TrendingSerieResults = ({mediaTitle}) => {
                         />
                     )
                     : (
-                        <img className="filler-poster">Filler Poster</img>
+                        <figure className="filler-poster" alt="No poster available">Filler Poster</figure>
                     )
                 }
             </figure>

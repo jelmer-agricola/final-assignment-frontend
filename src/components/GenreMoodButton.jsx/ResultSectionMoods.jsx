@@ -6,7 +6,7 @@ const ResultsSectionMood = ({data}) => {
 
     return (
         <section className="outer-content-container">
-            <div className="inner-content-container mood-page-results">
+            <section className="inner-content-container mood-page-results">
 
                 {data.results && (
                     <div className="mood-page-result">
@@ -22,7 +22,7 @@ const ResultsSectionMood = ({data}) => {
                         </ul>
                     </div>
                 )}
-            </div>
+            </section>
         </section>
     );
 };

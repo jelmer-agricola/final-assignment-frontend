@@ -3,7 +3,7 @@ import React from 'react';
 const GenreMoodHeader = () => {
     return (
         <section className="outer-content-container">
-            <div className="inner-content-container">
+            <section className="inner-content-container">
 
                 <h2>Get Your Mood Right and Your Movie Night Sorted!</h2>
                 <p className="genre-btns-text">After years of painstaking research, we've discovered that the key to the perfect movie night is all
@@ -14,7 +14,7 @@ const GenreMoodHeader = () => {
                     night
                     awaits!</p>
 
-            </div>
+            </section>
         </section>
 
     );

@@ -39,7 +39,7 @@ function SignUp() {
 
     return (
         <section className="outer-content-container">
-            <div className="inner-content-container">
+            <section className="inner-content-container">
                 <h1>Register</h1>
                 <p className="login-header">Enter your details below to register. </p>
 
@@ -114,7 +114,7 @@ function SignUp() {
                 </form>
                 <p className="login-header">Do you already have an account? You can <Link to="/login">Click here </Link>to
                     sign in</p>
-            </div>
+            </section>
         </section>
     );
 
